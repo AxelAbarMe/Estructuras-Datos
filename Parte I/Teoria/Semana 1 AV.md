@@ -55,6 +55,63 @@ DevOps nació hace más de una década como un hashtag y se convirtió en un mov
 ¿Es DevOps un rol o una metodología?
 Hay debate: algunos creen que "ingeniero DevOps" no debería ser un título porque DevOps es una forma de trabajar de toda la organización, no de una persona. Otros defienden el título porque señala una habilidad valiosa y escasa en el mercado. Datos citados: para 2020, la adopción de DevOps rondaba el 74% (con complementos), aunque encontrar y retener talento capacitado seguía siendo el mayor reto (58% y 48% de los encuestados, respectivamente).
 
+# Que son las API
+## Definición
+
+API = Application Programming Interface (Interfaz de Programación de Aplicaciones)
+Aplicación: software con una función o propósito específico
+Interfaz: contrato/protocolo que define cómo se comunican dos aplicaciones (mediante solicitudes y respuestas)
+En conjunto: una API permite que distintos sistemas se comuniquen entre sí
+
+## Analogía no técnica (restaurante)
+
+Reservación para 3 personas, quieres cambiarla a 6
+Llamas al restaurante → el empleado (API) recibe tu solicitud y responde sí/no
+Sin ese "empleado", tendrías que averiguar tú mismo mesas libres, capacidad de cocina, personal, etc. (trabajo innecesario y datos privados expuestos)
+Restaurante = aplicación que ofrece un servicio
+Tú = aplicación que solicita el servicio
+Empleado = la API, el canal de comunicación
+
+## Ejemplo técnico (Apple Weather)
+
+Apple no crea estaciones meteorológicas propias (muy costoso)
+Usa la API de un servicio como weather.com
+Así accede a los datos solo de la forma que weather.com permite
+
+## Cómo funcionan las Web APIs
+
+Transmiten solicitudes y respuestas vía JSON o XML, normalmente por internet
+Cada ciclo solicitud-respuesta = una "API call" (llamada a la API)
+
+## Componentes de una solicitud (request)
+
+URL del endpoint del servidor
+Método de solicitud (usualmente HTTP)
+El método indica la acción deseada
+
+## Componentes de una respuesta (response) HTTP
+
+Código de estado (ej. error 404 = URL no encontrada)
+Encabezado (header)
+Cuerpo de la respuesta (body): puede ser el recurso solicitado o mensajes específicos de la aplicación
+
+## Idea clave final
+
+Todo se reduce a: solicitud → respuesta (request → response)
+
+# Monolith vs Microservices
+
+# Arquitectura básica de una PC
+
+# Compiladores vs Intérpretes
+
+# Características de los Compiladores y los intérpretes
+
+# Memory Segments in C/C++
+
+
+
+
 
 
 
