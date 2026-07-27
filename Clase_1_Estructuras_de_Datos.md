@@ -27,6 +27,8 @@ De esto nace las Apps Cloud Native, basadas en microservicios, escalables y son 
 #### Tipos de API
 
 REST API (Más común).
+SOAP
+GraphQL
 
 ---
 
@@ -74,29 +76,32 @@ Se asigna en memoria RAM desde una dirección inicial el tamaño de los bytes en
 Espacio de memoria se divide en varias secciones-
 
 ```
-Low address-> Text segment		 <- Static Memory Layout  |	<-- Espacio de dirección
-	      Initialised Data		 <- Static Memory Layout  |	<-- Espacio de dirección
-	      UnInitialised Data (BSS)   <- Static Memory Layout  |	<-- Espacio de dirección
-------------------------------------------------------------------|	<-- Espacio de dirección
-	Heap				 <- Dynamic Memory Layout |	<-- Espacio de dirección
-	->				 <- Dynamic Memory Layout |	<-- Espacio de dirección
-	->				 <- Dynamic Memory Layout |	<-- Espacio de dirección
-	Stack				 <- Dynamic Memory Layout |	<-- Espacio de dirección
-------------------------------------------------------------------|	<-- Espacio de dirección
+Low address-> Text segment		 <- Static Memory Layout		  |	<-- Espacio de dirección
+	      Initialised Data		 <- Static Memory Layout    	  |	<-- Espacio de dirección
+	      UnInitialised Data (BSS)   <- Static Memory Layout  	  |	<-- Espacio de dirección
+------------------------------------------------------------------|
+	Heap								 <- Dynamic Memory Layout |	<-- Espacio de dirección
+	->									 <- Dynamic Memory Layout |	<-- Espacio de dirección
+	->									 <- Dynamic Memory Layout |	<-- Espacio de dirección
+	Stack								 <- Dynamic Memory Layout |	<-- Espacio de dirección
+------------------------------------------------------------------|
 High Address ->	Command-line Arguments & Environment Variables    |	<-- Espacio de dirección
+
+
 					Cada linea tiene asignada un espacio de memoria
+
 #include <iostream>			0x0040
 #include <string>			0x0044
 
 int numero = 10;			0x0048
-int suma(int a, int b){			0x0052 y así sucesivamente, no siempre va de 4 en 4
+int suma(int a, int b){		0x0052 y así sucesivamente, no siempre va de 4 en 4
 	int res;
 	res a+b;
 	return res;
 }
 
-int main(){				0x0068
-	int x=10;			0x0072
+int main(){					0x0068
+	int x=10;				0x0072
 	int y=20;
 
 	std::cout << suma(x,y);
@@ -153,10 +158,10 @@ Puntero global o estatico se guarda en .data o .bss
 x se encuentra en 0x0500, x almacena [0x4000], en 0x4000 se tiene 0x2000, y en 0x2000 se tiene el valor int 10.
 En este caso:
 
-&x imprime 0x0500	Dirección donde está x
-x imprime 0x4000	Dirección que almacena x
-*x imprime 0x2000	Contenido que apunta x
-**x imprime 10		Contenido apuntado por el contenido que apunta x
+- &x imprime 0x0500	Dirección donde está x
+- x imprime 0x4000	Dirección que almacena x
+- *x imprime 0x2000	Contenido que apunta x
+- **x imprime 10		Contenido apuntado por el contenido que apunta x
 
 ## Compilación -> C/C++ / Java
 
