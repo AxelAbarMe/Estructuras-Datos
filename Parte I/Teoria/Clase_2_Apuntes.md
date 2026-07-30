@@ -1,4 +1,4 @@
-#  Lenguajes interpretados
+# Lenguajes interpretados
 
 - Python
 - Javascript
