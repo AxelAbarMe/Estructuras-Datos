@@ -7,12 +7,12 @@
 -> Se toma en lenguaje de programación, ejemplo Java, en este se codean todo el código necesario, ósea el código fuente, donde se segmentan en las diferentes funcionalidades o features implementadas. Este se compila y genera el archivo ejecutable (.exe), llamado Artifact. Donde normalmente se utiliza el server para ejecutar dicha aplicación.
 
 Servidor utiliza (En resumen) para ejecutar la aplicación es del CPU y RAM llamada Compute
-Aquellas que sean exitosas requeriran mayor cantidad de CPU y RAM, incluso llegando hasta un 100% de su uso.
-Pero si la applicación no se codeo para implementar un segundo servidor, esto es una desventaja.
+Aquellas que sean exitosas requerirán mayor cantidad de CPU y RAM, incluso llegando hasta un 100% de su uso.
+Pero si la aplicación no se codeo para implementar un segundo servidor, esto es una desventaja.
 
 Otra desventaja es que, si hay necesidad de actualizar un recurso, hay que bajar el servidor, probarlo y actualizar las nuevas funcionalidades que ya existen anteriormente.
 
-A causa de esto, nacio una nueva arquitectura de tecnologias retomadas
+A causa de esto, nació una nueva arquitectura de tecnologías retomadas
 
 ### Arquitectura de microservicios
 
@@ -26,9 +26,9 @@ De esto nace las Apps Cloud Native, basadas en microservicios, escalables y son 
 
 #### Tipos de API
 
-REST API (Más común).
-SOAP
-GraphQL
+- REST API (Más común).
+- SOAP
+- GraphQL
 
 ---
 
@@ -44,19 +44,19 @@ CPU tiene memoria temporal donde guarda las instrucciones de memoria.
 
 ## Ciclo de instrucciones
 
-Fetch: Traer instrucciones de memoria RAM para ejecutarlas
-Decode: Tomar instrucción y la decodifica.
-Execute: Al estar lista, la ejecuta.
+- Fetch: Traer instrucciones de memoria RAM para ejecutarlas
+- Decode: Tomar instrucción y la decodifica.
+- Execute: Al estar lista, la ejecuta.
 
-ALU ejecuta las instrucciones matemáticas y lógicas
-->Registros
+ALU ejecuta las instrucciones matemáticas y lógicas ->Registros
 
 ## Arquitectura de la CPU y PC
 
 Se refiere a las x86, fabricantes de Intel, AMD. Existe otra arquitectura ARM abierto para cualquier fabricante.
 
-x86 - 64 | Potencia	  | Mayor consumo de energía
-ARM 	 | Menor Potencia | Menor consumo de energía
+- x86 - 64 | Potencia	  | Mayor consumo de energía
+- ARM 	 | Menor Potencia | Menor consumo de energía
+- 
 Esto afecta directamente en el consumo de la batería en el caso de los teléfonos móviles, debido a que ARM consume menor.
 
 Chips de ARM alcanzan el mismo nivel de potencia de Intel a un costo energético menor. Cloud computing importante porque a mayor consumo energético, aumenta el costo. ARM entonces genera menor costo. Migración de arquitecturas x86 a ARM genera ahorros de miles de dólares.
@@ -111,11 +111,12 @@ int main(){					0x0068
 }
 ```
 
-Variables locales/automáticas
-variables globales
-Asignaciones aritmeticas
-Bibliotecas
-funciones std::cout
+- Variables locales/automáticas
+- variables globales
+- Asignaciones aritméticas
+- Bibliotecas
+- funciones std::cout
+
 Son partes del programa, cada una se almacena en diferentes partes en el espacio de direcciones
 
 ### Ordena entonces ese código en el espacio de direcciones
@@ -125,18 +126,19 @@ Empezando en low address:
 El segmento código, o el .text: se almacena todo el código, las instrucciones. (Lo que contiene la función suma y función main). Esta parte de la memoria es solo lectura (Read Only).
 
 Segmento de datos: Se almacenan las variables globales y estáticas, existe la posibilidad a acceder a estos datos desde cualquier lugar del programa, gracias a que pertenecen al segmento de datos.
-.data  Variables ya inicializadas se guardan en el .data
-.bss   Variables sin inicializar se guardan en el BSS (.bss)
+
+- .data  Variables ya inicializadas se guardan en el .data
+- .bss   Variables sin inicializar se guardan en el BSS (.bss)
 
 .heap  Guarda toda la información de memoria dinámica, objetos creados durante la ejecución del programa se ubican aquí, no se sabe que llenará está zona hasta que no se este ejecutando el programa. Tiene la propiedad de que crece y decrece (al liberar memoria). En c++ al usar new y en C al usar malloc. Se hace manual y es responsabilidad del programador. Que pasa con Python y Java? El manejo de la memoria dinámica o el heap se realiza de manera automática. Sino se maneja la memoria dinámica correctamente, puede ocurrir que nos quedemos sin memoria, out of memory. Memory Leak.
 
 .stack  Es el único espacio de memoria que crece al revez, al disminuirse (Más alta hacia abajo). En el stack se guarda a las variables locales y los retornos de funciones. Importante retorno de funciones para recursividad y estructuras de stack.
 
 Para ejemplo int x=10;
-Se guarda en el stack 4Bytes, de dirección de memoria 0x1234.
-Compilador crea tabla con las variables, llamada tabla de símbolo, donde guarda nombre, tipo y alcance.
 
-## QUIZ
+Se guarda en el stack 4Bytes, de dirección de memoria 0x1234.
+
+Compilador crea tabla con las variables, llamada tabla de símbolo, donde guarda nombre, tipo y alcance.
 
 En que dirección de memoria está almacenada la función main? En el segmento código, en la dirección de memoria 0x0068. Aquí entonces inicia una función.
 
@@ -147,6 +149,7 @@ En cual parte de la memoria está almacenada la variable global int numero = 10;
 Las librerías se ubican donde? En .text
 
 Que ocurre con int* x = new int[10]
+
 Operador new asigna suficiente memoria para el tamaño del objeto [10], con dirección de memoria 0x4000, new devuelve entonces 0x4000, esa dirección de memoria se guarda en x, pero x se encuentra en el stack.
 
 x guarda 0x4000 en el stack (Variable local, de tipo puntero, guarda dirección 0x4000, que apunta a un objeto del heap que es un entero). Ya que cout << x imprime 0x4000, pero cout << *x imprime 10, el valor al que apunte.
