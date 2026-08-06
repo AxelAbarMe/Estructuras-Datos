@@ -92,6 +92,7 @@ Para evitar que esto deje de ser ineficiente, entonces se realiza una expansión
 - Borrar
 - Buscar
 
+<img src="../../img/vector.jpeg" alt="Vector" width="800">
 
 # Lista
 
@@ -124,6 +125,8 @@ class Nodo:
 - Insertar
 - Borrar
 - Buscar
+
+<img src="../../img/list.jpeg" alt="Vector" width="800">
 
 
 # Cola (Queue)
@@ -172,6 +175,7 @@ deque() devuelve el resultado que apunta Head, simulando el efecto de un fila, e
 - First
 - Out
 
+<img src="../../img/queue.jpeg" alt="Vector" width="800">
 
 # Pila (Stack)
 
@@ -231,9 +235,6 @@ push(60)
 |v
 |7|
 
-
-
-
 #### LIFO
 
 
@@ -241,6 +242,8 @@ push(60)
 - In
 - First
 - Out
+
+<img src="../../img/stack.jpeg" alt="Vector" width="800">
 
 
 ### Las anteriores son llamadas estructuras de datos lineales
