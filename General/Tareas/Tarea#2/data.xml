@@ -1,0 +1,23 @@
+<inventory>
+  <shop>Store</shop>
+  <items>
+    <item>
+      <code>001</code>
+      <name>item1</name>
+      <price>10.99</price>
+      <quantity>5</quantity>
+    </item>
+    <item>
+      <code>002</code>
+      <name>item2</name>
+      <price>5.49</price>
+      <quantity>10</quantity>
+    </item>
+    <item>
+      <code>003</code>
+      <name>item3</name>
+      <price>20.0</price>
+      <quantity>3</quantity>
+    </item>
+  </items>
+</inventory>
