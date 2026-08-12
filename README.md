@@ -19,6 +19,7 @@ Repositorio de teoría, labs, prácticas, proyectos, quices y tareas del curso d
 - [Clase 4 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_4_Apuntes.md)
 - [Clase 5 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_5_Apuntes.md)
 - [Clase 6 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_6_Apuntes.md)
+- [Clase 7 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_7_Apuntes.md)
 - [Semana 1 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Semana%201%20AV.md)
 - [Semana 2 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Semana%202%20AV.md)
 - [Semana 3 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Semana%203%20AV.md)
