@@ -1,0 +1,7 @@
+[
+  { "tipo": "NORM", "nombre": "Alice" },
+  { "tipo": "VIP",  "nombre": "Bob" },
+  { "tipo": "NORM", "nombre": "Charlie" },
+  { "tipo": "BULK", "nombre": "Dave" },
+  { "tipo": "VIP",  "nombre": "Eve" }
+]

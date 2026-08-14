@@ -1,0 +1,11 @@
+[
+  { "cmd": "MOVE", "x": 100 },
+  { "cmd": "TURN_RIGHT" },
+  { "cmd": "MOVE", "x": 50 },
+  { "cmd": "DROP" },
+  { "cmd": "MOVE", "x": 30 },
+  { "cmd": "TURN_LEFT" },
+  { "cmd": "MOVE", "x": 20 },
+  { "cmd": "DROP" },
+  { "cmd": "RETURN" }
+]

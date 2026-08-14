@@ -1,0 +1,20 @@
+[
+  { "cmd": "MOVE", "x": 10 },
+  { "cmd": "TURN_RIGHT" },
+  { "cmd": "MOVE", "x": 25 },
+  { "cmd": "DROP" },
+  { "cmd": "TURN_LEFT" },
+  { "cmd": "TURN_LEFT" },
+  { "cmd": "MOVE", "x": 5 },
+  { "cmd": "DROP" },
+  { "cmd": "DROP" },
+  { "cmd": "MOVE", "x": 100 },
+  { "cmd": "TURN_RIGHT" },
+  { "cmd": "MOVE", "x": 42 },
+  { "cmd": "RETURN" },
+  { "cmd": "MOVE", "x": 80 },
+  { "cmd": "TURN_RIGHT" },
+  { "cmd": "DROP" },
+  { "cmd": "MOVE", "x": 200 },
+  { "cmd": "TURN_LEFT" }
+]

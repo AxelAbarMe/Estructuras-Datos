@@ -1,0 +1,20 @@
+[
+  { "tipo": "NORM", "nombre": "Alice" },
+  { "tipo": "VIP",  "nombre": "Bob" },
+  { "tipo": "NORM", "nombre": "Charlie" },
+  { "tipo": "BULK", "nombre": "Dave" },
+  { "tipo": "VIP",  "nombre": "Eve" },
+
+  { "tipo": "BULK", "nombre": "Frank" },
+  { "tipo": "BULK", "nombre": "Grace" },
+
+  { "tipo": "VIP",  "nombre": "Heidi" },
+
+  { "tipo": "NORM", "nombre": "Ivan" },
+
+  { "tipo": "VIP",  "nombre": "Judy" },
+  { "tipo": "NORM", "nombre": "Karl" },
+  { "tipo": "BULK", "nombre": "Leo" },
+  { "tipo": "VIP",  "nombre": "Mallory" },
+  { "tipo": "NORM", "nombre": "Niaj" }
+]

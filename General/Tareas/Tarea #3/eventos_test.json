@@ -1,0 +1,28 @@
+[
+  { "inicio": "09:00", "duracion": 60, "sala": "A" },
+  { "inicio": "10:00", "duracion": 30, "sala": "A" },
+
+  { "inicio": "11:00", "duracion": 15, "sala": "B" },
+  { "inicio": "11:15", "duracion": 15, "sala": "B" },
+  { "inicio": "11:30", "duracion": 15, "sala": "B" },
+
+  { "inicio": "13:00", "duracion": 30, "sala": "C" },
+  { "inicio": "13:31", "duracion": 30, "sala": "C" },
+
+  { "inicio": "14:00", "duracion": 30, "sala": "D" },
+  { "inicio": "14:20", "duracion": 30, "sala": "D" },
+
+  { "inicio": "15:00", "duracion": 30, "sala": "E" },
+  { "inicio": "15:30", "duracion": 30, "sala": "F" },
+
+  { "inicio": "16:00", "duracion": 45, "sala": "G" },
+  { "inicio": "16:30", "duracion": 15, "sala": "H" },
+  { "inicio": "16:45", "duracion": 30, "sala": "G" },
+
+  { "inicio": "18:00", "duracion": 20, "sala": "I" },
+
+  { "inicio": "19:00", "duracion": 30, "sala": "J" },
+  { "inicio": "19:30", "duracion": 30, "sala": "K" },
+  { "inicio": "20:00", "duracion": 30, "sala": "J" },
+  { "inicio": "20:30", "duracion": 30, "sala": "J" }
+]
