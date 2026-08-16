@@ -20,7 +20,7 @@ Repositorio de teoría, labs, prácticas, proyectos, quices y tareas del curso d
 - [Clase 5 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_5_Apuntes.md) - TDA Simple (Lista enlazada simple, vector, stack, queue)
 - [Clase 6 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_6_Apuntes.md) - Lista doblemente enlazada, stack, queue
 - [Clase 7 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_7_Apuntes.md) - Recursividad
-- [Clase 8 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_8_Apuntes.md) - 
+- [Clase 8 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_8_Apuntes.md) - Eficiencia y O Grande
 - [Semana 1 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Semana%201%20AV.md)
 - [Semana 2 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Semana%202%20AV.md)
 - [Semana 3 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Semana%203%20AV.md)
