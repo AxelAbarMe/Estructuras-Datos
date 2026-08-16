@@ -31,7 +31,8 @@ Repositorio de teoría, labs, prácticas, proyectos, quices y tareas del curso d
 ## 🧪 Labs
 > Enunciados de laboratorio del curso.
 
-- [Lab 1](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Labs/_.md)
+- [Lab 1](https://github.com/AxelAbarMe/Estructuras-Datos/tree/main/General/Labs/Lab%201)
+- [Lab 2](https://github.com/AxelAbarMe/Estructuras-Datos/tree/main/General/Labs/Lab%202)
 
 ---
 
