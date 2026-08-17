@@ -1,20 +1,23 @@
-# Listas Doblemente Enlazadas
+# 6: Listas Doblemente Enlazadas, Colas y Pilas (Implementación)
 
-Al igual que una lista enlazada simple, que funciona por Nodos y referencias al siguiente Nodo.
+## Listas Doblemente Enlazadas
+
+Al igual que una lista enlazada simple, funciona por Nodos y referencias al siguiente Nodo.
 
 Movimiento de nodo temporal a través de la lista en Python:
+
 ```python
 while tmp is not none:
   tmp = tmp.next
-``` 
-Con dicha implementación de una lista simple, no se puede devolver hacia atrás, se debe de empezar desde el inicio cada vez que se requiera.
+```
 
-Para esto entonces se debe de modificar la estructura del Nodo para poder implementar esto:
+Con dicha implementación de una lista simple, no se puede devolver hacia atrás; se debe empezar desde el inicio cada vez que se requiera.
 
-|prev Apunta a| Nodo (Datos) |next Apunta a|prev Apunta a|Nodo (Datos)|next Apunta a|prev Apunta a|Nodo (Datos)|next Apunta a|
+Para esto, se debe modificar la estructura del Nodo para poder implementarlo:
+
+| prev Apunta a | Nodo (Datos) | next Apunta a | prev Apunta a | Nodo (Datos) | next Apunta a | prev Apunta a | Nodo (Datos) | next Apunta a |
 |:--:|:--:|:---:|:--:|:---:|:--:|:---:|:--:|:---:|
-|<-Null| prev ! data ! next |->Next|<-prev| prev ! data ! next |->Next|<-prev| prev ! data ! next |->Null|
-
+| ← Null | prev ! data ! next | → Next | ← prev | prev ! data ! next | → Next | ← prev | prev ! data ! next | → Null |
 
 ```python
 class Nodo:
@@ -25,15 +28,17 @@ class Nodo:
 
 Estas listas otorgan la ventaja de poder recorrer la lista hacia atrás y hacia adelante.
 
-> Un ejemplo es el carrusel en páginas web donde se tenga un < [ ] > y para regresar o avanzar, se utiliza está lista doblemente enlazada, si se utiliza una simple el tmp debe recorrer toda la lista de nuevo para poder regresar en dicho carrusel.
+> Un ejemplo es el carrusel en páginas web, donde se tiene un `< [ ] >`; para regresar o avanzar se utiliza esta lista doblemente enlazada. Si se utiliza una lista simple, el `tmp` debe recorrer toda la lista de nuevo para poder regresar en dicho carrusel.
 
-`Overhead` es para cuando se debe de realizar alguna implementación, la lista enlazada no funciona sin dichos punteros, pero estos punteros no son los datos. Dichos overhead se transforman en memoria adicional que se debe de consumir.
+### Overhead
 
-> Esto afecta debido a que si se toma el valor de los overhead como 4 Bytes cada uno, al tener 2 overhead se transforma en 8 Bytes por nodo y si se tiene una lista de 100.000 nodos, significa que se estaría consumiendo en memoria un tamaño de 800.800 Bytes o aproximadamente 800k.
+`Overhead` es la memoria adicional que se debe consumir para realizar alguna implementación; la lista enlazada no funciona sin dichos punteros, pero estos punteros no son los datos en sí.
 
-Esto toma efecto cuando se debe de implementar este tipo de estructuras en hardware más limitado como una cámara con 2MB de RAM y 2GB de disco.
+> Esto afecta debido a que, si se toma el valor del overhead como 4 bytes cada uno, al tener 2 overheads (prev y next) se transforma en 8 bytes por nodo; si se tiene una lista de 100.000 nodos, significa que se estaría consumiendo en memoria un tamaño de 800.000 bytes, o aproximadamente 800K.
 
-## Ejemplo Implementación Python
+Esto toma efecto cuando se debe implementar este tipo de estructuras en hardware más limitado, como una cámara con 2MB de RAM y 2GB de disco.
+
+### Ejemplo de implementación en Python
 
 ```python
 class DoubleNode:
@@ -58,23 +63,25 @@ class DoublyLinkedList:
         new_node.prev = current
 ```
 
-# Colas
+---
 
-> La cola es un TDA de tipo `FIFO` (First in First Out).
+## Colas
 
-Lo que diferencia a una cola de una lista enlazada son sus operaciones.
+> La cola es un TDA de tipo **FIFO** (First in First Out).
+
+Lo que diferencia a una cola de una lista enlazada son sus operaciones:
 
 * Enqueue (Insertar)
 * Dequeue (Remover al siguiente)
 
-## Implementaciones
+### Implementaciones
 
 * Vector
 * Listas
 
-Se pueden implementar de varias formas, utilizar una lista doblemente enlazada para el caso de cola es malgastar los recursos de memoria ya que por naturaleza, una cola nunca va a regresar de manera manual hacia sus elementos, solo se puede observar al primero o el head. Por esto, se puede concluir que la mejor opción es una lista simple para no crear un Overhead que gasta memoria adicional para algo que no tendrá funcionalidad para este caso.
+Se pueden implementar de varias formas; utilizar una lista doblemente enlazada para el caso de una cola es malgastar los recursos de memoria, ya que por naturaleza una cola nunca va a regresar de manera manual hacia sus elementos, solo se puede observar el primero (el *head*). Por esto, se puede concluir que la mejor opción es una lista simple, para no crear un overhead que gaste memoria adicional para algo que no tendrá funcionalidad en este caso.
 
-## Ejemplo Implementación Python
+### Ejemplo de implementación en Python
 
 ```python
 class Node:
@@ -105,26 +112,28 @@ class Queue:
         return value
 ```
 
-# Pila (Stack)
+---
 
-> La pila es un TDA de tipo `LIFO` (Last in First Out).
+## Pila (Stack)
 
-Operaciones de la pila:
+> La pila es un TDA de tipo **LIFO** (Last in First Out).
 
-* push() -> Inserta
-* pop() -> Saca el valor de arriba y lo devuelve
-* peek() Retorna el último elemeto (`Top()`)
+### Operaciones de la pila
 
-## Implementaciones
+* `push()` → Inserta
+* `pop()` → Saca el valor de arriba y lo devuelve
+* `peek()` → Retorna el último elemento (`Top()`)
+
+### Implementaciones
 
 * Vector
 * Listas
 
-Como se ha destacado en ambas, tantos colas como pilas, se pueden implementar de diversas formas, pero los vectores y listas son una forma de hacerlas.
+Como se ha destacado en ambas, tanto colas como pilas se pueden implementar de diversas formas, pero los vectores y listas son una forma común de hacerlas.
 
-> Un ejemplo es que una pila de libros, a como se vayan acumulando el puntero top va cambiando su valor al libro que este en la posición más alta, según se vayan insertando utilizando push() o pop().
+> Un ejemplo es una pila de libros: a como se vayan acumulando, el puntero `top` va cambiando su valor al libro que esté en la posición más alta, según se vayan insertando utilizando `push()` o `pop()`.
 
-## Ejemplo Implementación Python
+### Ejemplo de implementación en Python
 
 ```python
 class Node:
@@ -152,6 +161,10 @@ class Stack:
         return None if self.top is None else self.top.value
 ```
 
-# Conclusiones
+---
 
-Lo importante realmente es saber cuando utilizar cuál, no como implementarlas, porque ya existen librerías como `queue` que ya realizan la implementación de una cola estándar o `LifoQueue` dentro de `queue` que lo realiza para el caso de una pila en Python.
+## Conclusiones
+
+Lo importante realmente es saber cuándo utilizar cuál, no cómo implementarlas, porque ya existen librerías como `queue`, que ya realiza la implementación de una cola estándar, o `LifoQueue` dentro de `queue`, que lo realiza para el caso de una pila en Python.
+
+> **Nota adicional:** en Python, `collections.deque` es la implementación recomendada tanto para pilas como para colas eficientes, ya que internamente evita el costo de desplazar elementos que sí tiene una lista normal (`list`) al insertar o eliminar por el inicio.
