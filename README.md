@@ -21,7 +21,7 @@ Repositorio de teoría, labs, prácticas, proyectos, quices y tareas del curso d
 - [Clase 6 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_6_Apuntes.md) - Lista doblemente enlazada, stack, queue
 - [Clase 7 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_7_Apuntes.md) - Recursividad
 - [Clase 8 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_8_Apuntes.md) - Eficiencia y O Grande
-- [Clase 9 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_9_Apuntes.md) - Pendiente
+- [Clase 9 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_9_Apuntes.md) - Heap y Cola de prioridad
 - [Clase 10 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_%6010_Apuntes.md) - Pendiente
 - [Semana 1 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Semana%201%20AV.md)
 - [Semana 2 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Semana%202%20AV.md)
@@ -59,6 +59,7 @@ Repositorio de teoría, labs, prácticas, proyectos, quices y tareas del curso d
 > Enunciados de quices del curso.
 
 - [Quiz 1](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Quiz/Quiz%201.md) - Arquitecturas, Archivos, TDA y Python
+- [Quiz 2](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Quiz/Quiz%202.md) - 
 
 ---
 
@@ -67,8 +68,8 @@ Repositorio de teoría, labs, prácticas, proyectos, quices y tareas del curso d
 
 - [Tarea #1](https://github.com/AxelAbarMe/Estructuras-Datos/tree/main/General/Tareas/Tarea%20%231) - PythonBasic
 - [Tarea #2](https://github.com/AxelAbarMe/Estructuras-Datos/tree/main/General/Tareas/Tarea%20%232) - Archivos
-- [Tarea #3](https://github.com/AxelAbarMe/Estructuras-Datos/tree/main/General/Tareas/Tarea%20%233) - TDA
-- [Tarea #4](https://github.com/AxelAbarMe/Estructuras-Datos/tree/main/General/Tareas/Tarea%20%234) -
+- [Tarea #3](https://github.com/AxelAbarMe/Estructuras-Datos/tree/main/General/Tareas/Tarea%20%233) - TDA Simple
+- [Tarea #4](https://github.com/AxelAbarMe/Estructuras-Datos/tree/main/General/Tareas/Tarea%20%234) - Recursividad
 
 ---
 
