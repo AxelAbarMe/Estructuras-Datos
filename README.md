@@ -59,7 +59,7 @@ Repositorio de teoría, labs, prácticas, proyectos, quices y tareas del curso d
 > Enunciados de quices del curso.
 
 - [Quiz 1](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Quiz/Quiz%201.md) - Arquitecturas, Archivos, TDA y Python
-- [Quiz 2](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Quiz/Quiz%202.md) - 
+- [Quiz 2](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Quiz/Quiz%202.md) - TDA
 
 ---
 
