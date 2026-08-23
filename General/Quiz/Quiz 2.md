@@ -54,7 +54,25 @@ De acuerdo con el enunciado anterior, ¿cuál es la estructura de datos que mejo
 
 ## Pregunta 5
 
+¿Cuál componente de hardware se encarga de la ejecución de las instrucciones de los programas?
+
+* SSD
+* CPU
+* Cache
+* RAM
+* HDD
+
+> Respuesta Correcta: CPU
+
 ## Pregunta 6
+
+Una cola es una estructura de datos de tipo `     ` mientras que una pila es de tipo `     `
+
+
+> Respuesta Correcta: FIFO
+> 
+> Respuesta Correcta: LIFO
+
 
 ## Pregunta 7
 ¿Qué diferencia a un vector de una lista enlazada?
@@ -77,6 +95,7 @@ De acuerdo con el enunciado anterior, ¿cuál es la estructura de datos que mejo
 * push
 
 > Respuesta Correcta: pop
+> 
 > Respuesta Correcta: push
 
 ## Pregunta 9
