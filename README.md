@@ -38,8 +38,8 @@ Repositorio de teoría, labs, prácticas, proyectos, quices y tareas del curso d
 > Enunciados de laboratorio del curso.
 
 - [Lab 1](https://github.com/AxelAbarMe/Estructuras-Datos/tree/main/General/Labs/Lab%201)
-- [Lab 2](https://github.com/AxelAbarMe/Estructuras-Datos/tree/main/General/Labs/Lab%202)
-- [Lab 3](https://github.com/AxelAbarMe/Estructuras-Datos/tree/main/General/Labs/Lab%203)
+- [Lab 2](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Labs/Lab%202/Lab2.md)
+- [Lab 3](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Labs/Lab%203/Lab3.md)
 
 ---
 
