@@ -18,3 +18,6 @@
 * Complejidad de espacio
 * Estabilidad
 * Adaptabilidad
+
+
+[Solución](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_%6011_Apuntes.md)
