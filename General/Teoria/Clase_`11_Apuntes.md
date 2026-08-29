@@ -380,3 +380,8 @@ print(radix_sort([170, 45, 75, 90, 802, 24, 2, 66]))
 * **Mergesort:** cuando se necesita **garantizar** O(n log n) sin importar el caso, se requiere **estabilidad**, o se trabaja con estructuras como listas enlazadas o datos que no caben en memoria (ordenamiento externo).
 * **Heapsort:** cuando se necesita O(n log n) garantizado **y** memoria O(1) al mismo tiempo (sacrificando estabilidad).
 * **Counting Sort / Radix Sort:** cuando los datos son enteros dentro de un rango conocido y acotado, permitiendo superar la barrera de O(n log n) propia de los algoritmos basados en comparación.
+
+## Tabla comparativa
+
+<img width="700" alt="image" src="https://github.com/user-attachments/assets/1cacb05d-177f-4b9b-bda8-239dc53a4eb5" />
+
