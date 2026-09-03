@@ -561,403 +561,1003 @@ def counting_sort(arr):
 
 **1.** ¿Qué componente ejecuta las instrucciones matemáticas y lógicas dentro del CPU?
 
-[ ] a) RAM  [ ] b) ALU  [ ] c) Caché L1  [ ] d) Bus de datos
+[ ] a) RAM  
+
+[ ] b) ALU  
+
+[ ] c) Caché L1  
+
+[ ] d) Bus de datos
 
 **2.** En una arquitectura de microservicios, ¿cómo se comunican los módulos entre sí?
 
-[ ] a) Compartiendo variables globales  [ ] b) A través de APIs  [ ] c) Mediante el segmento .bss  [ ] d) Recompilando el monolito
+[ ] a) Compartiendo variables globales 
+
+[ ] b) A través de APIs 
+
+[ ] c) Mediante el segmento .bss  
+
+[ ] d) Recompilando el monolito
 
 **3.** ¿Cuál es la principal desventaja de una arquitectura monolítica frente a microservicios?
 
-[ ] a) No permite usar bases de datos  [ ] b) Dificultad para escalar y actualizar de forma independiente  [ ] c) No puede compilarse  [ ] d) Requiere más lenguajes de programación
+[ ] a) No permite usar bases de datos  
+
+[ ] b) Dificultad para escalar y actualizar de forma independiente  
+
+[ ] c) No puede compilarse  
+
+[ ] d) Requiere más lenguajes de programación
 
 **4.** ¿Qué tipo de API usa mensajes XML estrictos y es común en sistemas bancarios?
 
-[ ] a) REST  [ ] b) GraphQL  [ ] c) SOAP  [ ] d) gRPC
+[ ] a) REST  
+
+[ ] b) GraphQL  
+
+[ ] c) SOAP 
+
+[ ] d) gRPC
 
 **5.** ¿Cuál es la ventaja principal de GraphQL sobre REST?
 
-[ ] a) Usa menos memoria RAM  [ ] b) El cliente pide exactamente los campos que necesita  [ ] c) No requiere HTTP  [ ] d) Es más antiguo y estable
+[ ] a) Usa menos memoria RAM  
+
+[] b) El cliente pide exactamente los campos que necesita  
+
+[ ] c) No requiere HTTP  
+
+[ ] d) Es más antiguo y estable
 
 **6.** El segmento `.text` de un programa se caracteriza por ser:
 
-[ ] a) De solo lectura  [ ] b) Modificable en tiempo de ejecución  [ ] c) Parte del Heap  [ ] d) Volátil solo en ARM
+[ ] a) De solo lectura  
+
+[ ] b) Modificable en tiempo de ejecución  
+
+[ ] c) Parte del Heap  
+
+[ ] d) Volátil solo en ARM
 
 **7.** ¿En qué segmento de memoria se almacena una variable global inicializada?
 
-[ ] a) .bss  [ ] b) .data  [ ] c) Stack  [ ] d) .text
+[ ] a) .bss  
+
+] b) .data  
+
+[ ] c) Stack  
+
+[ ] d) .text
 
 **8.** ¿En qué segmento se almacena una variable global sin inicializar?
 
-[ ] a) .data  [ ] b) .bss  [ ] c) Heap  [ ] d) .text
+[ ] a) .data  
+
+[ ] b) .bss  
+
+[ ] c) Heap  
+
+[ ] d) .text
 
 **9.** La memoria dinámica reservada con `new` en C++ se almacena en:
 
-[ ] a) Stack  [ ] b) .data  [ ] c) Heap  [ ] d) .text
+[ ] a) Stack  
+
+[ ] b) .data  
+
+[ ] c) Heap  
+
+[ ] d) .text
 
 **10.** ¿Qué estructura crece en dirección contraria (hacia direcciones bajas) dentro del espacio de memoria de un programa?
 
-[ ] a) Heap  [ ] b) Stack  [ ] c) .bss  [ ] d) .text
+[ ] a) Heap  
+
+[ ] b) Stack  
+
+[ ] c) .bss  
+
+[ ] d) .text
 
 **11.** En C y C++, ¿quién es responsable de liberar la memoria dinámica manualmente?
 
-[ ] a) El sistema operativo automáticamente  [ ] b) El recolector de basura  [ ] c) El programador  [ ] d) El linker
+[ ] a) El sistema operativo automáticamente 
+
+[ ] b) El recolector de basura  
+
+[ ] c) El programador  
+
+[ ] d) El linker
 
 **12.** ¿Cuál lenguaje maneja la memoria dinámica (heap) de forma automática?
 
-[ ] a) C  [ ] b) C++  [ ] c) Python  [ ] d) Ensamblador
+[ ] a) C  
+
+[ ] b) C++  
+
+[ ] c) Python  
+
+[ ] d) Ensamblador
 
 **13.** ¿Qué arquitectura de CPU se asocia típicamente a mayor eficiencia energética?
 
-[ ] a) x86  [ ] b) ARM  [ ] c) x86-64  [ ] d) CISC clásico
+[ ] a) x86  
+
+[ ] b) ARM  
+
+[ ] c) x86-64  
+
+[ ] d) CISC clásico
 
 **14.** ¿Por qué la migración de x86 a ARM en la nube puede generar ahorros económicos?
 
-[ ] a) ARM tiene más registros  [ ] b) ARM consume menos energía  [ ] c) ARM no necesita RAM  [ ] d) ARM compila más rápido
+[ ] a) ARM tiene más registros  
+
+[ ] b) ARM consume menos energía 
+
+[ ] c) ARM no necesita RAM  
+
+[ ] d) ARM compila más rápido
 
 **15.** ¿Qué operación se traduce internamente `v[4] = 18;` en un vector de enteros?
 
-[ ] a) `*(v + 4)`  [ ] b) `*(v + 4*sizeof(int))`  [ ] c) `*(v - 4)`  [ ] d) `v.get(4)`
+[ ] a) `*(v + 4)`  
+
+[ ] b) `*(v + 4*sizeof(int))` 
+
+[ ] c) `*(v - 4)`  
+
+[ ] d) `v.get(4)`
 
 **16.** Un archivo compilado en x86-64 no puede ejecutarse directamente en ARM porque:
 
-[ ] a) El código fuente se pierde al compilar  [ ] b) El lenguaje máquina generado es específico de la arquitectura  [ ] c) ARM no soporta compilación  [ ] d) El linker lo impide
+[ ] a) El código fuente se pierde al compilar  
+
+[ ] b) El lenguaje máquina generado es específico de la arquitectura  
+
+[ ] c) ARM no soporta compilación  
+
+[ ] d) El linker lo impide
 
 **17.** ¿Qué proceso combina el código objeto (.obj) con las bibliotecas precompiladas para generar el ejecutable?
 
-[ ] a) Fetch  [ ] b) Linker  [ ] c) Heapify  [ ] d) Bubble Up
+[ ] a) Fetch  
+
+[ ] b) Linker 
+
+[ ] c) Heapify  
+
+[ ] d) Bubble Up
 
 **18.** El bytecode de Java (.class) es portable entre arquitecturas porque:
 
-[ ] a) Se ejecuta directamente en el CPU  [ ] b) Corre sobre la JVM  [ ] c) No usa RAM  [ ] d) Es un archivo de texto plano
+[ ] a) Se ejecuta directamente en el CPU  
+
+[ ] b) Corre sobre la JVM  
+
+[ ] c) No usa RAM  
+
+[ ] d) Es un archivo de texto plano
 
 **19.** ¿Cuál es la principal diferencia entre un lenguaje compilado y uno interpretado?
 
-[ ] a) El interpretado no usa RAM  [ ] b) El compilado genera un ejecutable antes de correr; el interpretado traduce en tiempo de ejecución  [ ] c) El compilado siempre es más portable  [ ] d) No existe diferencia real
+[ ] a) El interpretado no usa RAM  
+
+[ ] b) El compilado genera un ejecutable antes de correr; el interpretado traduce en tiempo de ejecución  
+
+[ ] c) El compilado siempre es más portable  
+
+[ ] d) No existe diferencia real
 
 **20.** ¿Qué técnica combina interpretación y compilación para acercarse al rendimiento nativo sin perder portabilidad?
 
-[ ] a) Heapify  [ ] b) JIT (Just-In-Time)  [ ] c) TCO  [ ] d) Linking estático
+[ ] a) Heapify  
+
+[ ] b) JIT (Just-In-Time)  
+
+[ ] c) TCO  
+
+[ ] d) Linking estático
 
 **21.** ¿Qué comando de Git descarga una copia completa de un repositorio remoto a la máquina local?
 
-[ ] a) git pull  [ ] b) git fetch  [ ] c) git clone  [ ] d) git init
+[ ] a) git pull  
+
+[ ] b) git fetch  
+
+[ ] c) git clone  
+
+[ ] d) git init
 
 **22.** ¿Qué operación de Git reescribe el historial dejando una línea recta de commits?
 
-[ ] a) Merge  [ ] b) Rebase  [ ] c) Fetch  [ ] d) Stash
+[ ] a) Merge  
+
+[ ] b) Rebase  
+
+[ ] c) Fetch  
+
+[ ] d) Stash
 
 **23.** ¿Cuál comando permite crear y cambiar a una nueva rama en un solo paso?
 
-[ ] a) git branch  [ ] b) git switch -c <nombre>  [ ] c) git commit -b  [ ] d) git log --graph
+[ ] a) git branch  
+
+[ ] b) git switch -c <nombre>  
+
+[ ] c) git commit -b  
+
+[ ] d) git log --graph
 
 **24.** ¿Qué representa un "commit" en Git?
 
-[ ] a) Una rama nueva  [ ] b) Un snapshot del estado de los archivos en un momento dado  [ ] c) Un archivo de configuración  [ ] d) Una copia del repositorio remoto
+[ ] a) Una rama nueva  
+
+[ ] b) Un snapshot del estado de los archivos en un momento dado  
+
+[ ] c) Un archivo de configuración  
+
+[ ] d) Una copia del repositorio remoto
 
 **25.** ¿Qué comando descarta todos los cambios locales (staged y unstaged) de forma permanente?
 
-[ ] a) git status  [ ] b) git reset --hard  [ ] c) git stash  [ ] d) git diff
+[ ] a) git status  
+
+[ ] b) git reset --hard  
+
+[ ] c) git stash  
+
+[ ] d) git diff
 
 **26.** En un flujo CI/CD, ¿qué se ejecuta automáticamente cada vez que se sube un cambio?
 
-[ ] a) El linker manualmente  [ ] b) Pruebas de unidad y validaciones de calidad  [ ] c) El heapify  [ ] d) La recompilación del kernel
+[ ] a) El linker manualmente  
+
+[ ] b) Pruebas de unidad y validaciones de calidad  
+
+[ ] c) El heapify  
+
+[ ] d) La recompilación del kernel
 
 **27.** ¿Cuál es el punto de partida en Spec-Driven Development?
 
-[ ] a) Una prueba automatizada  [ ] b) Una especificación clara de la intención/comportamiento del sistema  [ ] c) El código ya funcionando  [ ] d) El commit inicial
+[ ] a) Una prueba automatizada  
+
+[ ] b) Una especificación clara de la intención/comportamiento del sistema  
+
+[ ] c) El código ya funcionando  
+
+[ ] d) El commit inicial
 
 **28.** ¿Cuál es el punto de partida en Test-Driven Development (TDD)?
 
-[ ] a) La documentación del usuario final  [ ] b) Una prueba automatizada que aún falla  [ ] c) El diagrama de arquitectura  [ ] d) El archivo de configuración YAML
+[ ] a) La documentación del usuario final  
+
+[ ] b) Una prueba automatizada que aún falla  
+
+[ ] c) El diagrama de arquitectura  
+
+[ ] d) El archivo de configuración YAML
 
 **29.** En el ciclo Red-Green-Refactor, ¿qué ocurre en la fase "Green"?
 
-[ ] a) Se documenta el sistema  [ ] b) Se escribe el código mínimo necesario para pasar la prueba  [ ] c) Se elimina la prueba  [ ] d) Se hace deploy a producción
+[ ] a) Se documenta el sistema  
+
+[ ] b) Se escribe el código mínimo necesario para pasar la prueba  
+
+[ ] c) Se elimina la prueba  
+
+[ ] d) Se hace deploy a producción
 
 **30.** ¿Qué hace la opción "Step Into" (F11) en un debugger?
 
-[ ] a) Salta la función sin entrar en ella  [ ] b) Entra a ejecutar línea por línea dentro de la función llamada  [ ] c) Detiene el debugger  [ ] d) Reinicia el programa
+[ ] a) Salta la función sin entrar en ella  
+
+[ ] b) Entra a ejecutar línea por línea dentro de la función llamada  
+
+[ ] c) Detiene el debugger  
+
+[ ] d) Reinicia el programa
 
 **31.** Un archivo de texto y uno binario se diferencian principalmente en:
 
-[ ] a) El sistema operativo que los crea  [ ] b) Cómo se almacenan los datos en disco  [ ] c) El nombre de la extensión únicamente  [ ] d) Que los binarios no pueden leerse nunca
+[ ] a) El sistema operativo que los crea  
+
+[ ] b) Cómo se almacenan los datos en disco  
+
+[ ] c) El nombre de la extensión únicamente  
+
+[ ] d) Que los binarios no pueden leerse nunca
 
 **32.** ¿Cuántos bits usaba la versión original de ASCII?
 
-[ ] a) 8  [ ] b) 16  [ ] c) 7  [ ] d) 32
+[ ] a) 8  
+
+[ ] b) 16  
+
+[ ] c) 7  
+
+[ ] d) 32
 
 **33.** ¿Qué codificación es compatible hacia atrás con ASCII y es la más usada actualmente en la web?
 
-[ ] a) UTF-16  [ ] b) UTF-32  [ ] c) UTF-8  [ ] d) EBCDIC
+[ ] a) UTF-16  
+
+[ ] b) UTF-32  
+
+[ ] c) UTF-8  
+
+[ ] d) EBCDIC
 
 **34.** ¿Por qué es más eficiente leer un archivo en bloques que carácter por carácter?
 
-[ ] a) Porque reduce la cantidad de operaciones de entrada/salida  [ ] b) Porque cambia la codificación del archivo  [ ] c) Porque convierte el archivo a binario automáticamente  [ ] d) Porque evita usar RAM
+[ ] a) Porque reduce la cantidad de operaciones de entrada/salida  
+
+[ ] b) Porque cambia la codificación del archivo  
+
+[ ] c) Porque convierte el archivo a binario automáticamente  
+
+[ ] d) Porque evita usar RAM
 
 **35.** ¿Qué modo de apertura en Python trunca el archivo si ya existe?
 
-[ ] a) 'r'  [ ] b) 'a'  [ ] c) 'w'  [ ] d) 'r+'
+[ ] a) 'r'  
+
+[ ] b) 'a'  
+
+[ ] c) 'w'  
+
+[ ] d) 'r+'
 
 **36.** ¿Qué módulo de Python se usa comúnmente para serializar objetos a formato binario?
 
-[ ] a) json  [ ] b) pickle  [ ] c) yaml  [ ] d) os
+[ ] a) json  
+
+[ ] b) pickle  
+
+[ ] c) yaml  
+
+[ ] d) os
 
 **37.** ¿Cuál de los siguientes formatos trabaja principalmente por indentación (clave: valor) y es muy legible para humanos?
 
-[ ] a) JSON  [ ] b) XML  [ ] c) YAML  [ ] d) Binario
+[ ] a) JSON  
+
+[ ] b) XML  
+
+[ ] c) YAML  
+
+[ ] d) Binario
 
 **38.** ¿Cuál formato es el más común en APIs REST modernas por su ligereza?
 
-[ ] a) XML  [ ] b) JSON  [ ] c) YAML  [ ] d) CSV binario
+[ ] a) XML  
+
+[ ] b) JSON  
+
+[ ] c) YAML  
+
+[ ] d) CSV binario
 
 **39.** El CPU se comunica directamente con:
 
-[ ] a) El disco duro  [ ] b) La RAM  [ ] c) La red  [ ] d) El SSD
+[ ] a) El disco duro  
+
+[ ] b) La RAM  
+
+[ ] c) La red  
+
+[ ] d) El SSD
 
 **40.** ¿Cuál es la función principal de la caché del CPU?
 
-[ ] a) Guardar el sistema operativo completo  [ ] b) Mantener información cercana al CPU para reducir viajes a RAM  [ ] c) Reemplazar al disco duro  [ ] d) Ejecutar instrucciones lógicas
+[ ] a) Guardar el sistema operativo completo  
+
+[ ] b) Mantener información cercana al CPU para reducir viajes a RAM  
+
+[ ] c) Reemplazar al disco duro  
+
+[ ] d) Ejecutar instrucciones lógicas
 
 **41.** Un TDA (Tipo de Dato Abstracto) se define principalmente por:
 
-[ ] a) Su implementación específica en un lenguaje  [ ] b) Los datos que guarda y las operaciones que permite  [ ] c) El nombre de la clase  [ ] d) La cantidad de memoria RAM disponible
+[ ] a) Su implementación específica en un lenguaje  
+
+[ ] b) Los datos que guarda y las operaciones que permite  
+
+[ ] c) El nombre de la clase  
+
+[ ] d) La cantidad de memoria RAM disponible
 
 **42.** ¿Qué característica de un vector permite acceso en O(1)?
 
-[ ] a) Que use punteros dobles  [ ] b) Que su memoria esté asignada de forma contigua  [ ] c) Que sea dinámico  [ ] d) Que use recursión
+[ ] a) Que use punteros dobles  
+
+[ ] b) Que su memoria esté asignada de forma contigua  
+
+[ ] c) Que sea dinámico  
+
+[ ] d) Que use recursión
 
 **43.** ¿Qué técnica reduce drásticamente el número de copias al redimensionar un vector dinámico?
 
-[ ] a) Reducir el vector a la mitad cada vez  [ ] b) Expansión x2 del tamaño  [ ] c) Usar solo memoria estática  [ ] d) Convertirlo en lista enlazada
+[ ] a) Reducir el vector a la mitad cada vez  
+
+[ ] b) Expansión x2 del tamaño  
+
+[ ] c) Usar solo memoria estática  
+
+[ ] d) Convertirlo en lista enlazada
 
 **44.** ¿Qué operación en un vector dinámico se conoce como "Deep Copy"?
 
-[ ] a) Copiar solo la dirección de memoria  [ ] b) Copiar todos los elementos a un nuevo espacio de memoria  [ ] c) Eliminar el vector  [ ] d) Ordenar el vector
+[ ] a) Copiar solo la dirección de memoria  
+
+[ ] b) Copiar todos los elementos a un nuevo espacio de memoria  
+
+[ ] c) Eliminar el vector  
+
+[ ] d) Ordenar el vector
 
 **45.** ¿Qué estructura NO requiere memoria contigua para almacenar sus elementos?
 
-[ ] a) Vector estático  [ ] b) Vector dinámico  [ ] c) Lista enlazada simple  [ ] d) Arreglo en C
+[ ] a) Vector estático  
+
+[ ] b) Vector dinámico  
+
+[ ] c) Lista enlazada simple  
+
+[ ] d) Arreglo en C
 
 **46.** ¿Cuál es la complejidad de buscar un elemento por posición en una lista enlazada simple?
 
-[ ] a) O(1)  [ ] b) O(n)  [ ] c) O(log n)  [ ] d) O(n²)
+[ ] a) O(1)  
+
+[ ] b) O(n)  
+
+[ ] c) O(log n)  
+
+[ ] d) O(n²)
 
 **47.** Una cola (Queue) sigue el principio:
 
-[ ] a) LIFO  [ ] b) FIFO  [ ] c) Acceso directo  [ ] d) Aleatorio
+[ ] a) LIFO  
+
+[ ] b) FIFO  
+
+[ ] c) Acceso directo  
+
+[ ] d) Aleatorio
 
 **48.** Una pila (Stack) sigue el principio:
 
-[ ] a) FIFO  [ ] b) LIFO  [ ] c) Balanceado  [ ] d) Ninguno de los anteriores
+[ ] a) FIFO  
+
+[ ] b) LIFO  
+
+[ ] c) Balanceado  
+
+[ ] d) Ninguno de los anteriores
 
 **49.** ¿Cuáles son las dos operaciones principales de una pila?
 
-[ ] a) enqueue y dequeue  [ ] b) push y pop  [ ] c) insert y delete  [ ] d) get y set
+[ ] a) enqueue y dequeue  
+
+[ ] b) push y pop  
+
+[ ] c) insert y delete  
+
+[ ] d) get y set
 
 **50.** ¿Cuáles son las dos operaciones principales de una cola?
 
-[ ] a) push y pop  [ ] b) enqueue y dequeue  [ ] c) top y peek  [ ] d) heapify y bubble up
+[ ] a) push y pop  
+
+[ ] b) enqueue y dequeue  
+
+[ ] c) top y peek  
+
+[ ] d) heapify y bubble up
 
 **51.** Si una cola solo mantiene referencia al *front*, insertar al final tiene complejidad:
 
-[ ] a) O(1)  [ ] b) O(log n)  [ ] c) O(n)  [ ] d) O(n²)
+[ ] a) O(1)  
+
+[ ] b) O(log n)  
+
+[ ] c) O(n)  
+
+[ ] d) O(n²)
 
 **52.** ¿Cuál es un caso de uso típico de una pila?
 
-[ ] a) Cola de impresión  [ ] b) Función "Deshacer" (Undo) de un editor  [ ] c) BFS en grafos  [ ] d) Gestión de turnos en un banco
+[ ] a) Cola de impresión  
+
+[ ] b) Función "Deshacer" (Undo) de un editor  
+
+[ ] c) BFS en grafos  
+
+[ ] d) Gestión de turnos en un banco
 
 **53.** ¿Cuál es un caso de uso típico de una cola?
 
-[ ] a) Historial de "atrás" del navegador  [ ] b) Stack de llamadas del CPU  [ ] c) Gestión de procesos en orden de llegada en un sistema operativo  [ ] d) Balanceo de paréntesis
+[ ] a) Historial de "atrás" del navegador  
+
+[ ] b) Stack de llamadas del CPU  
+
+[ ] c) Gestión de procesos en orden de llegada en un sistema operativo  
+
+[ ] d) Balanceo de paréntesis
 
 **54.** ¿Qué información adicional necesita una lista doblemente enlazada respecto a una simple?
 
-[ ] a) Un puntero al elemento raíz  [ ] b) Un puntero `prev` en cada nodo  [ ] c) Un arreglo auxiliar  [ ] d) Un contador global de nodos
+[ ] a) Un puntero al elemento raíz  
+
+[ ] b) Un puntero `prev` en cada nodo  
+
+[ ] c) Un arreglo auxiliar  
+
+[ ] d) Un contador global de nodos
 
 **55.** El "overhead" de una estructura de datos se refiere a:
 
-[ ] a) La cantidad de datos útiles almacenados  [ ] b) La memoria adicional requerida por la estructura interna, además de los datos  [ ] c) El tiempo de compilación  [ ] d) El número de hilos usados
+[ ] a) La cantidad de datos útiles almacenados  
+
+[ ] b) La memoria adicional requerida por la estructura interna, además de los datos  
+
+[ ] c) El tiempo de compilación  
+
+[ ] d) El número de hilos usados
 
 **56.** ¿Por qué implementar una cola con lista doblemente enlazada es ineficiente en memoria?
 
-[ ] a) Porque una cola nunca necesita recorrerse hacia atrás  [ ] b) Porque las colas no permiten punteros  [ ] c) Porque no cabe en RAM  [ ] d) Porque rompe el principio FIFO
+[ ] a) Porque una cola nunca necesita recorrerse hacia atrás  
+
+[ ] b) Porque las colas no permiten punteros  
+
+[ ] c) Porque no cabe en RAM  
+
+[ ] d) Porque rompe el principio FIFO
 
 **57.** En Python, ¿qué estructura de la librería estándar es recomendada para implementar pilas y colas eficientes?
 
-[ ] a) list  [ ] b) tuple  [ ] c) collections.deque  [ ] d) set
+[ ] a) list  
+
+[ ] b) tuple  
+
+[ ] c) collections.deque  
+
+[ ] d) set
 
 **58.** ¿Qué elementos requiere obligatoriamente una función recursiva bien definida?
 
-[ ] a) Un ciclo for  [ ] b) Un caso base y un caso recursivo  [ ] c) Una variable global  [ ] d) Un puntero nulo
+[ ] a) Un ciclo for  
+
+[ ] b) Un caso base y un caso recursivo  
+
+[ ] c) Una variable global  
+
+[ ] d) Un puntero nulo
 
 **59.** ¿Qué registro del CPU almacena la dirección de la siguiente instrucción a ejecutar?
 
-[ ] a) RSP  [ ] b) RIP  [ ] c) ALU  [ ] d) RBX
+[ ] a) RSP  
+
+[ ] b) RIP  
+
+[ ] c) ALU  
+
+[ ] d) RBX
 
 **60.** ¿Qué registro del CPU actúa como puntero al tope de la pila del sistema?
 
-[ ] a) RIP  [ ] b) RSP  [ ] c) EAX  [ ] d) PC lógico
+[ ] a) RIP  
+
+[ ] b) RSP  
+
+[ ] c) EAX  
+
+[ ] d) PC lógico
 
 **61.** Cada llamada a una función recursiva genera en la pila del sistema un:
 
-[ ] a) Heapify  [ ] b) Stack frame  [ ] c) Bytecode  [ ] d) Bubble down
+[ ] a) Heapify  
+
+[ ] b) Stack frame  
+
+[ ] c) Bytecode  
+
+[ ] d) Bubble down
 
 **62.** ¿Qué técnica de recursión permite, ante un "punto muerto", regresar y probar otra alternativa?
 
-[ ] a) Memoización  [ ] b) Backtracking  [ ] c) Heapify  [ ] d) TCO
+[ ] a) Memoización  
+
+[ ] b) Backtracking  
+
+[ ] c) Heapify  
+
+[ ] d) TCO
 
 **63.** ¿Qué ocurre si una función recursiva no tiene un caso base bien definido?
 
-[ ] a) Se optimiza automáticamente  [ ] b) Puede causar un Stack Overflow  [ ] c) El compilador la convierte en iterativa  [ ] d) Se ejecuta en O(1)
+[ ] a) Se optimiza automáticamente  
+
+[ ] b) Puede causar un Stack Overflow  
+
+[ ] c) El compilador la convierte en iterativa  
+
+[ ] d) Se ejecuta en O(1)
 
 **64.** La recursión de cola (tail recursion) se caracteriza porque:
 
-[ ] a) La llamada recursiva es la primera instrucción de la función  [ ] b) La llamada recursiva es la última instrucción, sin operaciones pendientes después  [ ] c) Nunca tiene caso base  [ ] d) Solo existe en Python
+[ ] a) La llamada recursiva es la primera instrucción de la función  
+
+[ ] b) La llamada recursiva es la última instrucción, sin operaciones pendientes después  
+
+[ ] c) Nunca tiene caso base  
+
+[ ] d) Solo existe en Python
 
 **65.** ¿Python implementa optimización de llamadas de cola (TCO) de forma nativa?
 
-[ ] a) Sí, siempre  [ ] b) No  [ ] c) Solo en Python 3.12+  [ ] d) Solo con recursión de árbol
+[ ] a) Sí, siempre  
+
+[ ] b) No  
+
+[ ] c) Solo en Python 3.12+  
+
+[ ] d) Solo con recursión de árbol
 
 **66.** En general, ¿qué se prefiere entre recursión e iteración por rendimiento?
 
-[ ] a) Recursión siempre  [ ] b) Iteración, salvo que el problema sea naturalmente recursivo  [ ] c) Es indiferente  [ ] d) Ninguna de las dos, solo bucles while anidados
+[ ] a) Recursión siempre  
+
+[ ] b) Iteración, salvo que el problema sea naturalmente recursivo  
+
+[ ] c) Es indiferente  
+
+[ ] d) Ninguna de las dos, solo bucles while anidados
 
 **67.** ¿Qué mide principalmente el análisis de complejidad algorítmica (Big-O)?
 
-[ ] a) El tiempo real en segundos  [ ] b) La cantidad de instrucciones que ejecuta el algoritmo según el tamaño de entrada  [ ] c) El consumo de batería  [ ] d) La cantidad de líneas de código
+[ ] a) El tiempo real en segundos  
+
+[ ] b) La cantidad de instrucciones que ejecuta el algoritmo según el tamaño de entrada  
+
+[ ] c) El consumo de batería  
+
+[ ] d) La cantidad de líneas de código
 
 **68.** ¿Qué notación representa la cota superior (peor caso) de un algoritmo?
 
-[ ] a) Big-Omega (Ω)  [ ] b) Big-Theta (Θ)  [ ] c) Big-O (O)  [ ] d) Big-Sigma
+[ ] a) Big-Omega (Ω)  
+
+[ ] b) Big-Theta (Θ)  
+
+[ ] c) Big-O (O)  
+
+[ ] d) Big-Sigma
 
 **69.** ¿Qué notación representa la cota inferior (mejor caso)?
 
-[ ] a) Big-O  [ ] b) Big-Omega (Ω)  [ ] c) Big-Theta  [ ] d) Ninguna
+[ ] a) Big-O  
+
+[ ] b) Big-Omega (Ω)  
+
+[ ] c) Big-Theta  
+
+[ ] d) Ninguna
 
 **70.** Al simplificar `O(3n) + O(5)`, el resultado final es:
 
-[ ] a) O(3n+5)  [ ] b) O(n)  [ ] c) O(15n)  [ ] d) O(1)
+[ ] a) O(3n+5)  
+
+[ ] b) O(n)  
+
+[ ] c) O(15n)  
+
+[ ] d) O(1)
 
 **71.** ¿Qué complejidad tiene una búsqueda binaria sobre un arreglo ordenado?
 
-[ ] a) O(1)  [ ] b) O(n)  [ ] c) O(log n)  [ ] d) O(n²)
+[ ] a) O(1)  
+
+[ ] b) O(n)  
+
+[ ] c) O(log n)  
+
+[ ] d) O(n²)
 
 **72.** ¿Qué complejidad tiene un algoritmo con dos ciclos `for` anidados que recorren completamente n elementos cada uno?
 
-[ ] a) O(n)  [ ] b) O(log n)  [ ] c) O(n²)  [ ] d) O(n log n)
+[ ] a) O(n)  
+
+[ ] b) O(log n)  
+
+[ ] c) O(n²)  
+
+[ ] d) O(n log n)
 
 **73.** La técnica de memoización mejora principalmente:
 
-[ ] a) El uso de disco duro  [ ] b) El tiempo de ejecución, a cambio de más memoria  [ ] c) La legibilidad del código  [ ] d) La portabilidad entre arquitecturas
+[ ] a) El uso de disco duro  
+
+[ ] b) El tiempo de ejecución, a cambio de más memoria  
+
+[ ] c) La legibilidad del código  
+
+[ ] d) La portabilidad entre arquitecturas
 
 **74.** ¿Qué complejidad es típica del cálculo de Fibonacci recursivo sin memoización?
 
-[ ] a) O(n)  [ ] b) O(log n)  [ ] c) O(2ⁿ)  [ ] d) O(n log n)
+[ ] a) O(n)  
+
+[ ] b) O(log n)  
+
+[ ] c) O(2ⁿ)  
+
+[ ] d) O(n log n)
 
 **75.** ¿Qué complejidad es típica de un algoritmo de fuerza bruta que prueba todas las permutaciones posibles?
 
-[ ] a) O(n²)  [ ] b) O(n!)  [ ] c) O(n log n)  [ ] d) O(log n)
+[ ] a) O(n²)  
+
+[ ] b) O(n!)  
+
+[ ] c) O(n log n)  
+
+[ ] d) O(log n)
 
 **76.** En un Binary Heap Máximo, la relación que se cumple es:
 
-[ ] a) El padre es siempre menor que sus hijos  [ ] b) El padre es siempre mayor que sus hijos  [ ] c) Los hermanos deben estar ordenados entre sí  [ ] d) Es idéntico a un BST
+[ ] a) El padre es siempre menor que sus hijos  
+
+[ ] b) El padre es siempre mayor que sus hijos  
+
+[ ] c) Los hermanos deben estar ordenados entre sí  
+
+[ ] d) Es idéntico a un BST
 
 **77.** Un Binary Heap se diferencia de un Árbol Binario de Búsqueda (BST) porque:
 
-[ ] a) El heap no garantiza orden entre hermanos ni subárboles, solo padre-hijo  [ ] b) El heap siempre está balanceado alfabéticamente  [ ] c) El BST no puede representarse en vector  [ ] d) No hay diferencia, son lo mismo
+[ ] a) El heap no garantiza orden entre hermanos ni subárboles, solo padre-hijo  
+
+[ ] b) El heap siempre está balanceado alfabéticamente  
+
+[ ] c) El BST no puede representarse en vector  
+
+[ ] d) No hay diferencia, son lo mismo
 
 **78.** Dado un nodo en la posición `i` de un heap representado como vector, ¿cuál es la fórmula correcta para encontrar a su padre?
 
-[ ] a) i/2  [ ] b) (i-1)/2  [ ] c) (i*2)+1  [ ] d) (i*2)+2
+[ ] a) i/2  
+
+[ ] b) (i-1)/2  
+
+[ ] c) (i*2)+1  
+
+[ ] d) (i*2)+2
 
 **79.** ¿Cuál es la fórmula para encontrar el hijo izquierdo de un nodo en posición `i`?
 
-[ ] a) (i-1)/2  [ ] b) (i*2)+1  [ ] c) (i*2)+2  [ ] d) i/2
+[ ] a) (i-1)/2  
+
+[ ] b) (i*2)+1  
+
+[ ] c) (i*2)+2  
+
+[ ] d) i/2
 
 **80.** ¿Qué operación se usa para restaurar la propiedad de heap después de insertar un nuevo elemento al final?
 
-[ ] a) Heapify completo  [ ] b) Bubble Up  [ ] c) Merge  [ ] d) Partición
+[ ] a) Heapify completo  
+
+[ ] b) Bubble Up  
+
+[ ] c) Merge  
+
+[ ] d) Partición
 
 **81.** ¿Cuál es la complejidad de insertar un elemento en un heap?
 
-[ ] a) O(1)  [ ] b) O(n)  [ ] c) O(log n)  [ ] d) O(n²)
+[ ] a) O(1)  
+
+[ ] b) O(n)  
+
+[ ] c) O(log n)  
+
+[ ] d) O(n²)
 
 **82.** ¿Cuál es la complejidad de obtener el elemento máximo en un Heap Máximo?
 
-[ ] a) O(n)  [ ] b) O(log n)  [ ] c) O(1)  [ ] d) O(n log n)
+[ ] a) O(n)  
+
+[ ] b) O(log n)  
+
+[ ] c) O(1)  
+
+[ ] d) O(n log n)
 
 **83.** ¿Cuál es la complejidad total del proceso de Heapify sobre un vector completo?
 
-[ ] a) O(n log n)  [ ] b) O(n)  [ ] c) O(log n)  [ ] d) O(n²)
+[ ] a) O(n log n)  
+
+[ ] b) O(n)  
+
+[ ] c) O(log n)  
+
+[ ] d) O(n²)
 
 **84.** Una cola de prioridad implementada con Heap, comparada con una implementada con lista enlazada, ofrece:
 
-[ ] a) Peor rendimiento siempre  [ ] b) Mejor rendimiento en insertar/extraer (O(log n) vs O(n))  [ ] c) El mismo rendimiento exacto  [ ] d) Solo mejora el espacio, no el tiempo
+[ ] a) Peor rendimiento siempre  
+
+[ ] b) Mejor rendimiento en insertar/extraer (O(log n) vs O(n))  
+
+[ ] c) El mismo rendimiento exacto  
+
+[ ] d) Solo mejora el espacio, no el tiempo
 
 **85.** ¿Qué algoritmo clásico de caminos más cortos en grafos usa una cola de prioridad basada en heap?
 
-[ ] a) Bubble Sort  [ ] b) Dijkstra  [ ] c) Counting Sort  [ ] d) TDD
+[ ] a) Bubble Sort  
+
+[ ] b) Dijkstra  
+
+[ ] c) Counting Sort  
+
+[ ] d) TDD
 
 **86.** En Python, el módulo `heapq` implementa internamente:
 
-[ ] a) Un Heap Máximo  [ ] b) Un Heap Mínimo  [ ] c) Una lista doblemente enlazada  [ ] d) Un árbol AVL
+[ ] a) Un Heap Máximo  
+
+[ ] b) Un Heap Mínimo  
+
+[ ] c) Una lista doblemente enlazada  
+
+[ ] d) Un árbol AVL
 
 **87.** ¿Qué algoritmo de ordenamiento compara siempre elementos adyacentes e intercambia si están en el orden incorrecto?
 
-[ ] a) Selección  [ ] b) Burbuja  [ ] c) Quicksort  [ ] d) Counting Sort
+[ ] a) Selección  
+
+[ ] b) Burbuja  
+
+[ ] c) Quicksort  
+
+[ ] d) Counting Sort
 
 **88.** ¿Cuál es la cantidad exacta de comparaciones que realiza Selection Sort, sin importar el orden inicial de los datos?
 
-[ ] a) n-1  [ ] b) (n²-n)/2  [ ] c) n log n  [ ] d) 2n
+[ ] a) n-1  
+
+[ ] b) (n²-n)/2  
+
+[ ] c) n log n  
+
+[ ] d) 2n
 
 **89.** ¿Cuál es la cantidad de intercambios en el peor caso de Selection Sort?
 
-[ ] a) (n²-n)/2  [ ] b) n-1  [ ] c) 0  [ ] d) n²
+[ ] a) (n²-n)/2  
+
+[ ] b) n-1  
+
+[ ] c) 0  
+
+[ ] d) n²
 
 **90.** ¿Cuál es la cantidad de comparaciones en el mejor caso de Insertion Sort (arreglo ya ordenado)?
 
-[ ] a) (n²-n)/2  [ ] b) n-1  [ ] c) n²  [ ] d) log n
+[ ] a) (n²-n)/2  
+
+[ ] b) n-1  
+
+[ ] c) n²  
+
+[ ] d) log n
 
 **91.** ¿Cuál es la cantidad de intercambios/desplazamientos en el peor caso de Insertion Sort?
 
-[ ] a) n-1  [ ] b) (n²-n)/2  [ ] c) 0  [ ] d) n log n
+[ ] a) n-1  
+
+[ ] b) (n²-n)/2  
+
+[ ] c) 0  
+
+[ ] d) n log n
 
 **92.** Si se tienen limitaciones fuertes de escritura en disco (cada escritura es costosa), ¿qué algoritmo de los dos siguientes conviene más: Selección o Inserción?
 
-[ ] a) Inserción, porque tiene menos comparaciones siempre  [ ] b) Selección, porque en el peor caso solo hace n-1 intercambios  [ ] c) Ambos son iguales en intercambios  [ ] d) Ninguno, se debe usar Bubble Sort
+[ ] a) Inserción, porque tiene menos comparaciones siempre  
+
+[ ] b) Selección, porque en el peor caso solo hace n-1 intercambios  
+
+[ ] c) Ambos son iguales en intercambios  
+
+[ ] d) Ninguno, se debe usar Bubble Sort
 
 **93.** ¿Cuál es la principal diferencia entre Selection Sort e Insertion Sort en cuanto a intercambios?
 
-[ ] a) Selección hace como máximo un intercambio por pasada; Inserción puede desplazar varios elementos por pasada  [ ] b) Ambos hacen la misma cantidad de intercambios  [ ] c) Inserción nunca hace intercambios  [ ] d) Selección siempre es O(n)
+[ ] a) Selección hace como máximo un intercambio por pasada; Inserción puede desplazar varios elementos por pasada  
+
+[ ] b) Ambos hacen la misma cantidad de intercambios  
+
+[ ] c) Inserción nunca hace intercambios  
+
+[ ] d) Selección siempre es O(n)
 
 **94.** ¿Qué estrategia de selección de pivote en Quicksort agrega una complejidad O(n) adicional al algoritmo?
 
-[ ] a) Elegir el primer elemento  [ ] b) Elegir la mediana  [ ] c) Elegir un elemento aleatorio  [ ] d) Elegir el último elemento
+[ ] a) Elegir el primer elemento  
+
+[ ] b) Elegir la mediana  
+
+[ ] c) Elegir un elemento aleatorio  
+
+[ ] d) Elegir el último elemento
 
 **95.** ¿Qué estrategia de selección de pivote en Quicksort suele tener un rendimiento similar a usar la mediana, sin el costo adicional de calcularla?
 
-[ ] a) Elegir siempre el primer elemento  [ ] b) Elegir un elemento aleatorio (random)  [ ] c) Elegir siempre el último elemento  [ ] d) No elegir pivote
+[ ] a) Elegir siempre el primer elemento  
+
+[ ] b) Elegir un elemento aleatorio (random)  
+
+[ ] c) Elegir siempre el último elemento  
+
+[ ] d) No elegir pivote
 
 **96.** ¿En qué caso Quicksort alcanza su peor caso O(n²)?
 
-[ ] a) Cuando el arreglo ya está desordenado aleatoriamente  [ ] b) Cuando el pivote elegido resulta ser siempre el menor o el mayor elemento (particiones desbalanceadas)  [ ] c) Cuando se usa recursión de cola  [ ] d) Cuando el arreglo tiene números repetidos
+[ ] a) Cuando el arreglo ya está desordenado aleatoriamente  
+
+[ ] b) Cuando el pivote elegido resulta ser siempre el menor o el mayor elemento (particiones desbalanceadas)  
+
+[ ] c) Cuando se usa recursión de cola  
+
+[ ] d) Cuando el arreglo tiene números repetidos
 
 **97.** ¿Qué algoritmo de ordenamiento garantiza O(n log n) en todos los casos pero requiere O(n) de espacio adicional?
 
-[ ] a) Quicksort  [ ] b) Heapsort  [ ] c) Mergesort  [ ] d) Selection Sort
+[ ] a) Quicksort  
+
+[ ] b) Heapsort  
+
+[ ] c) Mergesort  
+
+[ ] d) Selection Sort
 
 **98.** ¿Qué algoritmo de ordenamiento garantiza O(n log n) en todos los casos Y usa espacio O(1) (in-place), sacrificando estabilidad?
 
-[ ] a) Mergesort  [ ] b) Heapsort  [ ] c) Bubble Sort  [ ] d) Counting Sort
+[ ] a) Mergesort  
+
+[ ] b) Heapsort  
+
+[ ] c) Bubble Sort  
+
+[ ] d) Counting Sort
 
 **99.** ¿Qué algoritmo de ordenamiento NO realiza comparaciones directas entre elementos, sino que cuenta ocurrencias dentro de un rango conocido?
 
-[ ] a) Quicksort  [ ] b) Mergesort  [ ] c) Counting Sort  [ ] d) Heapsort
+[ ] a) Quicksort  
+
+[ ] b) Mergesort  
+
+[ ] c) Counting Sort  
+
+[ ] d) Heapsort
 
 **100.** Radix Sort depende de que su subrutina interna (Counting Sort) sea estable porque:
 
-[ ] a) Sin estabilidad no compila  [ ] b) El orden logrado en pasadas de dígitos menos significativos debe preservarse al ordenar por dígitos más significativos  [ ] c) Solo así soporta números negativos  [ ] d) La estabilidad reduce el uso de memoria
+[ ] a) Sin estabilidad no compila  
+
+[ ] b) El orden logrado en pasadas de dígitos menos significativos debe preservarse al ordenar por dígitos más significativos  
+
+[ ] c) Solo así soporta números negativos  
+
+[ ] d) La estabilidad reduce el uso de memoria
 
 ---
 
@@ -1018,35 +1618,46 @@ def algoritmo_x(arr):
     return pasos_comparacion, pasos_intercambio
 
 datos = [9, 3, 7, 1, 5]
-
 ```
 
 **1.** ¿Qué algoritmo de ordenamiento implementa la función `algoritmo_x`?
 
-[ ] a) Ordenamiento por Inserción (Insertion Sort)
-[ ] b) Ordenamiento por Selección (Selection Sort)
-[ ] c) Ordenamiento Burbuja (Bubble Sort)
+[ ] a) Ordenamiento por Inserción (Insertion Sort)  
+
+[ ] b) Ordenamiento por Selección (Selection Sort)  
+
+[ ] c) Ordenamiento Burbuja (Bubble Sort)  
+
 [ ] d) Quicksort
 
 **2.** Si ejecutamos la función pasando `datos = [9, 3, 7, 1, 5]`, ¿cuál es el valor retornado para `pasos_comparacion`?
 
-[ ] a) 5
-[ ] b) 8
-[ ] c) 10
+[ ] a) 5  
+
+[ ] b) 8  
+
+[ ] c) 10  
+
 [ ] d) 20
 
 **3.** Para el mismo arreglo `datos = [9, 3, 7, 1, 5]`, ¿cuántos intercambios reales de memoria (`pasos_intercambio`) se efectúan?
 
-[ ] a) 2
-[ ] b) 3
-[ ] c) 4
+[ ] a) 2  
+
+[ ] b) 3  
+
+[ ] c) 4  
+
 [ ] d) 10
 
 **4.** En el peor de los casos para un arreglo de tamaño $n$, ¿cuál es el número máximo posible de intercambios que realiza esta implementación?
 
-[ ] a) $n - 1$
-[ ] b) $(n^2 - n) / 2$
-[ ] c) $n \log n$
+[ ] a) $n - 1$  
+
+[ ] b) $(n^2 - n) / 2$  
+
+[ ] c) $n \log n$  
+
 [ ] d) $n^2$
 
 ---
@@ -1063,35 +1674,46 @@ def rastrear(n):
         return rastrear(n // 2) + "X"
     else:
         return "Y" + rastrear(n - 1)
-
 ```
 
 **5.** Al ejecutar `rastrear(6)`, ¿cuántas llamadas a la función `rastrear` se apilan en total en el Call Stack antes de comenzar a retornar?
 
-[ ] a) 3
-[ ] b) 4
-[ ] c) 5
+[ ] a) 3  
+
+[ ] b) 4  
+
+[ ] c) 5  
+
 [ ] d) 6
 
 **6.** ¿Cuál es el valor exacto que retorna la llamada `rastrear(6)`?
 
-[ ] a) YXX
-[ ] b) YXX
-[ ] c) YX
+[ ] a) YXX  
+
+[ ] b) YXX  
+
+[ ] c) YX  
+
 [ ] d) YXXY
 
 **7.** ¿Qué registro interno del CPU modifica su valor con cada instrucción ejecutada dentro de una llamada del Call Stack?
 
-[ ] a) RSP (Stack Pointer)
-[ ] b) RIP (Instruction Pointer)
-[ ] c) ALU
+[ ] a) RSP (Stack Pointer)  
+
+[ ] b) RIP (Instruction Pointer)  
+
+[ ] c) ALU  
+
 [ ] d) BSS
 
 **8.** Si se remueve el caso base `if n <= 0: return ""`, ¿qué error se produciría en tiempo de ejecución?
 
-[ ] a) Memory Leak en el Heap
-[ ] b) Out of Memory por saturación de BSS
-[ ] c) Stack Overflow (RecursionError en Python)
+[ ] a) Memory Leak en el Heap  
+
+[ ] b) Out of Memory por saturación de BSS  
+
+[ ] c) Stack Overflow (RecursionError en Python)  
+
 [ ] d) Error de compilación en Linker
 
 ---
@@ -1104,30 +1726,42 @@ Dado un Binary Heap Máximo representado en memoria sobre un arreglo como:
 
 **9.** De acuerdo con las reglas de cálculo en arreglos, ¿cuál es el hijo derecho del nodo ubicado en el índice 1 (valor 80)?
 
-[ ] a) 75
-[ ] b) 60
-[ ] c) 50
+[ ] a) 75  
+
+[ ] b) 60  
+
+[ ] c) 50  
+
 [ ] d) 70
 
 **10.** Si insertamos el valor `100` al final de la estructura e invocamos `bubble_up`, ¿cuál será el arreglo final resultante?
 
-[ ] a) `[100, 95, 75, 80, 50, 70, 40, 60]`
-[ ] b) `[100, 80, 75, 95, 50, 70, 40, 60]`
-[ ] c) `[95, 80, 75, 60, 50, 70, 40, 100]`
+[ ] a) `[100, 95, 75, 80, 50, 70, 40, 60]`  
+
+[ ] b) `[100, 80, 75, 95, 50, 70, 40, 60]`  
+
+[ ] c) `[95, 80, 75, 60, 50, 70, 40, 100]`  
+
 [ ] d) `[100, 95, 80, 75, 60, 50, 70, 40]`
 
 **11.** Tras la inserción de `100` y el reordenamiento, ¿cuál es el nuevo padre del elemento que contiene el valor `80`?
 
-[ ] a) 100
-[ ] b) 95
-[ ] c) 75
+[ ] a) 100  
+
+[ ] b) 95  
+
+[ ] c) 75  
+
 [ ] d) 60
 
 **12.** ¿Cuál es la complejidad temporal de la operación de eliminación de la raíz en este heap restaurado?
 
-[ ] a) $O(1)$
-[ ] b) $O(\log n)$
-[ ] c) $O(n)$
+[ ] a) $O(1)$  
+
+[ ] b) $O(\log n)$  
+
+[ ] c) $O(n)$  
+
 [ ] d) $O(n \log n)$
 
 ---
@@ -1136,79 +1770,112 @@ Dado un Binary Heap Máximo representado en memoria sobre un arreglo como:
 
 **13.** Un programa compilado para una arquitectura x86-64 no puede ejecutarse directamente en un procesador ARM debido a que:
 
-[ ] a) ARM no posee memoria RAM.
-[ ] b) El código máquina/instrucciones del binario son específicos de la arquitectura de la CPU.
-[ ] c) La memoria virtual en ARM solo procesa texto plano.
+[ ] a) ARM no posee memoria RAM.  
+
+[ ] b) El código máquina/instrucciones del binario son específicos de la arquitectura de la CPU.  
+
+[ ] c) La memoria virtual en ARM solo procesa texto plano.  
+
 [ ] d) x86-64 no utiliza registros de segmento.
 
 **14.** En el espacio de direcciones de un programa en memoria RAM, ¿en qué segmento se ubican las variables globales declaradas que NO poseen valor asignado inicialmente?
 
-[ ] a) `.text`
-[ ] b) `.data`
-[ ] c) `.bss`
+[ ] a) `.text`  
+
+[ ] b) `.data`  
+
+[ ] c) `.bss`  
+
 [ ] d) Heap
 
 **15.** ¿Qué ventaja principal ofrece la arquitectura de Microservicios frente a un Monolito?
 
-[ ] a) Elimina la necesidad de utilizar bases de datos.
-[ ] b) Cada servicio se puede escalar e implementar de forma independiente mediante contenedores.
-[ ] c) Garantiza que el código no requiera compilación.
+[ ] a) Elimina la necesidad de utilizar bases de datos.  
+
+[ ] b) Cada servicio se puede escalar e implementar de forma independiente mediante contenedores.  
+
+[ ] c) Garantiza que el código no requiera compilación.  
+
 [ ] d) Reduce el uso de memoria a nivel de ALU.
 
 **16.** En un lenguaje compilado como C++, ¿cuál es la función del Linker?
 
-[ ] a) Traducir el código a bytecode de Java.
-[ ] b) Unir los archivos objeto (`.obj`) con las bibliotecas necesarias para generar el ejecutable.
-[ ] c) Ejecutar el código línea por línea controlando el temporizador.
+[ ] a) Traducir el código a bytecode de Java.  
+
+[ ] b) Unir los archivos objeto (`.obj`) con las bibliotecas necesarias para generar el ejecutable.  
+
+[ ] c) Ejecutar el código línea por línea controlando el temporizador.  
+
 [ ] d) Asignar memoria estática en la pila del sistema.
 
 **17.** ¿Por qué los programas en Java son considerados portables entre distintas arquitecturas físicas?
 
-[ ] a) Porque se compilan a un formato binario x86 directo.
-[ ] b) Porque generan Bytecode que se ejecuta sobre una Máquina Virtual (JVM).
-[ ] c) Porque no hacen uso del segmento Heap.
+[ ] a) Porque se compilan a un formato binario x86 directo.  
+
+[ ] b) Porque generan Bytecode que se ejecuta sobre una Máquina Virtual (JVM).  
+
+[ ] c) Porque no hacen uso del segmento Heap.  
+
 [ ] d) Porque convierten automáticamente sus instrucciones a texto UTF-8.
 
 **18.** ¿Qué diferencia principal existe entre los comandos `git merge` y `git rebase` al integrar cambios de ramas?
 
-[ ] a) `merge` borra el historial de commits y `rebase` no.
-[ ] b) `merge` conserva el historial de ambas ramas mediante un commit de unión; `rebase` reescribe el historial en una línea recta.
-[ ] c) `rebase` solo funciona con servidores remotos.
+[ ] a) `merge` borra el historial de commits y `rebase` no.  
+
+[ ] b) `merge` conserva el historial de ambas ramas mediante un commit de unión; `rebase` reescribe el historial en una línea recta.  
+
+[ ] c) `rebase` solo funciona con servidores remotos.  
+
 [ ] d) No hay diferencia técnica.
 
 **19.** En la metodología TDD (Test-Driven Development), ¿cuál es la secuencia correcta del ciclo de desarrollo?
 
-[ ] a) Refactor -> Green -> Red
-[ ] b) Green -> Red -> Refactor
-[ ] c) Red -> Green -> Refactor
+[ ] a) Refactor -> Green -> Red  
+
+[ ] b) Green -> Red -> Refactor  
+
+[ ] c) Red -> Green -> Refactor  
+
 [ ] d) Code -> Test -> Deploy
 
 **20.** Al utilizar un debugger, ¿cuál es el comportamiento de la opción **Step Over** (F10)?
 
-[ ] a) Entra en la función invocada para ejecutarla paso a paso.
-[ ] b) Ejecuta la línea actual y, si hay una llamada a función, la completa sin entrar a su detalle interno.
-[ ] c) Detiene la ejecución de todo el programa inmediatamente.
+[ ] a) Entra en la función invocada para ejecutarla paso a paso.  
+
+[ ] b) Ejecuta la línea actual y, si hay una llamada a función, la completa sin entrar a su detalle interno.  
+
+[ ] c) Detiene la ejecución de todo el programa inmediatamente.  
+
 [ ] d) Remueve todos los breakpoints activos.
 
 **21.** ¿Por qué el almacenamiento de datos en archivos binarios suele ser más eficiente que en archivos de texto plano?
 
-[ ] a) Los archivos binarios evitan hacer uso del bus de datos.
-[ ] b) Almacenan los valores en su representación nativa en bytes sin necesidad de conversiones a caracteres.
-[ ] c) Los archivos de texto consumen $O(n^2)$ de CPU.
+[ ] a) Los archivos binarios evitan hacer uso del bus de datos.  
+
+[ ] b) Almacenan los valores en su representación nativa en bytes sin necesidad de conversiones a caracteres.  
+
+[ ] c) Los archivos de texto consumen $O(n^2)$ de CPU.  
+
 [ ] d) Los archivos binarios solo pueden guardarse en memoria Caché.
 
 **22.** ¿Qué característica hace al formato UTF-8 el más utilizado actualmente para la codificación de caracteres en la web?
 
-[ ] a) Es una codificación fija de 32 bits por carácter.
-[ ] b) Es de tamaño variable y compatible hacia atrás con el estándar ASCII (1 byte para los primeros 128 caracteres).
-[ ] c) Ocupa menos espacio que el formato binario puro en todos los casos.
+[ ] a) Es una codificación fija de 32 bits por carácter.  
+
+[ ] b) Es de tamaño variable y compatible hacia atrás con el estándar ASCII (1 byte para los primeros 128 caracteres).  
+
+[ ] c) Ocupa menos espacio que el formato binario puro en todos los casos.  
+
 [ ] d) No requiere decodificación en la memoria RAM.
 
 **23.** ¿Qué modo de apertura en Python se debe utilizar para agregar información al final de un archivo existente sin borrar su contenido anterior?
 
-[ ] a) `'r+'`
-[ ] b) `'w'`
-[ ] c) `'a'`
+[ ] a) `'r+'`  
+
+[ ] b) `'w'`  
+
+[ ] c) `'a'`  
+
 [ ] d) `'wb+'`
 
 **24.** Analice la función en Python sobre listas enlazadas:
@@ -1219,42 +1886,56 @@ def misterio(head):
     while actual and actual.next:
         actual.next = actual.next.next
         actual = actual.next
-
 ```
 
 ¿Qué efecto produce la ejecución de esta función sobre la lista recibida?
 
-[ ] a) Invierte la lista enlazada por completo.
-[ ] b) Elimina los nodos en posiciones pares de la lista (asumiendo base 1 para el segundo nodo).
-[ ] c) Duplica los nodos de la lista.
+[ ] a) Invierte la lista enlazada por completo.  
+
+[ ] b) Elimina los nodos en posiciones pares de la lista (asumiendo base 1 para el segundo nodo).  
+
+[ ] c) Duplica los nodos de la lista.  
+
 [ ] d) Transforma la lista en un ciclo.
 
 **25.** ¿Cuál es la ventaja de la estrategia de "Expansión x2" (duplicar la capacidad) en arreglos dinámicos al superar el límite inicial?
 
-[ ] a) Garantiza que el arreglo sea in-place.
-[ ] b) Amortiza el costo de las inserciones a $O(1)$ en promedio.
-[ ] c) Evita el uso del segmento Heap.
+[ ] a) Garantiza que el arreglo sea in-place.  
+
+[ ] b) Amortiza el costo de las inserciones a $O(1)$ en promedio.  
+
+[ ] c) Evita el uso del segmento Heap.  
+
 [ ] d) Permite realizar búsquedas binarias en listas desordenadas.
 
 **26.** ¿Qué estructura de datos es la ideal para implementar la funcionalidad "Deshacer" (Undo) en un procesador de textos?
 
-[ ] a) Queue (Cola)
-[ ] b) Binary Heap
-[ ] c) Stack (Pila)
+[ ] a) Queue (Cola)  
+
+[ ] b) Binary Heap  
+
+[ ] c) Stack (Pila)  
+
 [ ] d) Lista Doblemente Enlazada sin tope
 
 **27.** ¿Cuál es la complejidad temporal de la operación de inserción (`enqueue`) en una Cola respaldada por una lista enlazada simple con punteros a `front` y `rear`?
 
-[ ] a) $O(1)$
-[ ] b) $O(\log n)$
-[ ] c) $O(n)$
+[ ] a) $O(1)$  
+
+[ ] b) $O(\log n)$  
+
+[ ] c) $O(n)$  
+
 [ ] d) $O(n^2)$
 
 **28.** ¿Qué diferencia fundamental existe entre una Lista Doblemente Enlazada y una Lista Simple?
 
-[ ] a) La doble permite acceso aleatorio en $O(1)$.
-[ ] b) Cada nodo en la lista doble posee una referencia adicional (`prev`) al nodo anterior.
-[ ] c) La lista simple consume más memoria por nodo.
+[ ] a) La doble permite acceso aleatorio en $O(1)$.  
+
+[ ] b) Cada nodo en la lista doble posee una referencia adicional (`prev`) al nodo anterior.  
+
+[ ] c) La lista simple consume más memoria por nodo.  
+
 [ ] d) La lista simple no requiere memoria del Heap.
 
 **29.** Considere el siguiente código sobre un TDA Pila:
@@ -1267,119 +1948,166 @@ s.push(30)
 x = s.pop()
 s.push(40)
 y = s.pop()
-
 ```
 
 ¿Cuáles son los valores guardados en `x` y `y` respectivamente?
 
-[ ] a) $x = 10, y = 20$
-[ ] b) $x = 30, y = 40$
-[ ] c) $x = 30, y = 20$
+[ ] a) $x = 10, y = 20$  
+
+[ ] b) $x = 30, y = 40$  
+
+[ ] c) $x = 30, y = 20$  
+
 [ ] d) $x = 10, y = 40$
 
 **30.** Un "Overhead" de memoria elevado en una estructura de datos se refiere a:
 
-[ ] a) La cantidad excesiva de tiempo de CPU requerida.
-[ ] b) El consumo de memoria adicional asignado a metadatos o punteros de control y no a los datos reales.
-[ ] c) La fuga de memoria (Memory Leak) producida por variables globales.
+[ ] a) La cantidad excesiva de tiempo de CPU requerida.  
+
+[ ] b) El consumo de memoria adicional asignado a metadatos o punteros de control y no a los datos reales.  
+
+[ ] c) La fuga de memoria (Memory Leak) producida por variables globales.  
+
 [ ] d) La saturación de la memoria Caché L1.
 
 **31.** En el análisis de eficiencia algorítmica, la cota superior Big-O ($O$) representa:
 
-[ ] a) El rendimiento esperado en el mejor de los casos.
-[ ] b) El límite del comportamiento del algoritmo en el peor de los casos.
-[ ] c) La exactitud matemática garantizada en casos promedio.
+[ ] a) El rendimiento esperado en el mejor de los casos.  
+
+[ ] b) El límite del comportamiento del algoritmo en el peor de los casos.  
+
+[ ] c) La exactitud matemática garantizada en casos promedio.  
+
 [ ] d) La memoria consumida durante la compilación.
 
 **32.** Si un algoritmo realiza $3n^2 + 15n + 100$ operaciones fundamentales, ¿cuál es su complejidad en notación Big-O simplificada?
 
-[ ] a) $O(3n^2)$
-[ ] b) $O(n)$
-[ ] c) $O(n^2)$
+[ ] a) $O(3n^2)$  
+
+[ ] b) $O(n)$  
+
+[ ] c) $O(n^2)$  
+
 [ ] d) $O(100)$
 
 **33.** ¿Cuál de las siguientes complejidades algorítmicas presenta la tasa de crecimiento de operaciones más rápida (menos eficiente) ante entradas grandes?
 
-[ ] a) $O(n \log n)$
-[ ] b) $O(n^2)$
-[ ] c) $O(2^n)$
+[ ] a) $O(n \log n)$  
+
+[ ] b) $O(n^2)$  
+
+[ ] c) $O(2^n)$  
+
 [ ] d) $O(n!)$
 
 **34.** La técnica de Memoización permite optimizar algoritmos recursivos al:
 
-[ ] a) Reemplazar la pila por un vector estático.
-[ ] b) Almacenar en una estructura auxiliar los resultados de subproblemas precalculados para evitar recomputaciones.
-[ ] c) Eliminar los casos base.
+[ ] a) Reemplazar la pila por un vector estático.  
+
+[ ] b) Almacenar en una estructura auxiliar los resultados de subproblemas precalculados para evitar recomputaciones.  
+
+[ ] c) Eliminar los casos base.  
+
 [ ] d) Convertir el código a binario.
 
 **35.** ¿Por qué el algoritmo Fibonacci recursivo sin memoización presenta una complejidad de $O(2^n)$?
 
-[ ] a) Porque realiza un ciclo `for` anidado sobre $n$.
-[ ] b) Porque cada llamada genera un árbol de dos llamadas recursivas redundantes que crece exponencialmente.
-[ ] c) Debido a la falta de punteros en la memoria.
+[ ] a) Porque realiza un ciclo `for` anidado sobre $n$.  
+
+[ ] b) Porque cada llamada genera un árbol de dos llamadas recursivas redundantes que crece exponencialmente.  
+
+[ ] c) Debido a la falta de punteros en la memoria.  
+
 [ ] d) Por el costo de ordenamiento del arreglo.
 
 **36.** En un Binary Heap Mínimo, ¿dónde se encuentra siempre ubicado el elemento con el valor menor de toda la estructura?
 
-[ ] a) En la última hoja del nivel más profundo.
-[ ] b) En la posición raíz del árbol (índice 0 en la representación vectorial).
-[ ] c) En el hijo derecho de la raíz.
+[ ] a) En la última hoja del nivel más profundo.  
+
+[ ] b) En la posición raíz del árbol (índice 0 en la representación vectorial).  
+
+[ ] c) En el hijo derecho de la raíz.  
+
 [ ] d) Se requiere una búsqueda lineal $O(n)$ para ubicarlo.
 
 **37.** ¿Qué algoritmo de ordenamiento es In-Place, garantiza una complejidad temporal de $O(n \log n)$ en el peor de los casos y utiliza un heap internamente?
 
-[ ] a) Mergesort
-[ ] b) Quicksort
-[ ] c) Heapsort
+[ ] a) Mergesort  
+
+[ ] b) Quicksort  
+
+[ ] c) Heapsort  
+
 [ ] d) Counting Sort
 
 **38.** ¿Cuál es el inconveniente principal de utilizar Mergesort frente a otros algoritmos como Heapsort sobre arreglos grandes en memoria RAM?
 
-[ ] a) Su complejidad en el peor caso se degrada a $O(n^2)$.
-[ ] b) Requiere memoria adicional $O(n)$ para crear arreglos auxiliares de mezcla.
-[ ] c) No es un algoritmo estable.
+[ ] a) Su complejidad en el peor caso se degrada a $O(n^2)$.  
+
+[ ] b) Requiere memoria adicional $O(n)$ para crear arreglos auxiliares de mezcla.  
+
+[ ] c) No es un algoritmo estable.  
+
 [ ] d) Modifica los punteros de la pila del CPU.
 
 **39.** En el algoritmo Quicksort, la elección de un mal pivote (como el menor o mayor elemento de un arreglo ya ordenado) provoca que su tiempo de ejecución se degrade a:
 
-[ ] a) $O(n \log n)$
-[ ] b) $O(n)$
-[ ] c) $O(n^2)$
+[ ] a) $O(n \log n)$  
+
+[ ] b) $O(n)$  
+
+[ ] c) $O(n^2)$  
+
 [ ] d) $O(\log n)$
 
 **40.** ¿Qué algoritmo de ordenamiento NO se basa en la comparación de elementos y puede ordenar enteros en un rango acotado $k$ con tiempo $O(n + k)$?
 
-[ ] a) Insertion Sort
-[ ] b) Counting Sort
-[ ] c) Selection Sort
+[ ] a) Insertion Sort  
+
+[ ] b) Counting Sort  
+
+[ ] c) Selection Sort  
+
 [ ] d) Quicksort
 
 **41.** ¿Qué significa que un algoritmo de ordenamiento sea "Estable"?
 
-[ ] a) Que consume siempre exactamente $1$ MB de memoria RAM.
-[ ] b) Que conserva el orden relativo original de los elementos que poseen claves o valores iguales.
-[ ] c) Que su mejor caso y peor caso tienen la misma representación Big-O.
+[ ] a) Que consume siempre exactamente $1$ MB de memoria RAM.  
+
+[ ] b) Que conserva el orden relativo original de los elementos que poseen claves o valores iguales.  
+
+[ ] c) Que su mejor caso y peor caso tienen la misma representación Big-O.  
+
 [ ] d) Que no utiliza recursión en su implementación.
 
 **42.** ¿Cuál es la cantidad total de comparaciones que realiza Selection Sort sobre un arreglo de 5 elementos, independientemente de si está ordenado o no?
 
-[ ] a) 4
-[ ] b) 10
-[ ] c) 25
+[ ] a) 4  
+
+[ ] b) 10  
+
+[ ] c) 25  
+
 [ ] d) 2
 
 **43.** Para ordenar un arreglo de tamaño $n$ que ya se encuentra completamente ordenado desde el inicio, ¿cuál algoritmo realiza únicamente $n - 1$ comparaciones?
 
-[ ] a) Selection Sort
-[ ] b) Insertion Sort (con detección adaptativa)
-[ ] c) Quicksort tradicional
+[ ] a) Selection Sort  
+
+[ ] b) Insertion Sort (con detección adaptativa)  
+
+[ ] c) Quicksort tradicional  
+
 [ ] d) Heapsort
 
 **44.** En aplicaciones embebidas o memorias Flash donde el costo de **escritura** es muy elevado y destructivo, ¿qué algoritmo de ordenamiento básico resulta más conveniente por limitar las escrituras a máximo $n - 1$?
 
-[ ] a) Insertion Sort
-[ ] b) Bubble Sort
-[ ] c) Selection Sort
+[ ] a) Insertion Sort  
+
+[ ] b) Bubble Sort  
+
+[ ] c) Selection Sort  
+
 [ ] d) Mergesort
 
 **45.** Considere el siguiente bloque de código en Python:
@@ -1389,51 +2117,68 @@ def procesar(n):
     if n <= 1:
         return 1
     return n * procesar(n - 1)
-
 ```
 
 ¿Cuál es el contenido del Stack Frame activo cuando la función alcanza su caso base con `procesar(4)`?
 
-[ ] a) Guarda únicamente el valor devuelto 24.
-[ ] b) Contiene los marcos apilados para $n=4, n=3, n=2$ y $n=1$, cada uno con sus datos y dirección de retorno pendientes.
-[ ] c) Libera toda la memoria acumulada previa.
+[ ] a) Guarda únicamente el valor devuelto 24.  
+
+[ ] b) Contiene los marcos apilados para $n=4, n=3, n=2$ y $n=1$, cada uno con sus datos y dirección de retorno pendientes.  
+
+[ ] c) Libera toda la memoria acumulada previa.  
+
 [ ] d) Pasa la memoria al segmento `.data`.
 
 **46.** ¿Qué es la Optimización de Llamada de Cola (Tail Call Optimization - TCO)?
 
-[ ] a) Una rutina para eliminar variables globales de la BSS.
-[ ] b) La capacidad de un compilador de reutilizar el mismo frame de pila cuando la llamada recursiva es la última operación de la función.
-[ ] c) La conversión de un heap en un árbol binario balanceado.
+[ ] a) Una rutina para eliminar variables globales de la BSS.  
+
+[ ] b) La capacidad de un compilador de reutilizar el mismo frame de pila cuando la llamada recursiva es la última operación de la función.  
+
+[ ] c) La conversión de un heap en un árbol binario balanceado.  
+
 [ ] d) La técnica de serializar archivos `.json` a binario.
 
 **47.** ¿Por qué la optimización TCO no previene el desbordamiento de pila por defecto en scripts estándar de Python?
 
-[ ] a) Porque Python no utiliza el segmento Stack.
-[ ] b) Porque el intérprete de Python no implementa TCO de forma nativa para preservar el trazado completo del Call Stack.
-[ ] c) Porque Python convierte todo a C++ automáticamente.
+[ ] a) Porque Python no utiliza el segmento Stack.  
+
+[ ] b) Porque el intérprete de Python no implementa TCO de forma nativa para preservar el trazado completo del Call Stack.  
+
+[ ] c) Porque Python convierte todo a C++ automáticamente.  
+
 [ ] d) Porque en Python las funciones no admiten retorno.
 
 **48.** ¿Qué diferencia existe entre un TDA (Tipo de Dato Abstracto) y su Estructura de Datos asociada?
 
-[ ] a) El TDA define el "qué hace" (interfaz u operaciones) y la estructura define el "cómo se implementa" en memoria.
-[ ] b) El TDA se compila y la estructura se interpreta.
-[ ] c) No existe diferencia técnica alguna.
+[ ] a) El TDA define el "qué hace" (interfaz u operaciones) y la estructura define el "cómo se implementa" en memoria.  
+
+[ ] b) El TDA se compila y la estructura se interpreta.  
+
+[ ] c) No existe diferencia técnica alguna.  
+
 [ ] d) El TDA solo sirve para archivos de texto.
 
 **49.** Considere la expresión en C/C++: `int *ptr = new int(50);`
 
 ¿Dónde reside la variable `ptr` y dónde reside el dato de valor `50` respectivamente?
 
-[ ] a) Ambos residen en el Heap.
-[ ] b) Ambos residen en el Stack.
-[ ] c) `ptr` reside en el Stack y la memoria apuntada con valor `50` reside en el Heap.
+[ ] a) Ambos residen en el Heap.  
+
+[ ] b) Ambos residen en el Stack.  
+
+[ ] c) `ptr` reside en el Stack y la memoria apuntada con valor `50` reside en el Heap.  
+
 [ ] d) `ptr` reside en `.text` y `50` en `.bss`.
 
 **50.** ¿Qué tipo de arquitectura de CPU es predominante en dispositivos móviles debido a su menor consumo energético y diseño RISC?
 
-[ ] a) x86
-[ ] b) x86-64
-[ ] c) ARM
+[ ] a) x86  
+
+[ ] b) x86-64  
+
+[ ] c) ARM  
+
 [ ] d) SPARC
 
 ---
@@ -1454,35 +2199,46 @@ def particion(arr, bajo, alto):
     return i + 1
 
 datos = [28, 12, 19, 35, 15]
-
 ```
 
 **51.** ¿A qué algoritmo de ordenamiento pertenece el esquema de particionado implementado en el código (esquema de Lomuto)?
 
-[ ] a) Mergesort
-[ ] b) Quicksort
-[ ] c) Heapsort
+[ ] a) Mergesort  
+
+[ ] b) Quicksort  
+
+[ ] c) Heapsort  
+
 [ ] d) Radix Sort
 
 **52.** Al ejecutar `particion(datos, 0, 4)`, ¿cuál es el valor seleccionado como pivote?
 
-[ ] a) 28
-[ ] b) 19
-[ ] c) 15
+[ ] a) 28  
+
+[ ] b) 19  
+
+[ ] c) 15  
+
 [ ] d) 35
 
 **53.** ¿Cuál es el arreglo `datos` resultante inmediatamente después de culminar la ejecución de `particion(datos, 0, 4)`?
 
-[ ] a) `[12, 15, 19, 35, 28]`
-[ ] b) `[12, 15, 19, 28, 35]`
-[ ] c) `[12, 19, 15, 35, 28]`
+[ ] a) `[12, 15, 19, 35, 28]`  
+
+[ ] b) `[12, 15, 19, 28, 35]`  
+
+[ ] c) `[12, 19, 15, 35, 28]`  
+
 [ ] d) `[15, 12, 19, 35, 28]`
 
 **54.** ¿Qué índice retorna la función `particion` para la lista analizada?
 
-[ ] a) 0
-[ ] b) 1
-[ ] c) 2
+[ ] a) 0  
+
+[ ] b) 1  
+
+[ ] c) 2  
+
 [ ] d) 4
 
 ---
@@ -1493,30 +2249,42 @@ Se requiere diseñar un sistema de atención prioritaria para una sala de emerge
 
 **55.** ¿Qué TDA es el más adecuado para gestionar el orden de atención de los pacientes?
 
-[ ] a) Pila (Stack)
-[ ] b) Cola FIFO Estándar
-[ ] c) Cola de Prioridad (Priority Queue)
+[ ] a) Pila (Stack)  
+
+[ ] b) Cola FIFO Estándar  
+
+[ ] c) Cola de Prioridad (Priority Queue)  
+
 [ ] d) Arreglo Circular
 
 **56.** ¿Qué estructura de datos subyacente ofrece la mejor eficiencia temporal $O(\log n)$ para la inserción de nuevos pacientes y extracción del más grave?
 
-[ ] a) Lista Simplemente Enlazada no ordenada
-[ ] b) Binary Heap
-[ ] c) Arreglo dinámico ordenado
+[ ] a) Lista Simplemente Enlazada no ordenada  
+
+[ ] b) Binary Heap  
+
+[ ] c) Arreglo dinámico ordenado  
+
 [ ] d) Matriz bidimensional
 
 **57.** Si ingresan pacientes con las siguientes prioridades en orden: `4, 8, 2, 9`, ¿cuál es la prioridad del primer paciente atendido bajo un comportamiento de Heap Máximo?
 
-[ ] a) 2
-[ ] b) 4
-[ ] c) 8
+[ ] a) 2  
+
+[ ] b) 4  
+
+[ ] c) 8  
+
 [ ] d) 9
 
 **58.** Si implementáramos esta estructura sobre una lista enlazada simple no ordenada, ¿cuál sería la complejidad temporal de la extracción del paciente con mayor prioridad?
 
-[ ] a) $O(1)$
-[ ] b) $O(\log n)$
-[ ] c) $O(n)$
+[ ] a) $O(1)$  
+
+[ ] b) $O(\log n)$  
+
+[ ] c) $O(n)$  
+
 [ ] d) $O(n^2)$
 
 ---
@@ -1525,65 +2293,92 @@ Se requiere diseñar un sistema de atención prioritaria para una sala de emerge
 
 **59.** El comando `git clone <URL>` realiza la siguiente acción:
 
-[ ] a) Crea una rama vacía en la nube.
-[ ] b) Copia un repositorio remoto completo, incluyendo historial y ramas, a la máquina local.
-[ ] c) Fusiona los archivos del directorio actual con el servidor.
+[ ] a) Crea una rama vacía en la nube.  
+
+[ ] b) Copia un repositorio remoto completo, incluyendo historial y ramas, a la máquina local.  
+
+[ ] c) Fusiona los archivos del directorio actual con el servidor.  
+
 [ ] d) Borra el directorio `.git`.
 
 **60.** ¿Qué ocurre cuando ejecutamos `git stash` en nuestro entorno local?
 
-[ ] a) Se envían los cambios al servidor remoto.
-[ ] b) Se guardan temporalmente los cambios no confirmados en un área de almacenamiento temporal para dejar el directorio de trabajo limpio.
-[ ] c) Se elimina la rama actual.
+[ ] a) Se envían los cambios al servidor remoto.  
+
+[ ] b) Se guardan temporalmente los cambios no confirmados en un área de almacenamiento temporal para dejar el directorio de trabajo limpio.  
+
+[ ] c) Se elimina la rama actual.  
+
 [ ] d) Se ejecuta una suite de pruebas de unidad.
 
 **61.** ¿Qué función cumple la tabla de símbolos generada por un compilador?
 
-[ ] a) Mantiene el registro de los breakpoints activos.
-[ ] b) Almacena la relación entre los nombres de variables, sus tipos, alcances y direcciones de memoria correspondientes.
-[ ] c) Traduce archivos `.json` a formato XML.
+[ ] a) Mantiene el registro de los breakpoints activos.  
+
+[ ] b) Almacena la relación entre los nombres de variables, sus tipos, alcances y direcciones de memoria correspondientes.  
+
+[ ] c) Traduce archivos `.json` a formato XML.  
+
 [ ] d) Mide el tiempo en milisegundos del ciclo Fetch.
 
 **62.** Un archivo con extensión `.yaml` se utiliza principalmente para:
 
-[ ] a) Código ejecutable de alto rendimiento.
-[ ] b) Archivos de configuración estructurados mediante sangría/indentación.
-[ ] c) Almacenamiento binario comprimido.
+[ ] a) Código ejecutable de alto rendimiento.  
+
+[ ] b) Archivos de configuración estructurados mediante sangría/indentación.  
+
+[ ] c) Almacenamiento binario comprimido.  
+
 [ ] d) Hojas de estilo de bases de datos.
 
 **63.** ¿Cuál es la representación en número de bytes requerida por la codificación ASCII estándar original?
 
-[ ] a) 7 bits (almacenados usualmente en 1 byte)
-[ ] b) 4 bytes
-[ ] c) 16 bits
+[ ] a) 7 bits (almacenados usualmente en 1 byte)  
+
+[ ] b) 4 bytes  
+
+[ ] c) 16 bits  
+
 [ ] d) 64 bits
 
 **64.** ¿Qué módulo en Python permite convertir cualquier objeto estructurado en memoria RAM a un flujo de bytes binarios?
 
-[ ] a) `json`
-[ ] b) `pickle`
-[ ] c) `sys`
+[ ] a) `json`  
+
+[ ] b) `pickle`  
+
+[ ] c) `sys`  
+
 [ ] d) `math`
 
 **65.** ¿Cuál es el orden de velocidad de acceso a los datos, del más rápido al más lento?
 
-[ ] a) Disco SSD -> RAM -> Registros de CPU -> Caché L1
-[ ] b) Registros de CPU -> Caché L1 -> RAM -> Disco SSD
-[ ] c) RAM -> Caché L1 -> Registros de CPU -> Disco SSD
+[ ] a) Disco SSD -> RAM -> Registros de CPU -> Caché L1  
+
+[ ] b) Registros de CPU -> Caché L1 -> RAM -> Disco SSD  
+
+[ ] c) RAM -> Caché L1 -> Registros de CPU -> Disco SSD  
+
 [ ] d) Registros de CPU -> RAM -> Caché L1 -> Disco SSD
 
 **66.** En un arreglo estático de C++, ¿cuál es la fórmula de dirección utilizada internamente para resolver el acceso a `arr[i]`?
 
-[ ] a) `Direccion_Base + i`
-[ ] b) `Direccion_Base + (i * sizeof(TipoDato))`
-[ ] c) `Direccion_Base / i`
+[ ] a) `Direccion_Base + i`  
+
+[ ] b) `Direccion_Base + (i * sizeof(TipoDato))`  
+
+[ ] c) `Direccion_Base / i`  
+
 [ ] d) `*(Direccion_Base) + i`
 
 **67.** La diferencia fundamental entre un algoritmo In-Place y uno Out-of-Place es:
 
-[ ] a) El algoritmo In-Place requiere memoria adicional de orden $O(1)$, mientras que Out-of-Place requiere memoria auxiliar proporcional a la entrada.
-[ ] b) In-Place solo funciona sobre vectores estáticos.
-[ ] c) Out-of-Place no utiliza procesador.
+[ ] a) El algoritmo In-Place requiere memoria adicional de orden $O(1)$, mientras que Out-of-Place requiere memoria auxiliar proporcional a la entrada.  
+
+[ ] b) In-Place solo funciona sobre vectores estáticos.  
+
+[ ] c) Out-of-Place no utiliza procesador.  
+
 [ ] d) In-Place es exclusivo de lenguajes interpretados.
 
 **68.** Analice el siguiente bloque de código:
@@ -1594,42 +2389,56 @@ def funcion_a(n):
         j = 1
         while j < n:
             j = j * 2
-
 ```
 
 ¿Cuál es la complejidad algorítmica Big-O de la función anterior?
 
-[ ] a) $O(n)$
-[ ] b) $O(n^2)$
-[ ] c) $O(n \log n)$
+[ ] a) $O(n)$  
+
+[ ] b) $O(n^2)$  
+
+[ ] c) $O(n \log n)$  
+
 [ ] d) $O(\log n)$
 
 **69.** ¿Cuál es la complejidad temporal de acceder al último elemento ingresado en un TDA Pila (Stack) de $n$ elementos?
 
-[ ] a) $O(1)$
-[ ] b) $O(n)$
-[ ] c) $O(\log n)$
+[ ] a) $O(1)$  
+
+[ ] b) $O(n)$  
+
+[ ] c) $O(\log n)$  
+
 [ ] d) $O(n^2)$
 
 **70.** ¿Qué estructura se utiliza internamente para gestionar el recorrido en anchura (BFS) sobre un árbol o grafo?
 
-[ ] a) Stack
-[ ] b) Queue (Cola)
-[ ] c) Vector estático sin punteros
+[ ] a) Stack  
+
+[ ] b) Queue (Cola)  
+
+[ ] c) Vector estático sin punteros  
+
 [ ] d) BSS
 
 **71.** ¿Qué estructura se utiliza internamente para gestionar el recorrido en profundidad (DFS) de manera iterativa?
 
-[ ] a) Queue
-[ ] b) Stack (Pila)
-[ ] c) Heap Mínimo
+[ ] a) Queue  
+
+[ ] b) Stack (Pila)  
+
+[ ] c) Heap Mínimo  
+
 [ ] d) Archivo de texto plano
 
 **72.** En el algoritmo Radix Sort, ¿por qué es indispensable que el método de ordenamiento auxiliar utilizado para cada dígito sea ESTABLE?
 
-[ ] a) Para reducir la memoria del Heap a $O(1)$.
-[ ] b) Para preservar el ordenamiento ya logrado en los dígitos menos significativos en las pasadas previas.
-[ ] c) Porque si no es estable se produce un Stack Overflow.
+[ ] a) Para reducir la memoria del Heap a $O(1)$.  
+
+[ ] b) Para preservar el ordenamiento ya logrado en los dígitos menos significativos en las pasadas previas.  
+
+[ ] c) Porque si no es estable se produce un Stack Overflow.  
+
 [ ] d) Para evitar convertir números a texto.
 
 **73.** Considere la función sobre arreglos:
@@ -1637,63 +2446,86 @@ def funcion_a(n):
 ```python
 def swap_test(arr):
     arr[0], arr[-1] = arr[-1], arr[0]
-
 ```
 
 ¿Cuál es la complejidad en espacio auxiliar consumida por la función `swap_test`?
 
-[ ] a) $O(n)$
-[ ] b) $O(1)$
-[ ] c) $O(n^2)$
+[ ] a) $O(n)$  
+
+[ ] b) $O(1)$  
+
+[ ] c) $O(n^2)$  
+
 [ ] d) $O(\log n)$
 
 **74.** Un algoritmo con complejidad $O(\log n)$ se caracteriza porque:
 
-[ ] a) Duplica el número de operaciones cada vez que la entrada crece en 1.
-[ ] b) Reduce el tamaño del problema a resolver a una fracción (usualmente la mitad) en cada paso.
-[ ] c) Realiza un recorrido secuencial sobre todos los elementos.
+[ ] a) Duplica el número de operaciones cada vez que la entrada crece en 1.  
+
+[ ] b) Reduce el tamaño del problema a resolver a una fracción (usualmente la mitad) en cada paso.  
+
+[ ] c) Realiza un recorrido secuencial sobre todos los elementos.  
+
 [ ] d) Consume toda la memoria RAM disponible.
 
 **75.** En un Binary Heap representado en un arreglo, para un nodo ubicado en el índice `i = 5`, ¿cuál es el índice de su nodo Padre?
 
-[ ] a) 2
-[ ] b) 1
-[ ] c) 3
+[ ] a) 2  
+
+[ ] b) 1  
+
+[ ] c) 3  
+
 [ ] d) 0
 
 **76.** Para la misma posición `i = 5`, ¿cuál es el índice de su Hijo Izquierdo?
 
-[ ] a) 10
-[ ] b) 11
-[ ] c) 12
+[ ] a) 10  
+
+[ ] b) 11  
+
+[ ] c) 12  
+
 [ ] d) 6
 
 **77.** ¿Qué algoritmo de ordenamiento por comparación garantiza un rendimiento de $O(n \log n)$ en el PEOR caso y es además ESTABLE?
 
-[ ] a) Quicksort
-[ ] b) Mergesort
-[ ] c) Heapsort
+[ ] a) Quicksort  
+
+[ ] b) Mergesort  
+
+[ ] c) Heapsort  
+
 [ ] d) Selection Sort
 
 **78.** ¿Cuál es la cota inferior estricta ($\Omega$) de comparaciones para cualquier algoritmo de ordenamiento basado en comparación de elementos?
 
-[ ] a) $\Omega(n)$
-[ ] b) $\Omega(n \log n)$
-[ ] c) $\Omega(n^2)$
+[ ] a) $\Omega(n)$  
+
+[ ] b) $\Omega(n \log n)$  
+
+[ ] c) $\Omega(n^2)$  
+
 [ ] d) $\Omega(1)$
 
 **79.** Un desarrollador requiere procesar una lista de 10 millones de registros de personas, ordenándolos por su edad (un número entero entre 0 y 120 años). ¿Cuál algoritmo ofrece el mejor rendimiento temporal absoluto en este escenario?
 
-[ ] a) Quicksort
-[ ] b) Counting Sort
-[ ] c) Insertion Sort
+[ ] a) Quicksort  
+
+[ ] b) Counting Sort  
+
+[ ] c) Insertion Sort  
+
 [ ] d) Mergesort
 
 **80.** ¿Qué valor retorna la función `len()` aplicada sobre una pila implementada con nodos enlazados?
 
-[ ] a) Depende del tamaño de la variable `.text`.
-[ ] b) Retorna el contador de nodos en $O(1)$ si se mantiene una variable de control, o en $O(n)$ si se recorren los nodos.
-[ ] c) Siempre realiza una lectura de disco $O(n^2)$.
+[ ] a) Depende del tamaño de la variable `.text`.  
+
+[ ] b) Retorna el contador de nodos en $O(1)$ si se mantiene una variable de control, o en $O(n)$ si se recorren los nodos.  
+
+[ ] c) Siempre realiza una lectura de disco $O(n^2)$.  
+
 [ ] d) No se puede calcular.
 
 **81.** Analice la función de ordenamiento:
@@ -1707,70 +2539,96 @@ def ordenar_demo(arr):
             arr[j + 1] = arr[j]
             j -= 1
         arr[j + 1] = clave
-
 ```
 
 ¿Qué algoritmo representa el código anterior?
 
-[ ] a) Selection Sort
-[ ] b) Insertion Sort
-[ ] c) Bubble Sort
+[ ] a) Selection Sort  
+
+[ ] b) Insertion Sort  
+
+[ ] c) Bubble Sort  
+
 [ ] d) Counting Sort
 
 **82.** ¿Cuál es la complejidad temporal de `ordenar_demo` si el arreglo de entrada ya se encuentra completamente en orden inverso?
 
-[ ] a) $O(n)$
-[ ] b) $O(n \log n)$
-[ ] c) $O(n^2)$
+[ ] a) $O(n)$  
+
+[ ] b) $O(n \log n)$  
+
+[ ] c) $O(n^2)$  
+
 [ ] d) $O(1)$
 
 **83.** ¿Cuál es la razón principal por la cual Quicksort suele ser en la práctica más rápido que Mergesort en arreglos de memoria RAM, a pesar de compartir complejidad promedio $O(n \log n)$?
 
-[ ] a) Quicksort no usa comparaciones.
-[ ] b) Posee una excelente localidad de referencia y menor costo de asignación de memoria (in-place sobre datos).
-[ ] c) Quicksort nunca cae en casos desbalanceados.
+[ ] a) Quicksort no usa comparaciones.  
+
+[ ] b) Posee una excelente localidad de referencia y menor costo de asignación de memoria (in-place sobre datos).  
+
+[ ] c) Quicksort nunca cae en casos desbalanceados.  
+
 [ ] d) Mergesort no funciona en CPU de 64 bits.
 
 **84.** En un entorno de CI/CD, la fase de "Build" o construcción incluye la instrucción de:
 
-[ ] a) Compilar el código, resolver dependencias y empaquetar ejecutables/artefactos.
-[ ] b) Desinstalar el sistema operativo.
-[ ] c) Limpiar manualmente la BSS.
+[ ] a) Compilar el código, resolver dependencias y empaquetar ejecutables/artefactos.  
+
+[ ] b) Desinstalar el sistema operativo.  
+
+[ ] c) Limpiar manualmente la BSS.  
+
 [ ] d) Escribir las especificaciones en lenguaje natural.
 
 **85.** ¿Qué ocurre en el Stack de un programa durante un "Stack Overflow"?
 
-[ ] a) Se llena la memoria del BSS de ceros.
-[ ] b) La pila supera el límite de memoria asignado por el sistema operativo al acumular demasiados stack frames sin liberar.
-[ ] c) El disco duro detiene la lectura.
+[ ] a) Se llena la memoria del BSS de ceros.  
+
+[ ] b) La pila supera el límite de memoria asignado por el sistema operativo al acumular demasiados stack frames sin liberar.  
+
+[ ] c) El disco duro detiene la lectura.  
+
 [ ] d) Se borran los punteros globales.
 
 **86.** La estrategia "Divide y Vencerás" (Divide and Conquer) consiste en:
 
-[ ] a) Probar todas las soluciones posibles mediante ciclos anidados.
-[ ] b) Dividir un problema en subproblemas más pequeños del mismo tipo, resolverlos recursivamente y combinar sus soluciones.
-[ ] c) Usar únicamente estructuras de memoria contigua.
+[ ] a) Probar todas las soluciones posibles mediante ciclos anidados.  
+
+[ ] b) Dividir un problema en subproblemas más pequeños del mismo tipo, resolverlos recursivamente y combinar sus soluciones.  
+
+[ ] c) Usar únicamente estructuras de memoria contigua.  
+
 [ ] d) Escribir las pruebas antes que el código.
 
 **87.** En Python, ¿qué estructura de la biblioteca estándar ofrece operaciones de inserción y eliminación eficientes $O(1)$ en ambos extremos?
 
-[ ] a) `list`
-[ ] b) `tuple`
-[ ] c) `collections.deque`
+[ ] a) `list`  
+
+[ ] b) `tuple`  
+
+[ ] c) `collections.deque`  
+
 [ ] d) `set`
 
 **88.** ¿Cuál es el espacio de memoria auxiliar utilizado por el algoritmo Heapsort durante el proceso de ordenamiento?
 
-[ ] a) $O(n)$
-[ ] b) $O(1)$
-[ ] c) $O(n \log n)$
+[ ] a) $O(n)$  
+
+[ ] b) $O(1)$  
+
+[ ] c) $O(n \log n)$  
+
 [ ] d) $O(\log n)$
 
 **89.** Si un vector estático en C++ se declara como `float datos[100];` y la dirección base es `0x1000`, ¿cuál es la dirección de memoria de `datos[2]` si un `float` ocupa 4 bytes?
 
-[ ] a) `0x1002`
-[ ] b) `0x1004`
-[ ] c) `0x1008`
+[ ] a) `0x1002`  
+
+[ ] b) `0x1004`  
+
+[ ] c) `0x1008`  
+
 [ ] d) `0x1016`
 
 **90.** ¿Qué valor tiene la variable `c` tras ejecutar la recursión `misterio_num(3)`?
@@ -1780,82 +2638,114 @@ def misterio_num(n):
     if n == 0:
         return 0
     return n + misterio_num(n - 1)
-
 ```
 
-[ ] a) 3
-[ ] b) 6
-[ ] c) 9
+[ ] a) 3  
+
+[ ] b) 6  
+
+[ ] c) 9  
+
 [ ] d) 0
 
 **91.** En el desarrollo asistido con especificaciones (Spec-Driven Development), la fuente de verdad principal del sistema es:
 
-[ ] a) El archivo ejecutable compilado.
-[ ] b) El documento formal de especificaciones de comportamiento e intenciones.
-[ ] c) La tabla de símbolos del sistema operativo.
+[ ] a) El archivo ejecutable compilado.  
+
+[ ] b) El documento formal de especificaciones de comportamiento e intenciones.  
+
+[ ] c) La tabla de símbolos del sistema operativo.  
+
 [ ] d) El archivo de log del debugger.
 
 **92.** ¿Cuál es la ventaja de la memoria Caché L1 integrada en la CPU frente a la memoria RAM primaria?
 
-[ ] a) Posee una capacidad de almacenamiento de varios Terabytes.
-[ ] b) Posee una velocidad de acceso infinitamente superior al estar en el mismo chip de la CPU, reduciendo la latencia de bus.
-[ ] c) Es de tipo no volátil.
+[ ] a) Posee una capacidad de almacenamiento de varios Terabytes.  
+
+[ ] b) Posee una velocidad de acceso infinitamente superior al estar en el mismo chip de la CPU, reduciendo la latencia de bus.  
+
+[ ] c) Es de tipo no volátil.  
+
 [ ] d) Reemplaza al segmento `.text`.
 
 **93.** Un archivo codificado en JSON presenta la siguiente ventaja estructural principal sobre XML:
 
-[ ] a) Requiere compilación.
-[ ] b) Es más compacto, fácil de parsear por navegadores/APIs y libre de etiquetas de cierre pesadas.
-[ ] c) Garantiza ordenamiento en $O(1)$.
+[ ] a) Requiere compilación.  
+
+[ ] b) Es más compacto, fácil de parsear por navegadores/APIs y libre de etiquetas de cierre pesadas.  
+
+[ ] c) Garantiza ordenamiento en $O(1)$.  
+
 [ ] d) Soporta datos binarios no serializados.
 
 **94.** ¿Cuál es la complejidad temporal de reconstruir completamente un arreglo desordenado en un Heap válido utilizando el algoritmo de **Heapify** (Floyd's algorithm)?
 
-[ ] a) $O(n \log n)$
-[ ] b) $O(n)$
-[ ] c) $O(n^2)$
+[ ] a) $O(n \log n)$  
+
+[ ] b) $O(n)$  
+
+[ ] c) $O(n^2)$  
+
 [ ] d) $O(\log n)$
 
 **95.** El algoritmo de ordenamiento por Inserción (Insertion Sort) funciona de manera idéntica a:
 
-[ ] a) Organizar fichas en un tablero de ajedrez.
-[ ] b) Ordenar cartas en la mano insertando cada una en su lugar correspondiente entre las ya ordenadas.
-[ ] c) Buscar la hoja más profunda de un árbol binario.
+[ ] a) Organizar fichas en un tablero de ajedrez.  
+
+[ ] b) Ordenar cartas en la mano insertando cada una en su lugar correspondiente entre las ya ordenadas.  
+
+[ ] c) Buscar la hoja más profunda de un árbol binario.  
+
 [ ] d) Intercambiar elementos de los extremos hacia el centro.
 
 **96.** ¿Qué comando de Git permite deshacer todos los cambios locales no confirmados y restaurar el espacio de trabajo al último commit de manera destructiva?
 
-[ ] a) `git status`
-[ ] b) `git reset --hard HEAD`
-[ ] c) `git log --oneline`
+[ ] a) `git status`  
+
+[ ] b) `git reset --hard HEAD`  
+
+[ ] c) `git log --oneline`  
+
 [ ] d) `git checkout -b`
 
 **97.** En un programa donde se realizan múltiples operaciones de inserción al inicio de una secuencia de datos, ¿qué estructura ofrece mejor complejidad temporal?
 
-[ ] a) Vector estático
-[ ] b) Lista Enlazada Simple
-[ ] c) Arreglo dinámico sin expansión
+[ ] a) Vector estático  
+
+[ ] b) Lista Enlazada Simple  
+
+[ ] c) Arreglo dinámico sin expansión  
+
 [ ] d) Matriz estática
 
 **98.** ¿Cuál es el papel del registro RSP (Stack Pointer) en la gestión de funciones?
 
-[ ] a) Guardar el código máquina.
-[ ] b) Apuntar a la dirección actual del tope del Stack de llamadas.
-[ ] c) Realizar sumas en la ALU.
+[ ] a) Guardar el código máquina.  
+
+[ ] b) Apuntar a la dirección actual del tope del Stack de llamadas.  
+
+[ ] c) Realizar sumas en la ALU.  
+
 [ ] d) Leer bloques desde el disco SSD.
 
 **99.** ¿Cuál es la cota ajustada ($\Theta$) de complejidad para el algoritmo Mergesort en su **MEJOR** caso?
 
-[ ] a) $\Theta(n)$
-[ ] b) $\Theta(n \log n)$
-[ ] c) $\Theta(1)$
+[ ] a) $\Theta(n)$  
+
+[ ] b) $\Theta(n \log n)$  
+
+[ ] c) $\Theta(1)$  
+
 [ ] d) $\Theta(n^2)$
 
 **100.** En la implementación de una Cola de Prioridad basada en Heap, la extracción del elemento con mayor prioridad requiere un proceso de:
 
-[ ] a) Intercambiar la raíz con el último elemento, eliminar la última posición y aplicar `bubble_down` (o `heapify`) desde la raíz.
-[ ] b) Recorrer todo el arreglo linealmente.
-[ ] c) Invertir los punteros de la lista.
+[ ] a) Intercambiar la raíz con el último elemento, eliminar la última posición y aplicar `bubble_down` (o `heapify`) desde la raíz.  
+
+[ ] b) Recorrer todo el arreglo linealmente.  
+
+[ ] c) Invertir los punteros de la lista.  
+
 [ ] d) Duplicar la capacidad del vector.
 
 ---
