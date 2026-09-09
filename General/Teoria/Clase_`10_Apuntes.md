@@ -1,4 +1,4 @@
-# CRIPTA — Notas del Proyecto (Estructuras de Datos II)
+# CRIPTA 
 
 ## 1. Idea General (Notas de texto)
 
