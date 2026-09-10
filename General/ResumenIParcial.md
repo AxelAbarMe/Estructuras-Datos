@@ -742,3 +742,11 @@ print(radix_sort([170, 45, 75, 90, 802, 24, 2, 66]))
 <img width="700" height="455" alt="image" src="../img/sorting.gif" />
 
 > [Resumen Completo](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_%6012_Apuntes.md) - Comparativa entre algoritmos de ordenamiento
+
+---
+
+# Exámenes simulacros de práctica
+
+## [Simulacro fácil](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Sim1.1.md)
+## [Simulacro medio](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Sim1.2.md)
+## [Simulacro dificil](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Sim1.3.md)
