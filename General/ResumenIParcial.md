@@ -17,6 +17,8 @@
   * SOAP (XML estricto, típico en banca/empresarial)
   * GraphQL (el cliente pide exactamente los campos que necesita, evita sobrecarga)
 
+<img width="745" height="297" alt="image" src="https://github.com/user-attachments/assets/c6daf2af-d623-495e-916b-cbc8ed1faa80" />
+
 ## Ejecución de un programa (RAM y CPU = "Compute")
 - Código fuente en HDD/SSD (persistente) -> se carga a RAM (volátil) -> CPU ejecuta.
 - El disco NO participa en la ejecución en sí, solo almacena.
@@ -31,6 +33,8 @@
 - ARM domina en móviles por eficiencia energética; en la nube, migrar de x86 a ARM reduce costos.
 - El tamaño de `int` depende de la arquitectura (ej. 4 bytes en x86-64 típico vs variaciones en ARM); esto afecta la portabilidad de binarios compilados.
 
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/8c196689-aa39-4815-a76d-85570a4847b7" />
+
 ## Memoria y direcciones
 - 1 byte = mínimo direccionable; direcciones en hexadecimal (0x0000...).
 - Espacio de direcciones de un programa (de low a high address):
@@ -42,6 +46,8 @@
   6. Argumentos de línea de comandos y variables de entorno (high address).
 - El compilador genera una **tabla de símbolos** (nombre, tipo, alcance de cada variable).
 - Punteros: `x` (variable puntero) vive en el stack; el valor que contiene es una dirección; `*x` desreferencia (da el valor apuntado); `&x` da la dirección donde vive `x`.
+
+<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/eb0fd6e5-152a-4556-91d8-39370cdc5330" />
 
 ## Compilación (C/C++, Java)
 - Código fuente -> compilador -> `.obj` (lenguaje máquina según arquitectura, NO portable entre x86/ARM).
@@ -129,6 +135,38 @@ with open("datos.txt", "r") as f:
 - **JSON:** por llaves `{ "clave": valor }`; el más usado en APIs REST por ser ligero.
 - **YAML:** por indentación `clave: valor`; muy usado en archivos de configuración (Docker Compose, CI/CD) por legibilidad humana.
 
+```
+XML
+<user>
+  <id>1</id>
+  <name>John Doe</name>
+  <email>john.doe@example.com</email>
+  <is_active>true</is_active>
+  <roles>
+    <role>admin</role>
+    <role>editor</role>
+  </roles>
+</user>
+
+JSON
+{
+  "id": 1,
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "is_active": true,
+  "roles": ["admin", "editor"]
+}
+
+YAML
+id: 1
+name: John Doe
+email: john.doe@example.com
+is_active: true
+roles:
+  - admin
+  - editor
+```
+
 > [Resumen Completo](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_4_Apuntes.md) - Archivos (.txt | .bin | .json | .xml | .yaml)
 
 # =========================================
@@ -146,6 +184,8 @@ with open("datos.txt", "r") as f:
 - Redimensionar 1 en 1 es ineficiente (para n inserciones, ~O(n²) operaciones acumuladas vía suma de Gauss); la solución estándar es la **expansión x2** (duplicar capacidad), que reduce drásticamente el número total de copias (amortiza a O(1) por inserción en promedio).
 - Operaciones: Insertar, Borrar, Buscar.
 
+<img width="700" height="455" alt="image" src="../img/vectorA.gif" />
+
 ## Lista Enlazada Simple
 - Cada **Nodo** guarda un dato y un puntero `next` al siguiente nodo; no requiere memoria contigua.
 ```python
@@ -156,17 +196,23 @@ class Nodo:
 ```
 - Operaciones: Insertar, Borrar, Buscar (recorrido secuencial, O(n) para buscar).
 
+<img width="700" height="455" alt="image" src="../img/linkedlistA.gif" />
+
 ## Cola (Queue) — FIFO
 - **First In, First Out.**
 - `enqueue()`: inserta por *tail/rear*. `dequeue()`: extrae por *head/front*.
 - Con referencia directa a front y rear: ambas operaciones son **O(1)**; si solo se tiene *front*, insertar al final degrada a O(n).
 - Usos: colas de impresión, procesos del SO, peticiones de servidor, BFS en árboles/grafos.
 
+<img width="700" height="455" alt="image" src="../img/stackA.gif" />
+
 ## Pila (Stack) — LIFO
 - **Last In, First Out.**
 - `push()`: inserta en el tope. `pop()`: extrae y elimina el tope. `top()`/`peek()`: consulta el tope sin eliminar.
 - Todas las operaciones son **O(1)** (solo se manipula un extremo).
 - Usos: Undo de editores, historial "atrás" del navegador, balanceo de paréntesis, **stack de llamadas del CPU** (base de la recursión). Un exceso de `push` sin `pop` -> **Stack Overflow**.
+
+<img width="700" height="455" alt="image" src="../img/queueA.gif" />
 
 > Vector, Lista Enlazada, Cola y Pila son estructuras **lineales**. Existen también estructuras **no lineales** (árboles, grafos, tablas hash) donde los elementos se relacionan jerárquica o reticularmente, no de forma secuencial.
 
@@ -187,6 +233,8 @@ class DoubleNode:
         self.prev = None
 ```
 - **Overhead:** memoria extra necesaria por la estructura misma (los punteros `prev`/`next`), no por los datos útiles. A mayor cantidad de nodos, mayor el costo acumulado de overhead; relevante en hardware con RAM limitada.
+
+<img width="738" height="414" alt="image" src="https://github.com/user-attachments/assets/82a3b6f2-f208-4751-aff3-e8a6301bc802" />
 
 ## Cola implementada con lista simple
 - Usar una lista doblemente enlazada para una cola desperdicia memoria (overhead innecesario), porque una cola nunca retrocede manualmente; basta una lista simple con referencias a `front` y `rear`.
@@ -234,12 +282,40 @@ class Stack:
   2. **Caso recursivo / repetición** (avanza hacia el caso base).
 - Sin caso base -> recursión infinita -> **Stack Overflow**.
 
+### Ejemplo de código
+
+```python
+def cuenta(n):       # 0x4000
+  if n==0:           # 0x4004   }  Caso
+    return           # 0x4008   }  Base
+  cuenta(n-1)        # 0x400C   } -v
+  print(n)           # 0x4010   }  Repetición
+
+def main():          # 0x4100
+  x=5                # 0x4104
+  cuenta(x)          # 0x4108
+
+main()               # 0x4120
+```
+
 ## Registros del CPU relevantes
 - **RIP (Instruction Pointer):** dirección de la siguiente instrucción a ejecutar.
 - **RSP (Stack Pointer):** dirección del tope actual de la pila del sistema.
 - Cada llamada crea un **Stack Frame** (guarda parámetros, variables locales y dirección de retorno `RET`).
 - Cada llamada = `push` al stack; cada `return` = `pop` del stack (regresa a la dirección `RET` guardada).
 - Variables locales con el mismo nombre en distintas llamadas NO se pisan entre sí: cada una vive en su propio stack frame.
+
+| Stack Frames | Stack |
+|:---:|:--:|
+| Stack Frame | `cuenta()` - RET->0x400C - n=0 |
+| Stack Frame | `cuenta()` - RET->0x400C - n=1 |
+| Stack Frame | `cuenta()` - RET->0x400C - n=2 |
+| Stack Frame | `cuenta()` - RET->0x400C - n=3 |
+| Stack Frame | `cuenta()` - RET->0x400C - n=4 |
+| Stack Frame | `cuenta()` - RET->0x4108 - n=5 |
+| Stack Frame | `main()` - RET->0x4120 - X=5 |
+
+> **Nota:** aunque en el stack frame donde se guarda `cuenta()` la variable local se llamara `n` en vez de `x`, esto no afecta a la variable guardada en `main()`, debido a que están en stack frames diferentes.
 
 ## Backtracking
 - Técnica donde, ante un "punto muerto" (dead point), el algoritmo recursivo puede devolverse (pop) y probar otro camino. Ejemplo clásico: resolver un laberinto.
@@ -266,6 +342,8 @@ def factorial(n):
 ```
 - Cada llamada apila un stack frame con su `RET` pendiente; los resultados se resuelven "de abajo hacia arriba" conforme se hace `pop` de cada frame.
 
+<img width="700" height="455" alt="image" src="../img/recursion.gif" />
+
 > [Resumen Completo](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_7_Apuntes.md) - Recursividad
 
 # =========================================
@@ -276,6 +354,8 @@ def factorial(n):
 - **Tiempo (CPU):** se mide en cantidad de instrucciones ejecutadas, NO en segundos reales (el hardware varía).
 - **Espacio (RAM):** memoria adicional que consume el algoritmo.
 - Mejorar tiempo puede implicar sacrificar espacio (y viceversa) -> **trade-off tiempo/espacio**. Ejemplo: **memoización** (guardar resultados ya calculados en una estructura auxiliar, ej. Fibonacci pasa de O(2ⁿ) a O(n) a cambio de más memoria).
+
+<img src="https://miro.medium.com/1*ENAP16Z-YXbzEebQllXFYA.jpeg" Alt="O()" width="500">
 
 ## Cotas
 - **Cota superior (Big-O, "O"):** peor caso; la más usada en la práctica.
@@ -318,6 +398,8 @@ def factorial(n):
 - **Heap Máximo:** el padre siempre es mayor que sus hijos.
 - **Heap Mínimo:** el padre siempre es menor que sus hijos.
 
+<img width="700" height="455" alt="image" src="../img/heapA.gif" />
+
 ## Representación como vector
 Dado un nodo en la posición `i`:
 - Raíz: posición 0.
@@ -338,10 +420,14 @@ def bubble_up(heap, i):
         bubble_up(heap, padre)
 ```
 
+<img width="738" height="430" alt="image" src="https://github.com/user-attachments/assets/e9fc7e0a-e9f0-44f9-8258-bac6db0e8154" />
+
 ## Cola de Prioridad
 - TDA con operaciones **insertar** y **pop/dequeue**, que siempre devuelve el elemento de mayor (o menor) prioridad.
 - Se puede implementar con Heap (O(log n) por operación) o con lista enlazada (O(n)); el Heap es la opción eficiente.
 - Aplicaciones reales: algoritmo de **Dijkstra** (camino más corto), compresión de **Huffman**, `heapq` en Python y `PriorityQueue` en Java (ambos basados en Heap Mínimo).
+
+<img width="541" height="400" alt="image" src="https://github.com/user-attachments/assets/ab5aaa50-bcec-4591-839f-187ca4805ca6" />
 
 > [Resumen Completo](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_9_Apuntes.md) - Heap y Cola de prioridad
 
@@ -369,17 +455,6 @@ def bubble_up(heap, i):
 | Counting Sort | O(n+k) | O(n+k) | O(n+k) | O(n+k) | Sí | No |
 | Radix Sort | O(nk) | O(nk) | O(nk) | O(n+k) | Sí | No |
 
-## Comparaciones e intercambios exactos: Selección vs Inserción
-### Selección
-- **Comparaciones (siempre las mismas, no depende del orden):** (n² − n) / 2
-- **Intercambios:** 0 en el mejor caso (no ocurre realmente, pero teóricamente el mínimo posible) — n−1 en el peor caso (como máximo un intercambio por pasada, y hay n−1 pasadas).
-
-### Inserción
-- **Comparaciones — mejor caso:** n − 1 (arreglo ya ordenado, una sola comparación por elemento).
-- **Intercambios (desplazamientos) — mejor caso:** 0. **Peor caso:** (n² − n) / 2 (arreglo en orden inverso, cada elemento se desplaza hasta el inicio).
-
-> **Conclusión práctica:** Selección conviene cuando escribir/intercambiar es costoso (ej. limitaciones de escritura en disco), porque en su peor caso solo hace n−1 intercambios, mientras que Inserción puede llegar a (n²−n)/2 intercambios en su peor caso. Selección "paga" ese ahorro con más comparaciones fijas ((n²−n)/2 siempre), mientras que Inserción es más barata en comparaciones cuando los datos ya están casi ordenados.
-
 ## Ordenamiento Burbuja (Bubble Sort)
 - Compara pares **adyacentes** e intercambia si están desordenados; en cada pasada "burbujea" el mayor hacia el final.
 - Optimización con bandera de "sin intercambios" -> permite terminar en O(n) si ya está ordenado (adaptativo).
@@ -397,6 +472,10 @@ def bubble_sort(arr):
     return arr
 ```
 
+## Representación gráfica
+
+<img width="941" height="190" alt="image" src="../img/bubble_sort.gif">
+
 ## Ordenamiento por Selección (Selection Sort)
 - Busca el mínimo de la porción desordenada y lo intercambia con la primera posición desordenada.
 - Siempre recorre todo, por eso no es adaptativo; máximo 1 intercambio por pasada.
@@ -412,6 +491,10 @@ def selection_sort(arr):
     return arr
 ```
 
+## Representación gráfica
+
+<img width="600" height="400" alt="image" src="../img/selection_sort.gif">
+
 ## Ordenamiento por Inserción (Insertion Sort)
 - Inserta cada elemento en su posición correcta dentro de la parte ya ordenada (como ordenar cartas en la mano).
 - Muy eficiente en arreglos pequeños o casi ordenados; usado por Timsort (Python) en sub-arreglos pequeños.
@@ -426,6 +509,10 @@ def insertion_sort(arr):
         arr[j+1] = actual
     return arr
 ```
+
+## Representación gráfica
+
+<img width="600" height="400" alt="image" src="../img/insertion_sort.gif">
 
 ## Quicksort
 - Divide y vencerás: elige un **pivote**, particiona en menores/mayores, y ordena recursivamente cada partición.
@@ -445,6 +532,12 @@ def quicksort(arr):
     return quicksort(menores) + iguales + quicksort(mayores)
 ```
 
+## Representación gráfica
+
+<img width="600" height="400" alt="image" src="../img/quicksort.gif">
+
+<img width="600" height="251" alt="image" src="https://github.com/user-attachments/assets/bfdb593a-d8a7-48c7-a8a9-3c2362d54ac6" />
+
 ## Mergesort
 - Divide y vencerás: divide a la mitad hasta llegar a elementos individuales, luego mezcla (**merge**) manteniendo el orden.
 - Garantiza O(n log n) en todos los casos (no adaptativo); requiere O(n) de espacio extra (no in-place); estable si se elige primero el elemento izquierdo en empates.
@@ -461,10 +554,50 @@ def merge(izq, der):
     return r + izq[i:] + der[j:]
 ```
 
+## Representación gráfica
+
+<img width="400" height="400" alt="image" src="../img/merge_sort.gif">
+
 ## Heapsort
 - Fase 1: **Heapify** del arreglo completo (O(n)).
 - Fase 2: extraer repetidamente la raíz (máximo), intercambiarla al final, reducir el heap y aplicar bubble-down -> n extracciones de O(log n) cada una.
 - O(n log n) garantizado en todos los casos, espacio O(1) (in-place), pero NO estable. Combina lo mejor de tiempo garantizado y espacio constante (algo que ni Quicksort ni Mergesort logran juntos).
+
+```python
+def heapify(arr, n, i):
+    mayor = i
+    izq = 2 * i + 1
+    der = 2 * i + 2
+
+    if izq < n and arr[izq] > arr[mayor]:
+        mayor = izq
+    if der < n and arr[der] > arr[mayor]:
+        mayor = der
+
+    if mayor != i:
+        arr[i], arr[mayor] = arr[mayor], arr[i]
+        heapify(arr, n, mayor)  # Bubble-down recursivo
+
+def heap_sort(arr):
+    n = len(arr)
+
+    # Construir el Heap Máximo (Heapify)
+    for i in range(n // 2 - 1, -1, -1):
+        heapify(arr, n, i)
+
+    # Extraer elementos uno por uno
+    for i in range(n - 1, 0, -1):
+        arr[0], arr[i] = arr[i], arr[0]  # Mover raíz al final
+        heapify(arr, i, 0)               # Restaurar heap con tamaño reducido
+
+    return arr
+
+print(heap_sort([5, 2, 9, 1, 5, 6]))
+```
+
+## Representación gráfica
+
+<img width="600" height="600" alt="image" src="../img/heap_sort.gif">
 
 ## Counting Sort
 - No compara elementos; cuenta ocurrencias de cada valor en un rango conocido `k` y las acumula para ubicar cada elemento en su posición final.
@@ -485,10 +618,54 @@ def counting_sort(arr):
     return salida
 ```
 
+## Representación gráfica
+
+<img width="600" height="600" alt="image" src="../img/counting_sort.gif">
+
 ## Radix Sort
 - Ordena por dígitos, del menos al más significativo (LSD), usando Counting Sort estable como subrutina en cada pasada.
 - O(n·k), donde k = cantidad de dígitos; requiere que la subrutina sea estable para preservar el orden de pasadas anteriores.
 - Útil para grandes volúmenes de enteros o cadenas de longitud fija.
+```python
+def counting_sort_por_digito(arr, exp):
+    n = len(arr)
+    salida = [0] * n
+    conteo = [0] * 10  # Dígitos van de 0 a 9
+
+    for numero in arr:
+        digito = (numero // exp) % 10
+        conteo[digito] += 1
+
+    for i in range(1, 10):
+        conteo[i] += conteo[i - 1]
+
+    for i in range(n - 1, -1, -1):
+        digito = (arr[i] // exp) % 10
+        conteo[digito] -= 1
+        salida[conteo[digito]] = arr[i]
+
+    return salida
+
+def radix_sort(arr):
+    if not arr:
+        return arr
+    
+    maximo = max(arr)
+    exp = 1
+    while maximo // exp > 0:
+        arr = counting_sort_por_digito(arr, exp)
+        exp *= 10
+    
+    return arr
+
+print(radix_sort([170, 45, 75, 90, 802, 24, 2, 66]))
+```
+## Representación gráfica
+
+<img width="700" height="300" alt="image" src="https://github.com/user-attachments/assets/b7efdc9d-a438-42b8-86d5-53a5c878f291" />
+<img width="700" height="300" alt="image" src="https://github.com/user-attachments/assets/ed220bb9-43e5-4787-a013-5943b0f24c95" />
+<img width="700" height="300" alt="image" src="https://github.com/user-attachments/assets/73bf823c-a77d-43d1-8e5d-81ce3cf04737" />
+<img width="700" height="300" alt="image" src="https://github.com/user-attachments/assets/fb286369-9d4c-41f2-ad1b-168a279372be" />
 
 ## ¿Cuándo usar cuál? (resumen rápido)
 - **Burbuja/Selección/Inserción:** datasets muy pequeños, fines educativos, o casi ordenados (Burbuja/Inserción, por ser adaptativos). Selección conviene si escribir/intercambiar es costoso.
@@ -496,6 +673,8 @@ def counting_sort(arr):
 - **Mergesort:** cuando se necesita O(n log n) garantizado + estabilidad, o listas enlazadas/ordenamiento externo.
 - **Heapsort:** cuando se necesita O(n log n) garantizado + espacio O(1) a la vez.
 - **Counting/Radix Sort:** enteros en un rango conocido y acotado; superan la barrera teórica O(n log n) de los algoritmos por comparación.
+
+<img width="700" alt="image" src="https://github.com/user-attachments/assets/1cacb05d-177f-4b9b-bda8-239dc53a4eb5" />
 
 > [Resumen Completo](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_%6011_Apuntes.md) - Algoritmos de Ordenamiento
 
@@ -545,10 +724,21 @@ def counting_sort(arr):
 
 ---
 
-> **Diferencia de eficiencia en escrituras:** Selección es mejor que Inserción y Burbuja cuando existen limitaciones en escrituras de disco/memoria, debido a que en el peor de los casos realiza solo $n - 1$ intercambios, mientras que Inserción y Burbuja realizan $\frac{n^2 - n}{2}$.
+## Comparaciones e intercambios exactos: Selección vs Inserción
+### Selección
+- **Comparaciones (siempre las mismas, no depende del orden):** (n² − n) / 2
+- **Intercambios:** 0 en el mejor caso (no ocurre realmente, pero teóricamente el mínimo posible) — n−1 en el peor caso (como máximo un intercambio por pasada, y hay n−1 pasadas).
+
+### Inserción
+- **Comparaciones — mejor caso:** n − 1 (arreglo ya ordenado, una sola comparación por elemento).
+- **Intercambios (desplazamientos) — mejor caso:** 0. **Peor caso:** (n² − n) / 2 (arreglo en orden inverso, cada elemento se desplaza hasta el inicio).
+
+> **Conclusión práctica:** Selección conviene cuando escribir/intercambiar es costoso (ej. limitaciones de escritura en disco), porque en su peor caso solo hace n−1 intercambios, mientras que Inserción puede llegar a (n²−n)/2 intercambios en su peor caso. Selección "paga" ese ahorro con más comparaciones fijas ((n²−n)/2 siempre), mientras que Inserción es más barata en comparaciones cuando los datos ya están casi ordenados.
 
 > **Estrategias de pivote en Quicksort:** El funcionamiento y balanceo de las particiones depende del pivote:
 > - *Mediana real:* Garantiza particiones equilibradas pero agrega un costo adicional de $O(n)$ por nivel.
 > - *Pivote aleatorio:* Tiene un costo computacional despreciable y logra un rendimiento cercano al caso óptimo en la práctica.
+
+<img width="700" height="455" alt="image" src="../img/sorting.gif" />
 
 > [Resumen Completo](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_%6012_Apuntes.md) - Comparativa entre algoritmos de ordenamiento
