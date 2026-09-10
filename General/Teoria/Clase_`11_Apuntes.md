@@ -1,4 +1,4 @@
-# Algoritmos de Ordenamiento (Sorting)
+# 10. Algoritmos de Ordenamiento (Sorting)
 
 ## Conceptos generales antes de comenzar
 
