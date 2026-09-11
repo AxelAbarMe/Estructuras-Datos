@@ -204,7 +204,7 @@ class Nodo:
 - Con referencia directa a front y rear: ambas operaciones son **O(1)**; si solo se tiene *front*, insertar al final degrada a O(n).
 - Usos: colas de impresión, procesos del SO, peticiones de servidor, BFS en árboles/grafos.
 
-<img width="700" height="455" alt="image" src="../img/stackA.gif" />
+<img width="700" height="455" alt="image" src="../img/queueA.gif" />
 
 ## Pila (Stack) — LIFO
 - **Last In, First Out.**
@@ -212,7 +212,7 @@ class Nodo:
 - Todas las operaciones son **O(1)** (solo se manipula un extremo).
 - Usos: Undo de editores, historial "atrás" del navegador, balanceo de paréntesis, **stack de llamadas del CPU** (base de la recursión). Un exceso de `push` sin `pop` -> **Stack Overflow**.
 
-<img width="700" height="455" alt="image" src="../img/queueA.gif" />
+<img width="700" height="455" alt="image" src="../img/stackA.gif" />
 
 > Vector, Lista Enlazada, Cola y Pila son estructuras **lineales**. Existen también estructuras **no lineales** (árboles, grafos, tablas hash) donde los elementos se relacionan jerárquica o reticularmente, no de forma secuencial.
 
