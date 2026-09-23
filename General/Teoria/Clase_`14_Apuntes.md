@@ -151,6 +151,36 @@ def bfs(raiz):
             cola.append(nodo.left)     # enqueue
         if nodo.right is not None:
             cola.append(nodo.right)
+
+# O también
+
+class Node:
+    def __init__(self,val=None):
+      self.key = val
+      self.left = None
+      self.right = None
+
+class Tree:
+    def __init__(self):
+      self.root = None
+
+    def bfs(self):
+        if self.root is None:
+            return []
+
+        result = []
+        cola = queue.Queue()
+        cola.put(self.root)
+
+        while not cola.empty():
+            tmp = cola.get()
+            result.append(tmp.key)
+            if tmp.left is not None:
+                cola.put(tmp.left)
+            if tmp.right is not None:
+                cola.put(tmp.right)
+
+        return result
 ```
 
 ### DFS (Por profundidad)
