@@ -27,7 +27,8 @@ Repositorio de teoría, labs, prácticas, proyectos, quices y tareas del curso d
 - [Clase 12 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_%6012_Apuntes.md) - Comparativa entre algoritmos de ordenamiento
 - [Clase 13 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_%6013_Apuntes.md) - LLM, RAG, MCP, Skills y Spec-Driven Development
 - [Clase 14 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_%6014_Apuntes.md) - Árboles binarios
-- [Clase 15 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_%6015_Apuntes.md) - 
+- [Clase 15 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_%6015_Apuntes.md) - Wrappers e implementación BFS y DFS
+- [Clase 16 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_%6016_Apuntes.md) - 
 - [Semana 1 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Semana%201%20AV.md)
 - [Semana 2 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Semana%202%20AV.md)
 - [Semana 3 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Semana%203%20AV.md)
