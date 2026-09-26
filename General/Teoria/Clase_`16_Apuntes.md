@@ -58,3 +58,21 @@
       izq = self._recursive_search(node.left, key)
       return izq if izq is not None else self._recursive_search(node.right, key)
 ```
+
+## Altura
+
+```python
+    def height(self):
+        return self._height(self.root)
+
+    def _height(self, root):
+        if root is None:
+            return -1
+        return max(self._height(root.left) + 1, self._height(root.right) + 1)
+```
+
+## Insertar
+
+```python
+
+```
