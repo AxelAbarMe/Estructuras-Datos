@@ -74,5 +74,24 @@
 ## Insertar
 
 ```python
-
+def insert(self, key):
+        if self.root is None:
+            self.root = Node(key)
+            return
+        cola = collections.deque()
+        cola.append(self.root)
+        while cola:
+            tmp = cola.popleft()
+            if tmp.key == key:
+                return tmp
+            if tmp.left is not None:
+                cola.append(tmp.left)
+            else:
+                tmp.left = Node(key)
+                return
+            if tmp.right is not None:
+                cola.append(tmp.right)
+            else:
+                tmp.right = Node(key)
+                return
 ```
