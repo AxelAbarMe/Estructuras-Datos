@@ -166,6 +166,24 @@ Luego se aplica el segundo paso, la rotación derecha en x
   7   15    17
 ```
 
+## Práctica - Lab
+
+a) Insertar al árbol 19,23,28,7,15,20,13,6
+
+```
+
+```
+
+b) Insertar al árbol 1,2,3,4,5,6,7,8,9,10
+
+```
+      13
+     /  \
+    11   16   
+   /    /  \
+  7   15    17
+```
+c) Insertar al árbol 25, 14, 
 
 
 
