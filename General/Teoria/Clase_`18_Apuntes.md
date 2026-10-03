@@ -171,8 +171,16 @@ Luego se aplica el segundo paso, la rotación derecha en x
 a) Insertar al árbol 19,23,28,7,15,20,13,6
 
 ```
-
+       1 9
+     /     \
+    13       23   
+   /  \     /  \
+  7    15  20    28
+ /
+6
 ```
+
+Nota: Programa donde se deban hacer muchas inserciones, se pierde rendimiento del programa
 
 b) Insertar al árbol 1,2,3,4,5,6,7,8,9,10
 
@@ -183,7 +191,7 @@ b) Insertar al árbol 1,2,3,4,5,6,7,8,9,10
    /    /  \
   7   15    17
 ```
-c) Insertar al árbol 25, 14, 
+c) Insertar al árbol 25, 14, 33, 6, 10, 40, 38, 35, 12, 8
 
 
 
