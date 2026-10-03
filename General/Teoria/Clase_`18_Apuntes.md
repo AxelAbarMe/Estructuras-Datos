@@ -63,7 +63,7 @@ En este caso, se debe de colocar el hijo derecho del nodo 6 como hijo izquierdo 
    2   10    25
 ```
 
-## Caso 2 PR
+## Caso 2 RR
 
 Inserción se hace en el sub-árbol derecho del hijo derecho de "x". Donde x es el nodo donde está el desbalance. Se resuelve con una rotación simple a la izquierda, se hace en el nodo "x".
 
@@ -73,7 +73,7 @@ Inserción se hace en el sub-árbol derecho del hijo derecho de "x". Donde x es 
   10    23    <- Nodo 10 es el "x" desbalanceado
    \
     15    <_
-     \      \
+     \      \  Rotación de los nodos
       17     |
 ```
 
@@ -89,7 +89,82 @@ Nota: Aplica lo mismo de que si hijo izquierdo de nodo desbalanceado se pone com
 
 ## Caso 3 LR
 
-Inserción se hace en el sub-árbol izquierdo del hijo derecho en "x". Donde x es el nodo donde está el desbalance. Se resuelve con una rotación doble, ósea una rotación simple a la derecha, se hace en el hijo del nodo "x". Luego se aplica una rotación simple a la izquierda, se hace en el nodo "x".
+Inserción se hace en el sub-árbol izquierdo del hijo derecho en "x". Donde x es el nodo donde está el desbalance. Se resuelve con una rotación doble, ósea una rotación simple a la derecha, se hace en el hijo derecho del nodo "x". Luego se aplica una rotación simple a la izquierda, se hace en el nodo "x".
+
+```
+    18
+   /  \
+  10    25   <- Nodo "x" Encontrado por FB 1-3 = 2
+ /     /  \
+6     20  30
+         /  \
+        28   33
+         \
+          29
+```
+
+Primer paso, rotación simple derecha en hijo derecho de x
+
+```
+    18
+   /  \
+  10    25   <- "x"
+ /     /  \
+6     20  28
+            \
+            30
+            / \
+          29  33
+```
+
+Nota: Árbol siempre debe de cumplir BST en todos sus pasos de rotaciones y movimientos, ahora se aplica segundo paso, rotación simple izquierda en x.
+
+```
+    18
+   /  \
+  10    28
+ /     /  \
+6     25   30
+     /     / \
+    20    29  33
+```
+
+## Caso 4 RL
+
+Inserción se hace en el sub-árbol derecho del hijo izquierdo en "x". Donde x es el nodo donde está el desbalance. Se resuelve con una rotación doble, ósea una rotación simple a la izquierda, se hace en el hijo izquierdo del nodo "x". Luego se aplica una rotación simple a la derecha, se hace en el nodo "x".
+
+
+```
+    16   <- Nodo "x". FB 3-1 = 2
+   /  \
+  11    17
+ / \    
+7   13
+      \
+       15
+```
+
+Primer paso, rotación simple izquierda en hijo izquierdo de x.
+
+```
+      16   <- Nodo "x".
+     /  \
+    13    17
+   / \    
+  11  15
+ /
+7
+```
+
+Luego se aplica el segundo paso, la rotación derecha en x
+
+```
+      13
+     /  \
+    11   16   <- Recordar que Nodo 15, hijo derecho de hijo izquierdo de nodo x, se mueve como hijo directo izquierdo de nodo x al aplicar la rotación simple.
+   /    /  \
+  7   15    17
+```
 
 
 
