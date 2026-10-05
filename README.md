@@ -40,9 +40,9 @@ Repositorio de teoría, labs, prácticas, proyectos, quices y tareas del curso d
 - [Semana 5 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Semana%205%20AV.md)
 - [Semana 6 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Semana%206%20AV.md)
 - [Semana 9 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Semana%209%20AV.md)
-- [Semana 10 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Semana%210%20AV.md)
-- [Semana 11 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Semana%206%20AV.md)
-- [Semana 12 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Semana%206%20AV.md)
+- [Semana 10 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Semana%20%6010%20AV.md)
+- [Semana 11 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Semana%20%6011%20AV.md)
+- [Semana 12 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Semana%20%6012%20AV.md)
 
 
 ---
