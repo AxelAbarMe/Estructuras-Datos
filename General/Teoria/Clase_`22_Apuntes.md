@@ -166,3 +166,34 @@ Al insertar los elementos 67, 17 y 37, se obtiene el hash:
 No sufre de clustering
 
 > Nota: Arreglar código
+
+## Ejemplo de Examen
+
+> 25,82,17,55,2,10,36,48,14
+
+```python
+#define MAX_TAM 10
+int v[10]
+
+def hash(x):
+  return x % 11
+
+def hash2(x):
+  return 3-x % 3
+```
+
+* Linear
+* Quad
+* Double Hash
+
+|0|  |
+|:--:|:--:|
+|1|  |
+|2|  |
+|3|  |
+|4|  |
+|5|  |
+|6|  |
+|7|  |
+|8|  |
+|9|  |
