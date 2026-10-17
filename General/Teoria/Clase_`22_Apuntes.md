@@ -143,7 +143,7 @@ Al insertar el 67 y 17, queda de esta manera:
 # Solo aplica en caso de colisiones, código necesita verificaciones para evitar calcular hash2(x) para funcionalidad correcta, solo académico
 
 for i in range(0,n):
-  pos = (hash(x)+hash2(x)
+  pos = (hash(x)+hash2(x) * i
 
 def hash2(x):
   return x % 3 + 2
