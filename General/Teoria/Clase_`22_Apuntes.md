@@ -99,7 +99,7 @@ def hash(x):
 
 ### Quadratic Probing
 
-|0|18
+|0||
 |:--:|:--:|
 |1|  |
 |2|  |
@@ -116,6 +116,53 @@ for i in range(0,n):
   pos = hash(x)+i^2
 ```
 
-Deja de ser linear, al insertar el 67 se genera una colisión, 
+Deja de ser linear, al insertar el 67 se genera una colisión en la posición 7, se genera colisión porque hash(x) = 7 e i^2 = 1 => 8, ocupada nuevamente y al hacer 2^2 = 4 => 11, al ser el hash circular pasa hasta la posición 11 (1) y se inserta en dicha posición.
+
+Los elementos quedan más dispersos, sufre de clustering secundario. Cuando dos llaves distintas siguen el mismo camino o patron
+
+
+Al insertar el 67 y 17, queda de esta manera:
+
+|0||
+|:--:|:--:|
+|1|67|
+|2|  |
+|3|13|
+|4|  |
+|5|  |
+|6|17|
+|7|7 |
+|8|48|
+|9|  |
+
+> Nota: Se entregan en prácticas lista de elementos y se pide la tabla hash final obtenida al aplicar ciertas resoluciones de colisiones
 
 ### Double Hashing
+
+```python
+# Solo aplica en caso de colisiones, código necesita verificaciones para evitar calcular hash2(x) para funcionalidad correcta, solo académico
+
+for i in range(0,n):
+  pos = (hash(x)+hash2(x)
+
+def hash2(x):
+  return x % 3 + 2
+```
+
+Al insertar los elementos 67, 17 y 37, se obtiene el hash:
+
+|0|67|
+|:--:|:--:|
+|1|17|
+|2|  |
+|3|13|
+|4|  |
+|5|  |
+|6|  |
+|7|7 |
+|8|48|
+|9|  |
+
+No sufre de clustering
+
+> Nota: Arreglar código
