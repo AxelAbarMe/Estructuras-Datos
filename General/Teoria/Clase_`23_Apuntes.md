@@ -119,12 +119,53 @@ Se refiere a la cantidad de adyacencias que se encuentren en un grafo, se puede 
 |  |<\  |  />^
 |  V   \v/   |
 |  F -->E<---C
-|  |
-v  |
-G<-|
+|  |         ^
+v  |         |
+G<-|         |
+|____________|
 ```
 
 > Nota: Procesar las adyacencias de menor a mayor
 
 ### Recorrido -> A
 
+* Inserta A (Nodo inicial)
+* Sacar vértice de la cola (A)
+* Visita V (A)
+* Visite Adyacencias {D,F,G} (Solo se visitan 1 vez)
+* Se repite
+
+Resultado final: **A,D,F,G,B,E,C**
+
+Entonces, el resumen del proceso es extraer el nodo, ver sus adyacencias e insertar todos en su orden y esto se repite.
+
+## DFS
+
+> DFS utiliza Pila o Recursividad.. Backtracking
+
+```
+|--A--->D--->B
+|  |<\  |  />^
+|  V   \v/   |
+|  F -->E<---C
+|  |         ^
+v  |         |
+G<-|         |
+|____________|
+```
+
+### Pila
+
+* Inserta A (Nodo inicial)
+* Sacar vértice de la cola (A)
+* Visita V (A)
+* Visite Adyacencia menor (Solo se visitan 1 vez) (Push)
+* Se repite hasta que ya no tenga adyacencia, entonces se hace Pop
+
+Resultado final: **A,D,B,E,F,G,C**
+
+#### Ejemplo de práctica del mismo ejemplo, empezando en E:
+
+Recorrido BFS: **E,A,B,D,F,G,C**
+
+Recorrido DFS: **E,A,D,B,F,G,C**
