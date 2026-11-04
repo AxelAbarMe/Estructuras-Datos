@@ -32,3 +32,8 @@ def backtracking(empty):
 * Las guarda
 * Pop para probar otra opción
 
+## Problema N-Queen
+
+NxN -> Board
+
+N Queens sin que se ataque entre ellas (Ejemplo matriz 4x4) [01,13,20,32] Pos
