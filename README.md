@@ -41,6 +41,9 @@ Repositorio de teoría, labs, prácticas, proyectos, quices y tareas del curso d
 - [Clase 26 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Apuntes/Clase_%6026_Apuntes.md) - Topological Sorting - Kubernetes
 - [Clase 27 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Apuntes/Clase_%6027_Apuntes.md) - Backtracking
 - [Clase 28 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Apuntes/Clase_%6028_Apuntes.md) - Practica Examen
+
+---
+
 - [Semana 1 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/AV/Semana%201%20AV.md)
 - [Semana 2 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/AV/Semana%202%20AV.md)
 - [Semana 3 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/AV/Semana%203%20AV.md)
@@ -55,6 +58,9 @@ Repositorio de teoría, labs, prácticas, proyectos, quices y tareas del curso d
 - [Semana 14 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/AV/Semana%20%6014%20AV.md)
 - [Semana 15 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/AV/Semana%20%6015%20AV.md)
 - [Semana 16 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/AV/Semana%20%6016%20AV.md)
+
+---
+
 - [ResumenParcial I](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Parcial/ResumenIParcial.md)
 - [ResumenParcial II](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Parcial/ResumenIIParcial.md)
 
