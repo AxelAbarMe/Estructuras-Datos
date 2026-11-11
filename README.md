@@ -32,7 +32,15 @@ Repositorio de teoría, labs, prácticas, proyectos, quices y tareas del curso d
 - [Clase 17 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_%6017_Apuntes.md) - Árbol BST (Borrado y Tuplas)
 - [Clase 18 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_%6018_Apuntes.md) - Árbol AVL (Rotaciones)
 - [Clase 19 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_%6019_Apuntes.md) - Árbol Red-Black
-- [Clase 20 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_%6020_Apuntes.md) - Pendiente
+- [Clase 20 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_%6020_Apuntes.md) - Red-Black y AVL (Virtual)
+- [Clase 21 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_%6021_Apuntes.md) - Hashing
+- [Clase 22 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_%6022_Apuntes.md) - Colisiones de Hashing
+- [Clase 23 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_%6023_Apuntes.md) - Grafos
+- [Clase 24 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_%6024_Apuntes.md) - Grafos ponderados - Kruskal - Dijkstra - Cripta 2
+- [Clase 25 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_%6025_Apuntes.md) - SDD - Speckit
+- [Clase 26 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_%6026_Apuntes.md) - Topological Sorting - Kubernetes
+- [Clase 27 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_%6027_Apuntes.md) - Backtracking
+- [Clase 28 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_%6028_Apuntes.md) - Practica Examen
 - [Semana 1 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Semana%201%20AV.md)
 - [Semana 2 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Semana%202%20AV.md)
 - [Semana 3 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Semana%203%20AV.md)
@@ -43,7 +51,10 @@ Repositorio de teoría, labs, prácticas, proyectos, quices y tareas del curso d
 - [Semana 10 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Semana%20%6010%20AV.md)
 - [Semana 11 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Semana%20%6011%20AV.md)
 - [Semana 12 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Semana%20%6012%20AV.md)
-
+- [Semana 13 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Semana%20%6013%20AV.md)
+- [Semana 14 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Semana%20%6014%20AV.md)
+- [Semana 15 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Semana%20%6015%20AV.md)
+- [Semana 16 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Semana%20%6016%20AV.md)
 
 ---
 
@@ -55,15 +66,6 @@ Repositorio de teoría, labs, prácticas, proyectos, quices y tareas del curso d
 - [Lab 3](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Labs/Lab%203/Lab3.md)
 - [Lab 4](https://github.com/AxelAbarMe/Estructuras-Datos/tree/main/General/Labs/Lab%204)
 - [Lab 5](https://github.com/AxelAbarMe/Estructuras-Datos/tree/main/General/Labs/Lab%205)
-
----
-
-## ✏️ Prácticas
-> Ejercicios prácticos para reforzar la teoría.
-
-- [Práctica 1](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Practicas/Practica%201/Enunciado.md)
-- [Práctica 2](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Practicas/Practica%202/Enunciado.md)
-- [Práctica 3](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Practicas/Practica%203/Enunciado.md)
 
 ---
 
@@ -80,7 +82,6 @@ Repositorio de teoría, labs, prácticas, proyectos, quices y tareas del curso d
 
 - [Quiz 1](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Quiz/Quiz%201.md) - Arquitecturas, Archivos, TDA y Python
 - [Quiz 2](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Quiz/Quiz%202.md) - TDA
-- [Quiz 3](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Quiz/Quiz%203.md) - 
 
 ---
 
@@ -91,7 +92,6 @@ Repositorio de teoría, labs, prácticas, proyectos, quices y tareas del curso d
 - [Tarea #2](https://github.com/AxelAbarMe/Estructuras-Datos/tree/main/General/Tareas/Tarea%20%232) - Archivos
 - [Tarea #3](https://github.com/AxelAbarMe/Estructuras-Datos/tree/main/General/Tareas/Tarea%20%233) - TDA Simple
 - [Tarea #4](https://github.com/AxelAbarMe/Estructuras-Datos/tree/main/General/Tareas/Tarea%20%234) - Recursividad
-- [Tarea #5](https://github.com/AxelAbarMe/Estructuras-Datos/tree/main/General/Tareas/Tarea%20%235) - 
 
 ---
 
