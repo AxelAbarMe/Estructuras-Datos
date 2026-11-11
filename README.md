@@ -26,6 +26,9 @@ Repositorio de teoría, labs, prácticas, proyectos, quices y tareas del curso d
 - [Clase 11 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Apuntes/Clase_%6011_Apuntes.md) - Algoritmos de Ordenamiento
 - [Clase 12 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Apuntes/Clase_%6012_Apuntes.md) - Comparativa entre algoritmos de ordenamiento
 - [Clase 13 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Apuntes/Clase_%6013_Apuntes.md) - LLM, RAG, MCP, Skills y Spec-Driven Development
+
+> Segundo Parcial.
+
 - [Clase 14 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Apuntes/Clase_%6014_Apuntes.md) - Árboles binarios
 - [Clase 15 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Apuntes/Clase_%6015_Apuntes.md) - Wrappers e implementación BFS y DFS
 - [Clase 16 { Apuntes }](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Apuntes/Clase_%6016_Apuntes.md) - Métodos Árbol (Search, Insert, Height)
@@ -44,12 +47,17 @@ Repositorio de teoría, labs, prácticas, proyectos, quices y tareas del curso d
 
 ---
 
+> Recursos adicionales semanales.
+
 - [Semana 1 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/AV/Semana%201%20AV.md)
 - [Semana 2 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/AV/Semana%202%20AV.md)
 - [Semana 3 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/AV/Semana%203%20AV.md)
 - [Semana 4 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/AV/Semana%204%20AV.md)
 - [Semana 5 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/AV/Semana%205%20AV.md)
 - [Semana 6 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/AV/Semana%206%20AV.md)
+
+> Segundo Parcial.
+
 - [Semana 9 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/AV/Semana%209%20AV.md)
 - [Semana 10 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/AV/Semana%20%6010%20AV.md)
 - [Semana 11 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/AV/Semana%20%6011%20AV.md)
@@ -60,6 +68,8 @@ Repositorio de teoría, labs, prácticas, proyectos, quices y tareas del curso d
 - [Semana 16 AV](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/AV/Semana%20%6016%20AV.md)
 
 ---
+
+> Resumenes de cada parcial.
 
 - [ResumenParcial I](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Parcial/ResumenIParcial.md)
 - [ResumenParcial II](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Parcial/ResumenIIParcial.md)
