@@ -31,6 +31,10 @@
       NULL  NULL                <- Hijos de una hoja
 ```
 
+### Representación gráfica
+<img width="400" height="350" alt="image" src="https://github.com/user-attachments/assets/a34b161c-b415-41b1-a8c9-5863c199d779" />
+
+
 ## Terminología
 | Término | Inglés | Descripción |
 |---|---|---|
@@ -43,6 +47,9 @@
 | Nodo interno | Internal node | Nodo con al menos un hijo |
 | Nivel | Level | Conjunto de nodos a la misma profundidad |
 | Subárbol | Subtree | Árbol formado por un nodo y todos sus descendientes |
+
+### Representación gráfica
+<img width="700" height="400" alt="image" src="https://github.com/user-attachments/assets/993f5714-a9b6-4342-9c0f-3032a80e6d22" />
 
 ## Estructura del Nodo
 - Cada nodo guarda un **dato** y dos referencias (izquierda y derecha), similar a la lista doblemente enlazada pero apuntando hacia abajo.
@@ -81,6 +88,9 @@ def altura(nodo):
     return 1 + max(altura(nodo.left), altura(nodo.right))
 ```
 
+### Representación gráfica
+<img width="700" height="450" alt="image" src="https://github.com/user-attachments/assets/e16ac869-5080-48ce-99d5-fe45be68d0e5" />
+
 ## Propiedades cuantitativas
 - Máximo de nodos en el nivel `k`: **2ᵏ**.
 - Máximo de nodos en un árbol de altura `h`: **2^(h+1) − 1**.
@@ -95,6 +105,9 @@ def altura(nodo):
 | **Perfecto (Perfect)** | Todos los niveles llenos y todas las hojas al mismo nivel |
 | **Degenerado** | Cada nodo tiene un solo hijo; se comporta como lista enlazada (altura n − 1) |
 | **Balanceado** | La diferencia de altura entre subárbol izquierdo y derecho es pequeña en todos los nodos |
+
+### Representación gráfica
+<img width="1200" height="422" alt="image" src="https://github.com/user-attachments/assets/99fce490-8165-4422-a97b-51c7c6ef0796" />
 
 ## Llaves
 - Los datos se organizan pensando en **llaves** (key); es deseable (y suele ser requisito) que sean **ÚNICAS** (ej: `id`).
@@ -134,6 +147,10 @@ def bfs(raiz):
         if nodo.right is not None:
             cola.append(nodo.right)
 ```
+
+### [Tutorial](https://www.youtube.com/watch?v=HZ5YTanv5QE)
+### Representación gráfica
+<img src="../../img/BFS.gif" alt="BFS" width="500" />
 
 ### DFS (por profundidad)
 - Se implementa con **recursión** (stack de llamadas del CPU) o iterativamente con una **Pila (LIFO)**.
@@ -178,6 +195,13 @@ def pre_orden_iterativo(raiz):
         if nodo.left is not None:
             pila.append(nodo.left)
 ```
+
+### [Tutorial](https://youtube.com/playlist?list=PL9xmBV_5YoZO1JC2RgEi04nLy6D-rKk6b&si=MYCkUhXSH8SD6UK-)
+### Representación gráfica
+<img src="../../img/DFS-Pre.gif" alt="DFS Pre-Ordem" width="500" />
+<img src="../../img/DFS-In.gif" alt="DFS In-Ordem" width="500" />
+<img src="../../img/DFS-Pos.gif" alt="DFS Pos-Ordem" width="500" />
+
 
 ## Ejemplo 1
 ```
@@ -239,7 +263,7 @@ def pre_orden_iterativo(raiz):
 > [Resumen Completo](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_14_Apuntes.md) - Árboles binarios, recorridos BFS / DFS
 
 # =========================================
-# SEGMENTO 13: WRAPPERS, ENCAPSULAMIENTO Y HERRAMIENTAS AVANZADAS DE PYTHON
+# SEGMENTO 13: WRAPPERS, ENCAPSULAMIENTO Y HERRAMIENTAS DE PYTHON
 # =========================================
 
 ## Wrapper
@@ -389,6 +413,8 @@ def _recursive_search(self, node, key):
     return izq if izq is not None else self._recursive_search(node.right, key)
 ```
 
+### [Tutorial](https://www.youtube.com/watch?v=jLEhJqNVauc)
+
 ## Altura del árbol
 ```python
 def _height(self, root):
@@ -420,6 +446,9 @@ def insert(self, key):
             tmp.right = Node(key)
             return
 ```
+
+### [Tutorial](https://www.youtube.com/watch?v=tT2DT9Z4H-0)
+
 - **No es una inserción de BST**: no compara valores, inserta en el **primer espacio libre** por niveles (como llenar un **Heap**).
 - Si la llave ya existe, se detiene sin duplicarla.
 
@@ -504,6 +533,8 @@ def delete(self, val):
     return True
 ```
 
+### [Tutorial](https://www.youtube.com/watch?v=pN4C8cLVc7I)
+
 | Paso | Qué se hace |
 |---|---|
 | **1** | Recorrer por niveles (BFS) con cola de tuplas `(nodo, padre)` |
@@ -585,6 +616,9 @@ def _is_bst(node, minimo, maximo):
             _is_bst(node.right, node.key, maximo))
 ```
 
+### Representación gráfica
+<img width="598" height="334" alt="image" src="https://github.com/user-attachments/assets/2e9b473a-6efb-4da7-b79f-15a4b17a9843" />
+
 | Operación | Cómo funciona |
 |---|---|
 | **Insertar** | Si el nodo es `None` crea el nuevo; menor -> izquierda, mayor -> derecha; no duplica |
@@ -616,10 +650,13 @@ def _is_bst(node, minimo, maximo):
 - AVL y Red-Black se corrigen solos después de **cada inserción** y **cada eliminación**.
 - Con **muchas inserciones** se pierde rendimiento (cada una puede provocar rotaciones).
 
-## Factor de balance (FB)
+## Factor de balance (FB) / Factor de carga
 ```
 FB(nodo) = altura(sub-árbol izquierdo) - altura(sub-árbol derecho)
 ```
+
+### Representación gráfica
+<img width="1104" height="554" alt="image" src="https://github.com/user-attachments/assets/a53be407-4a56-48e6-a2d2-54b97f7f83eb" />
 
 | Situación | FB |
 |---|---|
@@ -686,6 +723,10 @@ Ejemplo: x = 16 (FB = 3 - 1 = 2), insertado 15 bajo 13 (der de 11, izq de 16)
 Paso 1: izquierda en 11  ->   13 sube bajo 16 (hijos 11 y 15; 11 con hijo 7)
 Paso 2: derecha en 16    ->   13 raíz del subárbol, hijos 11 (con 7) y 16 (con 15 y 17)
 ```
+
+### [Tutorial](https://www.youtube.com/watch?v=JPI-DPizQYk)
+### Representación gráfica
+<img width="700" height="1119" alt="image" src="https://github.com/user-attachments/assets/d438c701-41ec-459c-ae31-73596ed2b607" />
 
 ## Implementación en Python
 ```python
@@ -786,6 +827,9 @@ a) Final               b) Final               c) Final
 - Balance **menos estricto** que el AVL: hace **menos rotaciones**.
 - En este resumen se escribe `(N)` negro y `(R)` rojo junto a cada llave.
 
+### Representación gráfica
+<img width="1343" height="558" alt="image" src="https://github.com/user-attachments/assets/ff86085f-6c62-4d83-986d-e3f56db6fbce" />
+
 ## Propiedades
 | # | Propiedad | Explicación |
 |---|---|---|
@@ -845,6 +889,8 @@ Caso LL (línea)                       Caso RL (triángulo)
     /                                  \     \              /                          \
  X(R)                                  T(N)  X(R)         P(R)                         T(N)
 ```
+
+### [Tutorial Red-Black](https://youtube.com/playlist?list=PL9xmBV_5YoZNqDI8qfOZgzbqahCUmUEin&si=sTvoC2VmcMocCFcp)
 
 ## Ejemplo de la clase: insertar 25, 12, 32, 10, 6
 | Inserción | Situación | Acción |
@@ -1225,6 +1271,10 @@ RB : 54(N), 34(N), 88(N), 17(R), 45(R), 83(R), 92(N), 6(N), 27(N), 42(N), 51(N),
 | **Pocas colisiones** | Minimiza keys distintas en la misma posición |
 | **Usa toda la tabla** | Cualquier posición puede ser resultado |
 
+### [Tutorial](https://www.youtube.com/watch?v=FsfRsGFHuv4)
+### Representación gráfica
+<img width="1043" height="746" alt="image" src="https://github.com/user-attachments/assets/a00e7aa8-dbd9-45a9-b376-335df4b3b854" />
+
 ## Aplicación en estructuras de datos
 > Un diccionario de Python (`dict`) es una tabla hash. `set` también.
 
@@ -1390,6 +1440,8 @@ for i in range(0, n):
 - Los elementos quedan más dispersos pero sufre **clustering secundario**. La tabla es **circular** (`% tam`).
 - En las prácticas se entrega una lista de elementos y se pide la tabla hash final con ciertas resoluciones.
 
+### [Tutorial](https://www.youtube.com/shorts/0M_SB_Y2krc)
+
 ### Double Hashing
 ```python
 # Solo aplica en caso de colisiones
@@ -1412,6 +1464,8 @@ for i in range(0, n):
 
 - **No sufre clustering**: el salto depende de la key, así que dos keys con el mismo hash siguen caminos distintos.
 - `hash2(x)` nunca debe dar `0` (la posición no avanzaría); por eso `x % 3 + 2`.
+
+### [Tutorial](https://www.youtube.com/watch?v=HcWxaVl1TII)
 
 ## Comparación de técnicas
 | Técnica | Familia | Memoria extra | Clustering | Búsqueda peor caso | Fórmula |
@@ -1543,6 +1597,9 @@ for letra in "banana":
 | **V** | Conjunto de **vértices** o nodos (`llaves` o `keys`) | `V = {A, B, C}` |
 | **E** | Conjunto de **aristas** (pares de vértices) | `E = {(A,B), (B,C)}` |
 | **(a,b)** | Arista que conecta `a` con `b` | `(A,B)` |
+
+### Representación gráfica
+<img width="1200" height="900" alt="image" src="https://github.com/user-attachments/assets/bf2eac73-f854-43f1-a67b-94eeb7090784" />
 
 ## Tipos de grafos
 ### Según la dirección
@@ -1679,6 +1736,8 @@ def bfs(grafo, inicio):
     return orden
 ```
 
+### [Tutorial](https://www.youtube.com/watch?v=m1_0UlIFnLs)
+
 ### DFS desde A -> **A, D, B, E, F, G, C**
 | Paso | Vértice | Acción | Pila |
 |:--:|:--:|---|---|
@@ -1705,6 +1764,8 @@ def dfs(grafo, v, visitados=None, orden=None):
             dfs(grafo, w, visitados, orden) # push (llamada recursiva)
     return orden                            # al terminar, pop
 ```
+
+### [Tutorial](https://www.youtube.com/watch?v=84jNzUOY78c)
 
 ### Práctica: mismo grafo desde E
 - **BFS:** `E, A, B, D, F, G, C`.  **DFS:** `E, A, D, B, F, G, C`.
@@ -2504,6 +2565,10 @@ stringData:
 - Ejemplo clásico: el grafo de **todos los cursos de una carrera**. Otros usos: orden de compilación, instalación de paquetes, planificación de tareas, evaluación de fórmulas en una hoja de cálculo.
 - **Dependency Hell:** `pip install networkx <- libc <- xyz`; dependencias numerosas, entrecruzadas o incompatibles. Un gestor de paquetes las resuelve con un orden topológico.
 
+### [Tutorial](https://www.youtube.com/watch?v=7J3GadLzydI&t=2s)
+### Representación gráfica
+<img width="2953" height="1076" alt="image" src="https://github.com/user-attachments/assets/d10579e1-9a4a-434a-bd8b-0ef9997ac3de" />
+
 ## Requisito: el grafo debe ser un DAG
 | Letra | Significado | Descripción |
 |:--:|---|---|
@@ -2853,6 +2918,10 @@ def n_reinas(n):
 | **Backtracking con poda** | Mucho menor en la práctica; peor caso exponencial |
 
 - Tiempo exponencial en `N`; espacio `O(N)` (pila de decisiones y recursión); verificación por reina `O(N)`.
+
+### [Tutorial](https://www.youtube.com/watch?v=Ak-fxEwAR14&t=3s)
+### Representación gráfica de laberinto resuelto con fuerza bruta y backtracking
+<img src="../../img/Backtracking.gif" alt="Backtracking" width="500" />
 
 > [Resumen Completo](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_27_Apuntes.md) - Backtracking, N Reinas
 
