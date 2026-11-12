@@ -3094,3 +3094,472 @@ AVL                                      Red-Black
 | **Dijkstra** | Camino mínimo | O((V + E) log V) con heap | O(V²) con arreglo |
 | **Bellman-Ford / Floyd-Warshall** | Camino mínimo | O(V · E) / O(V³) | |
 | **Backtracking** | Búsqueda exhaustiva | `k^n`, `n!`, `2^n` | Exponencial (la poda lo reduce en la práctica) |
+
+---
+
+# =========================================
+# SEGMENTO 27 - EXTRA: ALGORITMOS ÁVIDOS (GREEDY) Y ÁRBOLES B, B+ y B*
+# =========================================
+
+# Algoritmos ávidos (Greedy)
+
+Un **algoritmo ávido** (*greedy*, también llamado **voraz**) construye la solución paso a paso y, en cada paso, toma la **mejor opción local** disponible en ese momento, **sin reconsiderar** decisiones anteriores. Se espera que la suma de decisiones localmente óptimas dé una solución globalmente óptima.
+
+| Concepto | Qué es | Ejemplo |
+|---|---|---|
+| **Criterio ávido** | Regla que decide cuál es la "mejor" opción local | Menor peso, menor tiempo de fin, mayor valor/peso |
+| **Decisión irrevocable** | Una vez tomada, no se deshace | No existe `pop` como en backtracking |
+| **Conjunto de candidatos** | Opciones disponibles en cada paso | Aristas, monedas, actividades |
+| **Función de factibilidad** | Verifica que la opción elegida no rompa las restricciones | Que la arista no forme un ciclo (Kruskal) |
+| **Solución óptima** | La mejor posible según el objetivo | Menor costo, mayor cantidad de actividades |
+
+> Un algoritmo ávido es **rápido y simple**, pero **solo es correcto** si el problema cumple las propiedades que lo justifican.
+
+## Propiedades necesarias
+| Propiedad | Descripción |
+|---|---|
+| **Propiedad de elección ávida** | Existe una solución óptima que contiene la decisión local óptima tomada en el primer paso |
+| **Subestructura óptima** | Después de tomar la decisión, el problema restante es del mismo tipo y su solución óptima, combinada con la decisión, da la óptima global |
+
+- Se demuestra normalmente con un **argumento de intercambio**: se toma una solución óptima cualquiera y se muestra que se puede cambiar por la decisión ávida sin empeorarla.
+- Si una de las dos propiedades falla, el algoritmo ávido **puede dar una solución no óptima** (aunque válida).
+
+## Esquema general
+| Paso | Qué se hace |
+|:--:|---|
+| **1** | Definir el **criterio ávido** (qué significa "mejor") |
+| **2** | **Ordenar** los candidatos según el criterio (o usar una **cola de prioridad / heap**) |
+| **3** | Recorrer los candidatos y **aceptar** el actual si es factible |
+| **4** | Repetir hasta completar la solución o agotar candidatos |
+
+```python
+def greedy(candidatos, es_factible, criterio):
+    solucion = []
+    for c in sorted(candidatos, key=criterio):   # criterio ávido
+        if es_factible(solucion, c):             # función de factibilidad
+            solucion.append(c)                   # decisión irrevocable
+    return solucion
+```
+
+- El costo suele estar dominado por el **ordenamiento**: **O(n log n)**.
+
+## Greedy frente a otras técnicas
+| Aspecto | Greedy | Backtracking | Programación dinámica |
+|---|---|---|---|
+| **Estrategia** | Mejor opción local, sin volver atrás | Explora todo y retrocede (`pop`) | Combina subproblemas guardando resultados |
+| **Reconsidera decisiones** | No | Sí | Sí (compara alternativas) |
+| **Garantiza el óptimo** | Solo con propiedad ávida | Sí (si recorre todo) | Sí |
+| **Costo típico** | Bajo: O(n log n) | Exponencial | Polinomial |
+| **Uso de memoria** | Mínimo | Pila de decisiones | Tabla de subproblemas |
+| **Ejemplos** | Kruskal, Prim, Dijkstra, Huffman | N reinas, sudoku | Mochila 0/1, Fibonacci con memoización |
+
+## Ejemplos clásicos
+| Problema | Criterio ávido | ¿Es óptimo? |
+|---|---|---|
+| **Selección de actividades** | Elegir la actividad compatible que **termina primero** | Sí |
+| **Mochila fraccionaria** | Mayor **valor / peso** primero (se permite fracción) | Sí |
+| **Mochila 0/1** | Mayor valor / peso | **No** |
+| **Cambio de monedas** | Moneda de mayor denominación posible | Solo en sistemas "canónicos" (ej. 1, 5, 10, 25) |
+| **Código de Huffman** | Unir siempre los **dos nodos de menor frecuencia** | Sí |
+| **Kruskal** (MST) | Arista de **menor peso** que no forme ciclo | Sí |
+| **Prim** (MST) | Arista más barata que conecta el árbol con un vértice nuevo | Sí |
+| **Dijkstra** (camino mínimo) | Confirmar el nodo pendiente de **menor distancia** | Sí (pesos no negativos) |
+| **Planificación de tareas** | Menor fecha límite primero (EDF) | Sí (minimiza el retraso máximo) |
+
+### Selección de actividades
+- Dadas actividades con hora de inicio y de fin, elegir el **máximo número** de actividades que no se solapan.
+- Criterio: ordenar por **hora de fin** y tomar la siguiente que comience después de que termine la última elegida.
+
+```python
+def seleccionar(actividades):
+    # actividades: lista de (inicio, fin)
+    actividades.sort(key=lambda a: a[1])      # por hora de fin
+    elegidas = []
+    ultimo_fin = -1
+    for inicio, fin in actividades:
+        if inicio >= ultimo_fin:              # compatible
+            elegidas.append((inicio, fin))
+            ultimo_fin = fin
+    return elegidas
+```
+
+| Actividades `(inicio, fin)` | Elegidas |
+|---|---|
+| `(1,4) (3,5) (0,6) (5,7) (3,9) (5,9) (6,10) (8,11) (8,12) (2,14) (12,16)` | `(1,4) (5,7) (8,11) (12,16)` → **4 actividades** |
+
+- Si se ordenara por inicio o por duración, el resultado puede **no** ser óptimo (por eso el criterio importa).
+
+### Mochila fraccionaria vs 0/1
+- Capacidad = 50; ítems `(valor, peso)`: `(60, 10)`, `(100, 20)`, `(120, 30)`; razones valor/peso: 6, 5 y 4.
+
+| Variante | Resultado ávido | Óptimo |
+|---|---|---|
+| **Fraccionaria** | 10 + 20 completos y 20 de 30 del tercero = 60 + 100 + 80 = **240** | **240** (greedy es óptimo) |
+| **0/1** | Ítems 1 y 2 = **160** | **220** (ítems 2 y 3): greedy **falla**; se usa programación dinámica |
+
+```python
+def mochila_fraccionaria(items, capacidad):
+    # items: lista de (valor, peso)
+    items.sort(key=lambda it: it[0] / it[1], reverse=True)
+    total = 0
+    for valor, peso in items:
+        if capacidad >= peso:
+            total += valor
+            capacidad -= peso
+        else:
+            total += valor * (capacidad / peso)   # fracción del ítem
+            break
+    return total
+```
+
+### Cambio de monedas
+```python
+def cambio(monedas, monto):
+    monedas = sorted(monedas, reverse=True)
+    resultado = []
+    for m in monedas:
+        while monto >= m:
+            monto -= m
+            resultado.append(m)
+    return resultado
+```
+
+| Sistema de monedas | Monto | Greedy | Óptimo |
+|---|:--:|---|---|
+| `1, 5, 10, 25` | 63 | `25, 25, 10, 1, 1, 1` (6 monedas) | 6 monedas (**óptimo**) |
+| `1, 3, 4` | 6 | `4, 1, 1` (3 monedas) | `3, 3` (2 monedas): greedy **falla** |
+
+- Un mismo criterio ávido puede ser correcto para unos datos y **incorrecto** para otros: hay que demostrar o verificar la propiedad ávida.
+
+### Código de Huffman (compresión)
+- Asigna códigos binarios de **longitud variable**: símbolos frecuentes -> códigos cortos; raros -> largos (**códigos prefijo**: ningún código es prefijo de otro).
+- Se usa una **cola de prioridad (Heap mínimo)**, vista en el Segmento 9.
+
+| Paso | Qué se hace |
+|:--:|---|
+| **1** | Crear un nodo hoja por símbolo con su frecuencia e insertarlos en un heap mínimo |
+| **2** | Extraer los **dos nodos de menor frecuencia** |
+| **3** | Crear un nodo interno con la **suma** de ambas frecuencias y esos dos nodos como hijos |
+| **4** | Insertar el nodo nuevo en el heap; repetir hasta que quede un solo nodo (la raíz) |
+| **5** | Recorrer el árbol: izquierda = `0`, derecha = `1`; el camino hasta cada hoja es su código |
+
+| Símbolo | Frecuencia | Código |
+|:--:|:--:|:--:|
+| **f** | 45 | `0` |
+| **c** | 12 | `100` |
+| **d** | 13 | `101` |
+| **a** | 5 | `1100` |
+| **b** | 9 | `1101` |
+| **e** | 16 | `111` |
+
+```
+Uniones: 5+9=14, 12+13=25, 14+16=30, 25+30=55, 45+55=100
+
+            (100)
+           /     \
+        f(45)    (55)
+                /    \
+            (25)      (30)
+            /  \      /  \
+         c(12) d(13) (14) e(16)
+                     /  \
+                  a(5)  b(9)
+```
+
+## Complejidad
+| Algoritmo | Complejidad | Dominada por |
+|---|---|---|
+| **Selección de actividades** | O(n log n) | Ordenamiento |
+| **Mochila fraccionaria** | O(n log n) | Ordenamiento |
+| **Huffman** | O(n log n) | `n` extracciones e inserciones en el heap |
+| **Kruskal** | O(E log E) | Ordenamiento de aristas |
+| **Prim / Dijkstra (heap)** | O(E log V) / O((V + E) log V) | Cola de prioridad |
+
+## Ventajas y limitaciones
+| Ventajas | Limitaciones |
+|---|---|
+| Simples de programar | No siempre dan el óptimo global |
+| Muy rápidos (O(n log n) típico) | Requieren demostrar la propiedad ávida |
+| Usan poca memoria | Dependen mucho del criterio elegido |
+| Útiles como **heurística** cuando el óptimo es muy costoso | Nunca reconsideran una mala decisión |
+
+---
+
+# Árboles B, B+ y B*
+
+## ¿Por qué existen?
+- Los árboles AVL y Red-Black son **binarios**: cada nodo tiene máximo 2 hijos, por lo que la altura es `log₂ n`. Funcionan bien en **memoria RAM**.
+- Cuando los datos están en **disco** (HDD / SSD), cada nodo visitado es un **acceso al disco** (muy lento); un árbol alto implica muchos accesos.
+- Solución: **árboles de búsqueda multicamino** con nodos grandes (del tamaño de una **página o bloque de disco**) que guardan **muchas llaves** y tienen **muchos hijos**. Así la altura es muy baja y se reducen los accesos a disco.
+
+| Aspecto | AVL / Red-Black | Árbol B |
+|---|---|---|
+| **Hijos por nodo** | Máximo 2 | Cientos (según el tamaño de la página) |
+| **Llaves por nodo** | 1 | Muchas, ordenadas |
+| **Altura** | `log₂ n` | `log_m n` (mucho menor) |
+| **Pensado para** | Memoria RAM | Disco / bases de datos / sistemas de archivos |
+| **Balanceo** | Rotaciones | **Divisiones (split)** y **fusiones (merge)** |
+
+- Ejemplo: con 1 000 000 de llaves, un árbol binario balanceado tiene altura ≈ 20; un árbol B con ≈ 100 hijos por nodo, altura ≈ 3.
+
+## Árbol B (B-Tree)
+- Árbol **multicamino, balanceado y ordenado** donde **todas las hojas están al mismo nivel**.
+- Cada nodo guarda **llaves ordenadas** y un nodo con `k` llaves tiene `k + 1` hijos; las llaves actúan como **separadores** de rangos.
+- Los **datos** (o referencias a ellos) pueden estar en **cualquier nodo** (internos y hojas).
+
+### Propiedades (orden `m` = máximo de hijos)
+| Propiedad | Regla |
+|---|---|
+| **Máximo por nodo** | `m` hijos y `m − 1` llaves |
+| **Mínimo por nodo interno** (no raíz) | `⌈m/2⌉` hijos y `⌈m/2⌉ − 1` llaves |
+| **Raíz** | Mínimo 2 hijos (si no es hoja) y 1 llave |
+| **Hojas** | Todas al **mismo nivel**; mismas cotas de llaves que los internos |
+| **Orden** | Las llaves de un nodo están ordenadas; el hijo `i` contiene llaves entre la llave `i − 1` y la llave `i` |
+| **Llaves** | Únicas |
+
+| Orden `m` | Máx. llaves | Mín. llaves (no raíz) | Máx. hijos | Mín. hijos (no raíz) |
+|:--:|:--:|:--:|:--:|:--:|
+| 3 | 2 | 1 | 3 | 2 |
+| 4 | 3 | 1 | 4 | 2 |
+| 5 | 4 | 2 | 5 | 3 |
+| 7 | 6 | 3 | 7 | 4 |
+
+- Nota: algunos textos definen el árbol B con un **grado mínimo `t`** (cada nodo tiene entre `t − 1` y `2t − 1` llaves). Es equivalente a la definición por orden; en clase se usa el **orden `m`**.
+
+```
+Árbol B de orden 4 (máx. 3 llaves por nodo)
+
+                 [ 40 ]
+              /          \
+        [ 20 ]            [ 60 | 80 ]
+        /    \           /     |     \
+    [10]    [30]     [50]    [70]    [90 | 100]
+```
+
+### Estructura del nodo
+```python
+class NodoB:
+    def __init__(self, hoja=True):
+        self.llaves = []        # llaves ordenadas
+        self.hijos = []         # k + 1 hijos si tiene k llaves (vacío en las hojas)
+        self.hoja = hoja
+```
+
+### Búsqueda
+| Paso | Qué se hace |
+|:--:|---|
+| **1** | Comenzar en la raíz |
+| **2** | Buscar la llave dentro del nodo (secuencial o **búsqueda binaria**, porque está ordenado) |
+| **3** | Si se encuentra, terminar |
+| **4** | Si no, bajar al hijo correspondiente al rango donde cabría la llave |
+| **5** | Si se llega a una hoja sin encontrarla, **no existe** |
+
+```python
+def buscar(nodo, llave):
+    i = 0
+    while i < len(nodo.llaves) and llave > nodo.llaves[i]:
+        i += 1
+    if i < len(nodo.llaves) and llave == nodo.llaves[i]:
+        return nodo, i                     # encontrada
+    if nodo.hoja:
+        return None                        # no existe
+    return buscar(nodo.hijos[i], llave)    # bajar al hijo correspondiente
+```
+
+### Inserción
+- Siempre se inserta en una **hoja**. Si la hoja se **desborda** (más de `m − 1` llaves), se **divide (split)**.
+
+| Paso | Qué se hace |
+|:--:|---|
+| **1** | Buscar la hoja donde corresponde la llave |
+| **2** | Insertarla de forma ordenada dentro de la hoja |
+| **3** | Si la hoja tiene ≤ `m − 1` llaves, terminar |
+| **4** | Si hay **overflow**: tomar la **llave mediana**, **subirla al padre**, y dividir el resto en dos nodos (menores a la izquierda, mayores a la derecha) |
+| **5** | Si el padre se desborda, repetir el paso 4 en **cascada** hacia arriba |
+| **6** | Si se divide la **raíz**, se crea una nueva raíz con la mediana: el árbol **crece en altura por la raíz** (por eso todas las hojas siguen al mismo nivel) |
+
+- Convención usada aquí: con un número par de llaves en el desbordamiento, se sube la **mediana inferior** (la segunda de cuatro).
+
+#### Ejemplo: orden 4, insertar `10, 20, 30, 40, 50, 60, 70, 80, 90, 100`
+| Inserción | Situación | Acción |
+|---|---|---|
+| 10, 20, 30 | Caben en la raíz (máx. 3) | `[10 20 30]` |
+| 40 | Overflow `[10 20 30 40]` | **Split:** sube 20; hojas `[10]` y `[30 40]` |
+| 50 | Cabe en la hoja derecha | `[30 40 50]` |
+| 60 | Overflow `[30 40 50 60]` | **Split:** sube 40; raíz `[20 40]`; hojas `[10]`, `[30]`, `[50 60]` |
+| 70 | Cabe | `[50 60 70]` |
+| 80 | Overflow `[50 60 70 80]` | **Split:** sube 60; raíz `[20 40 60]` |
+| 90 | Cabe | `[70 80 90]` |
+| 100 | Overflow en la hoja **y** luego en la raíz | Sube 80 -> raíz `[20 40 60 80]` desbordada -> **split de la raíz:** sube 40, **nueva raíz** `[40]` |
+
+```
+Resultado final (altura 2)
+
+                 [ 40 ]
+              /          \
+        [ 20 ]            [ 60 | 80 ]
+        /    \           /     |     \
+    [10]    [30]     [50]    [70]    [90 | 100]
+```
+
+### Borrado
+- Es el caso más complejo: se debe mantener el **mínimo de llaves** en cada nodo (no raíz). Si un nodo queda con **menos** (**underflow**), se corrige.
+
+| Caso | Acción |
+|---|---|
+| **Borrar de una hoja con llaves de sobra** | Se elimina la llave y termina |
+| **Borrar de un nodo interno** | Se reemplaza la llave por su **predecesor** (mayor del subárbol izquierdo) o **sucesor** (menor del subárbol derecho), que está en una hoja, y se borra esa llave de la hoja |
+| **Underflow, un hermano tiene llaves de sobra** | **Préstamo (rotación):** baja la llave separadora del padre y sube una llave del hermano |
+| **Underflow, hermanos en el mínimo** | **Fusión (merge):** se une el nodo con un hermano y la llave separadora del padre baja a la fusión; el padre pierde una llave y puede quedar en underflow (cascada) |
+| **La raíz queda sin llaves** | Su único hijo pasa a ser la nueva raíz: el árbol **baja en altura** |
+
+#### Ejemplo: borrar `10` del árbol anterior
+| Paso | Situación | Acción |
+|:--:|---|---|
+| 1 | Hoja `[10]` queda vacía (mínimo = 1) | **Underflow** |
+| 2 | El hermano `[30]` está en el mínimo (no presta) | **Merge** con el separador 20: `[20 30]` |
+| 3 | El padre `[20]` queda sin llaves | **Underflow** del nodo interno |
+| 4 | Su hermano `[60 80]` tiene una llave de sobra | **Préstamo** por la raíz: baja 40, sube 60 |
+
+```
+Resultado
+
+                    [ 60 ]
+                 /          \
+           [ 40 ]            [ 80 ]
+           /    \            /    \
+     [20 | 30]  [50]      [70]    [90 | 100]
+```
+
+### Complejidad del árbol B
+| Operación | Comparaciones | Accesos a disco |
+|---|---|---|
+| **Buscar** | O(log n) | O(log_m n) |
+| **Insertar** | O(log n) | O(log_m n) |
+| **Borrar** | O(log n) | O(log_m n) |
+| **Recorrido en-orden** | O(n) | Visita nodos hijo-llave-hijo (sin acceso secuencial directo) |
+
+- Altura: `h ≤ log_{⌈m/2⌉} ((n + 1) / 2)`; el peor caso para la altura es cuando los nodos están en su mínimo.
+- Espacio: O(n); ocupación mínima de cada nodo ≈ **50 %**.
+
+## Árbol B+ (B+ Tree)
+- Variante del árbol B donde **todos los datos (registros o referencias) están únicamente en las hojas**; los nodos internos solo guardan **llaves para dirigir la búsqueda** (índice).
+- Las **hojas están enlazadas** entre sí (lista enlazada ordenada), lo que permite recorrer los datos **en orden secuencial** y hacer **consultas por rango** sin subir y bajar por el árbol.
+
+| Característica | B | B+ |
+|---|---|---|
+| **Dónde están los datos** | En todos los nodos | **Solo en las hojas** |
+| **Nodos internos** | Llaves + datos | **Solo llaves** (separadores / índice) |
+| **Llaves repetidas** | No (cada llave aparece una vez) | **Sí**: las llaves de los internos se **copian** de las hojas |
+| **Hojas enlazadas** | No | **Sí** (lista enlazada) |
+| **Búsqueda** | Puede terminar en un nodo interno | **Siempre llega a una hoja** (costo uniforme) |
+| **Fan-out (hijos por nodo)** | Menor (los nodos guardan datos) | **Mayor** (más llaves por nodo) -> árbol más bajo |
+| **Consulta por rango** | Recorrido en-orden más costoso | **Muy eficiente**: localizar el inicio y seguir los enlaces |
+| **Recorrido secuencial completo** | Recorrer todo el árbol | Recorrer solo la lista de hojas |
+
+```
+Árbol B+ (orden 4)
+
+              [ 30 | 50 ]                  <- nodos internos: solo llaves (índice)
+            /      |      \
+   [10 20] -> [30 40] -> [50 60]           <- hojas: datos + enlace a la siguiente
+```
+
+### Inserción
+- Se inserta en la **hoja** correspondiente. Si se desborda, se **divide**, pero a diferencia del B:
+  - En una **hoja**, la llave que sube al padre se **COPIA** (la menor de la hoja derecha) y **permanece** en la hoja.
+  - En un **nodo interno**, la llave que sube se **MUEVE** (como en el B).
+
+#### Ejemplo: orden 4, insertar `10, 20, 30, 40, 50, 60`
+| Inserción | Situación | Acción |
+|---|---|---|
+| 10, 20, 30 | Caben en la hoja | `[10 20 30]` |
+| 40 | Overflow `[10 20 30 40]` | **Split** de hoja: `[10 20]` y `[30 40]`; se **copia 30** a la nueva raíz `[30]`; hojas enlazadas |
+| 50 | Cabe | `[30 40 50]` |
+| 60 | Overflow `[30 40 50 60]` | **Split:** `[30 40]` y `[50 60]`; se **copia 50** al padre `[30 50]` |
+
+### Borrado
+- Se elimina la llave de la **hoja**; la copia en un nodo interno **puede permanecer** como separador (sigue siendo válida para el enrutamiento).
+- Si la hoja queda en underflow: **préstamo** de un hermano (se actualiza la llave separadora del padre) o **fusión** de hojas (el padre pierde un separador y puede propagarse).
+
+### Consulta por rango (ej. llaves entre 25 y 55)
+| Paso | Qué se hace |
+|:--:|---|
+| **1** | Buscar la llave **25** bajando hasta la hoja correspondiente |
+| **2** | Leer las llaves de esa hoja que sean ≥ 25 |
+| **3** | Seguir el **enlace a la siguiente hoja** y continuar leyendo |
+| **4** | Detenerse al superar **55** |
+
+### Complejidad del B+
+| Operación | Costo |
+|---|---|
+| **Buscar una llave** | O(log_m n) accesos (siempre baja hasta una hoja) |
+| **Insertar / borrar** | O(log_m n) |
+| **Consulta por rango** | O(log_m n + k), con `k` = cantidad de resultados |
+| **Recorrido secuencial** | O(n) siguiendo las hojas |
+
+- **Usos reales:** índices de **bases de datos relacionales** (MySQL InnoDB, PostgreSQL, Oracle, SQL Server) y **sistemas de archivos** (NTFS, XFS, Btrfs). El B+ es la estructura de indexación más usada en la práctica.
+
+## Árbol B* (B-Star)
+- Variante del árbol B que busca **mejor aprovechamiento del espacio**: cada nodo (no raíz) debe estar lleno al menos **2/3** (≈ 66 %) en lugar de 1/2.
+- Idea: **retrasar la división** de los nodos redistribuyendo llaves con un **hermano** antes de dividir.
+
+| Aspecto | B | B* |
+|---|---|---|
+| **Ocupación mínima** | ≈ 1/2 del nodo | ≈ **2/3** del nodo |
+| **Cuando un nodo se desborda** | **Se divide** en 2 nodos (cada uno ≈ 1/2) | Primero **redistribuye con un hermano**; si el hermano también está lleno, **divide 2 nodos llenos en 3** (cada uno ≈ 2/3) |
+| **Cantidad de divisiones** | Más | **Menos** |
+| **Altura** | Algo mayor | Algo **menor** (nodos más llenos) |
+| **Uso de memoria / disco** | Más desperdicio | **Menos desperdicio** |
+| **Complejidad de la implementación** | Menor | **Mayor** (hay que gestionar hermanos) |
+| **Raíz** | Se divide en 2 | Caso especial: no tiene hermano, se divide en 2 |
+
+### Inserción en B*
+| Paso | Qué se hace |
+|:--:|---|
+| **1** | Insertar en la hoja correspondiente |
+| **2** | Si **no hay overflow**, terminar |
+| **3** | Si hay overflow y un **hermano adyacente tiene espacio**, **redistribuir** las llaves entre ambos (rotación a través del padre, actualizando la llave separadora) |
+| **4** | Si **también el hermano está lleno**, se **divide en tres**: las llaves de los dos nodos más la nueva se reparten en **3 nodos** (≈ 2/3 cada uno) y se sube una llave más al padre |
+| **5** | Si el padre se desborda, se repite el proceso hacia arriba |
+
+- Relación entre variantes: existe también el **B\*+** (combinación de B+ y B\*: datos solo en hojas enlazadas con ocupación 2/3). Los nombres no siempre se usan igual en todos los textos, por lo que conviene aclarar la definición usada.
+
+### Complejidad del B*
+| Operación | Costo |
+|---|---|
+| **Buscar / insertar / borrar** | O(log_m n) |
+| **Ocupación de los nodos** | ≥ 2/3 (mejor que el B) |
+
+## Comparación general B, B+ y B*
+| Característica | B | B+ | B* |
+|---|---|---|---|
+| **Datos en** | Todos los nodos | Solo hojas | Todos los nodos |
+| **Hojas enlazadas** | No | **Sí** | No |
+| **Ocupación mínima** | 1/2 | 1/2 | **2/3** |
+| **Manejo del overflow** | Split 1 -> 2 | Split 1 -> 2 (**copia** la llave en hojas) | Redistribución; split 2 -> 3 |
+| **Mejor para** | Búsquedas puntuales en disco | **Consultas por rango** y recorridos ordenados | Máximo aprovechamiento del espacio |
+| **Complejidad (buscar / insertar / borrar)** | O(log n) | O(log n) | O(log n) |
+| **Uso típico** | Sistemas de archivos, bases de datos | **Índices de bases de datos** | Sistemas con almacenamiento limitado |
+
+## Comparación con los árboles balanceados vistos
+| Estructura | Hijos por nodo | Balanceo | Ideal para | Altura |
+|---|---|---|---|---|
+| **BST** | 2 | Ninguno | Pocos datos en memoria | O(n) peor caso |
+| **AVL** | 2 | Rotaciones (estricto) | Muchas búsquedas en memoria | ≈ 1,44 · log₂ n |
+| **Red-Black** | 2 | Rotaciones y colores (relajado) | Muchas escrituras en memoria | ≈ 2 · log₂ n |
+| **B** | Hasta `m` | Split / merge | Datos en disco | log_m n |
+| **B+** | Hasta `m` | Split / merge | Índices y consultas por rango | log_m n |
+| **B\*** | Hasta `m` | Redistribución / split 2 -> 3 | Ahorro de espacio | log_m n |
+
+## Resumen del segmento
+| Idea | Resumen |
+|---|---|
+| **Greedy** | Elige la mejor opción local sin volver atrás; rápido (O(n log n)) pero solo es óptimo con propiedad de elección ávida y subestructura óptima |
+| **Ejemplos** | Selección de actividades, mochila fraccionaria, Huffman, Kruskal, Prim, Dijkstra |
+| **Contraejemplos** | Mochila 0/1 y cambio con monedas `1, 3, 4`: greedy no es óptimo |
+| **Árbol B** | Multicamino balanceado, hojas al mismo nivel; datos en todos los nodos; crece/decrece por la raíz con split y merge |
+| **Árbol B+** | Datos solo en hojas enlazadas; internos solo llaves; excelente en consultas por rango; base de los índices de BD |
+| **Árbol B\*** | Ocupación mínima 2/3; redistribuye con hermanos y divide 2 en 3; menos divisiones y menos desperdicio |
+| **Por qué B** | Nodos del tamaño de una página de disco: poca altura = pocos accesos a disco |
+| **Complejidad** | Búsqueda, inserción y borrado en O(log n) comparaciones y O(log_m n) accesos a disco |
