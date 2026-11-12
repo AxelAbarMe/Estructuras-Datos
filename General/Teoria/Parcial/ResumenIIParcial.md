@@ -150,7 +150,7 @@ def bfs(raiz):
 
 ### [Tutorial](https://www.youtube.com/watch?v=HZ5YTanv5QE)
 ### Representación gráfica
-<img src="../../img/BFS.gif" alt="BFS" width="500" />
+<img src="/img/BST.gif" alt="BFS" width="500" />
 
 ### DFS (por profundidad)
 - Se implementa con **recursión** (stack de llamadas del CPU) o iterativamente con una **Pila (LIFO)**.
@@ -198,9 +198,9 @@ def pre_orden_iterativo(raiz):
 
 ### [Tutorial](https://youtube.com/playlist?list=PL9xmBV_5YoZO1JC2RgEi04nLy6D-rKk6b&si=MYCkUhXSH8SD6UK-)
 ### Representación gráfica
-<img src="../../img/DFS-Pre.gif" alt="DFS Pre-Ordem" width="500" />
-<img src="../../img/DFS-In.gif" alt="DFS In-Ordem" width="500" />
-<img src="../../img/DFS-Pos.gif" alt="DFS Pos-Ordem" width="500" />
+<img src="/img/DFS-Pre.gif" alt="DFS Pre-Ordem" width="500" />
+<img src="/img/DFS-In.gif" alt="DFS In-Ordem" width="500" />
+<img src="/img/DFS-Pos.gif" alt="DFS Pos-Ordem" width="500" />
 
 
 ## Ejemplo 1
@@ -2921,7 +2921,7 @@ def n_reinas(n):
 
 ### [Tutorial](https://www.youtube.com/watch?v=Ak-fxEwAR14&t=3s)
 ### Representación gráfica de laberinto resuelto con fuerza bruta y backtracking
-<img src="../../img/Backtracking.gif" alt="Backtracking" width="500" />
+<img src="/img/Backtrack.gif" alt="Backtracking" width="500" />
 
 > [Resumen Completo](https://github.com/AxelAbarMe/Estructuras-Datos/blob/main/General/Teoria/Clase_27_Apuntes.md) - Backtracking, N Reinas
 
